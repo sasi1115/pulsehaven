@@ -1,0 +1,2973 @@
+/* =========================================================
+PULSE HAVEN — ABOUT HERO SECTION
+========================================================= */
+
+.pulse-about-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--light-bg);
+}
+
+/* =========================================================
+BACKGROUND DECORATION
+========================================================= */
+
+.pulse-about-hero-section::before {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -180px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: var(--primary-soft);
+}
+
+.pulse-about-hero-section::after {
+  content: "";
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  left: -90px;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: var(--secondary-soft);
+}
+
+/* =========================================================
+HERO CONTAINER
+========================================================= */
+
+.pulse-about-hero-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1150px, 90%);
+  max-width: 1200px;
+
+  height: 100%;
+  max-height: 100%;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+/* =========================================================
+HERO CONTENT
+========================================================= */
+
+.pulse-about-hero-content {
+  width: 100%;
+  max-width: 620px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* =========================================================
+SECTION TAG
+========================================================= */
+
+.pulse-about-hero-content .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: var(--primary-color);
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.pulse-about-hero-content .pulse-section-tag-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+}
+
+.pulse-about-hero-content .pulse-section-tag-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================================
+HERO TITLE
+========================================================= */
+
+.pulse-about-hero-title {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: clamp(48px, 3.5vw, 68px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.pulse-about-hero-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+HERO DESCRIPTION
+========================================================= */
+
+.pulse-about-hero-description {
+  width: 100%;
+  max-width: 540px;
+
+  margin: 26px 0 32px;
+
+  color: var(--text-color);
+
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.75;
+
+  opacity: 0.72;
+}
+
+/* =========================================================
+HERO BUTTON
+========================================================= */
+
+.pulse-about-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: auto;
+  max-width: 100%;
+
+  min-height: 50px;
+
+  padding: 0 22px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  text-decoration: none;
+
+  font-size: var(--fs-button);
+  font-weight: var(--fw-bold);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pulse-about-hero-btn svg {
+  width: 17px;
+  height: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.pulse-about-hero-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-about-hero-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+RIGHT HERO VISUAL
+========================================================= */
+
+.pulse-about-hero-visual {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+IMAGE WRAPPER
+========================================================= */
+
+.pulse-about-hero-image-wrap {
+  position: relative;
+
+  width: 390px;
+  max-width: 100%;
+
+  height: 455px;
+  max-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+DECORATIVE CIRCLE
+========================================================= */
+
+.pulse-about-hero-decoration {
+  position: absolute;
+  z-index: 1;
+
+  width: 350px;
+  height: 350px;
+
+  top: 35px;
+  right: -10px;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  border-radius: 50%;
+
+  background: var(--primary-soft);
+
+  transform: rotate(12deg);
+}
+
+/* =========================================================
+HERO IMAGE
+========================================================= */
+
+.pulse-about-hero-image {
+  position: relative;
+  z-index: 2;
+
+  width: 340px;
+  max-width: 100%;
+
+  height: 410px;
+  max-height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  border: 1px solid var(--primary-soft);
+
+  box-shadow: var(--box-shadow);
+}
+
+/* =========================================================
+FLOATING CARE CARD
+========================================================= */
+
+.pulse-about-care-card {
+  position: absolute;
+  z-index: 4;
+
+  left: -35px;
+  bottom: 38px;
+
+  width: auto;
+  max-width: 230px;
+
+  min-width: 205px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 16px;
+
+  border: 1px solid var(--primary-soft);
+  border-radius: 14px;
+
+  background: var(--light-bg);
+
+  box-shadow: var(--box-shadow);
+
+  animation: pulseAboutFloat 4s ease-in-out infinite;
+}
+
+/* =========================================================
+CARE CARD ICON
+========================================================= */
+
+.pulse-about-care-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--secondary-soft);
+  color: var(--secondary-color);
+}
+
+.pulse-about-care-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* =========================================================
+CARE CARD TEXT
+========================================================= */
+
+.pulse-about-care-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.pulse-about-care-content span {
+  color: var(--text-color);
+
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+
+  white-space: nowrap;
+}
+
+.pulse-about-care-content small {
+  color: var(--text-color);
+
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+
+  opacity: 0.6;
+}
+
+/* =========================================================
+FLOATING ANIMATION
+========================================================= */
+
+@keyframes pulseAboutFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* =========================================================
+SCROLL INDICATOR
+========================================================= */
+
+.pulse-about-hero-scroll {
+  position: absolute;
+  z-index: 5;
+
+  left: 50%;
+  bottom: 22px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  color: var(--text-color);
+
+  opacity: 0.5;
+
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pulse-about-hero-scroll svg {
+  width: 16px;
+  height: 16px;
+
+  animation: pulseAboutScroll 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseAboutScroll {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* =========================================================
+NEST HUB
+1024 × 600
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-hero-section {
+    min-height: 600px;
+  }
+
+  .pulse-about-hero-container {
+    width: min(92%, 950px);
+    gap: 35px;
+  }
+
+  .pulse-about-hero-content {
+    max-width: 520px;
+  }
+
+  .pulse-about-hero-content .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-about-hero-title {
+    font-size: 48px;
+    line-height: 1.02;
+  }
+
+  .pulse-about-hero-description {
+    margin: 18px 0 22px;
+    font-size: var(--fs-small);
+    line-height: 1.55;
+  }
+
+  .pulse-about-hero-btn {
+    min-height: 46px;
+  }
+
+  .pulse-about-hero-image-wrap {
+    width: 320px;
+    height: 380px;
+    max-height: 70vh;
+  }
+
+  .pulse-about-hero-image {
+    width: 285px;
+    height: 350px;
+  }
+
+  .pulse-about-hero-decoration {
+    width: 300px;
+    height: 300px;
+  }
+
+  .pulse-about-care-card {
+    left: -10px;
+    bottom: 20px;
+
+    min-width: 185px;
+
+    padding: 10px 12px;
+  }
+
+  .pulse-about-care-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .pulse-about-hero-scroll {
+    bottom: 10px;
+  }
+}
+
+/* =========================================================
+TABLET / iPAD MINI
+768 × 1024
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-hero-section {
+    height: auto;
+    min-height: 100vh;
+
+    padding: 90px 0 70px;
+  }
+
+  .pulse-about-hero-container {
+    width: min(90%, 650px);
+
+    height: auto;
+    max-height: none;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    text-align: center;
+  }
+
+  .pulse-about-hero-content {
+    max-width: 650px;
+    align-items: center;
+  }
+
+  .pulse-about-hero-content .pulse-section-tag {
+    margin-bottom: 18px;
+  }
+
+  .pulse-about-hero-title {
+    max-width: 650px;
+
+    font-size: 54px;
+    line-height: 1.05;
+  }
+
+  .pulse-about-hero-description {
+    max-width: 570px;
+
+    margin: 20px auto 28px;
+  }
+
+  .pulse-about-hero-visual {
+    height: auto;
+    max-height: none;
+  }
+
+  .pulse-about-hero-image-wrap {
+    width: 330px;
+    height: 390px;
+
+    max-height: none;
+  }
+
+  .pulse-about-hero-image {
+    width: 295px;
+    height: 360px;
+
+    max-height: none;
+  }
+
+  .pulse-about-hero-decoration {
+    width: 310px;
+    height: 310px;
+  }
+
+  .pulse-about-care-card {
+    left: -5px;
+    bottom: 18px;
+  }
+
+  .pulse-about-hero-scroll {
+    display: none;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+360 × 740
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-hero-section {
+    padding: 78px 0 50px;
+  }
+
+  .pulse-about-hero-container {
+    width: 90%;
+    gap: 30px;
+  }
+
+  .pulse-about-hero-content .pulse-section-tag {
+    margin-bottom: 14px;
+
+    font-size: var(--fs-label);
+    letter-spacing: 1px;
+  }
+
+  .pulse-about-hero-content .pulse-section-tag-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .pulse-about-hero-title {
+    font-size: 35px;
+    line-height: 1.08;
+  }
+
+  .pulse-about-hero-description {
+    margin: 16px 0 22px;
+
+    font-size: var(--fs-label);
+    line-height: 1.6;
+  }
+
+  .pulse-about-hero-btn {
+    min-height: 44px;
+    padding: 0 16px;
+
+    font-size: var(--fs-label);
+  }
+
+  .pulse-about-hero-image-wrap {
+    width: 250px;
+    height: 300px;
+  }
+
+  .pulse-about-hero-image {
+    width: 225px;
+    height: 270px;
+
+    border-radius: 20px;
+  }
+
+  .pulse-about-hero-decoration {
+    width: 220px;
+    height: 220px;
+
+    top: 25px;
+  }
+
+  .pulse-about-care-card {
+    left: -12px;
+    bottom: 5px;
+
+    min-width: 160px;
+
+    padding: 8px 10px;
+
+    gap: 8px;
+  }
+
+  .pulse-about-care-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pulse-about-care-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pulse-about-care-content {
+    gap: 2px;
+  }
+
+  .pulse-about-care-content span {
+    font-size: 11px;
+  }
+
+  .pulse-about-care-content small {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+OUR STORY SECTION
+========================================================= */
+
+.pulse-about-story-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.pulse-about-story-container {
+  width: min(1200px, 88%);
+  max-width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: stretch;
+  gap: 75px;
+}
+
+/* =========================================================
+IMAGE SIDE
+========================================================= */
+
+.pulse-about-story-visual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.pulse-about-story-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+}
+
+/* =========================================================
+IMAGE
+========================================================= */
+
+.pulse-about-story-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 30px;
+
+  box-shadow: var(--box-shadow);
+}
+
+/* =========================================================
+IMAGE ACCENT
+========================================================= */
+
+.pulse-about-story-image-accent {
+  position: absolute;
+  z-index: 1;
+
+  right: -24px;
+  bottom: -24px;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+  background: var(--secondary-soft);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+CONTENT SIDE
+========================================================= */
+
+.pulse-about-story-content {
+  width: 100%;
+  height: 500px;
+  max-width: 590px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================================================
+SECTION TAG
+========================================================= */
+
+.pulse-about-story-content .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  width: fit-content;
+  margin-bottom: 20px;
+
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+TAG ICON
+========================================================= */
+
+.pulse-about-story-content .pulse-section-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-about-story-content .pulse-section-tag-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.pulse-about-story-title {
+  margin: 0;
+
+  color: var(--text-color);
+  font-size: clamp(40px, 3.2vw, 56px);
+  font-weight: var(--fw-bold);
+
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.pulse-about-story-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.pulse-about-story-description {
+  max-width: 560px;
+  margin: 18px 0 0;
+
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+
+  line-height: 1.7;
+  opacity: 0.72;
+}
+
+/* =========================================================
+SUB CONTENT
+========================================================= */
+
+.pulse-about-story-subcontent {
+  margin-top: 20px;
+}
+
+/* =========================================================
+SUBTITLE
+========================================================= */
+
+.pulse-about-story-subtitle {
+  margin: 0;
+
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+SUBCONTENT PARAGRAPH
+========================================================= */
+
+.pulse-about-story-subcontent .pulse-about-story-description {
+  margin-top: 8px;
+}
+
+/* =========================================================
+DIVIDER
+========================================================= */
+
+.pulse-about-story-divider {
+  width: 75px;
+  height: 2px;
+
+  margin: 20px 0 13px;
+
+  border-radius: 10px;
+  background: var(--secondary-color);
+}
+
+/* =========================================================
+HIGHLIGHT
+========================================================= */
+
+.pulse-about-story-highlight {
+  margin: 0;
+
+  color: var(--text-color);
+  font-size: 17px;
+  font-weight: var(--fw-bold);
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+NEST HUB
+1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-story-section {
+    padding: 70px 0;
+  }
+
+  .pulse-about-story-container {
+    width: 90%;
+    min-height: 420px;
+
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+  }
+
+  .pulse-about-story-visual {
+    height: 420px;
+  }
+
+  .pulse-about-story-image-wrap {
+    max-width: 360px;
+  }
+
+  .pulse-about-story-image {
+    border-radius: 24px;
+  }
+
+  .pulse-about-story-image-accent {
+    right: -18px;
+    bottom: -18px;
+
+    width: 135px;
+    height: 135px;
+  }
+
+  .pulse-about-story-content {
+    height: 420px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pulse-about-story-title {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-story-description {
+    margin-top: 13px;
+    line-height: 1.55;
+  }
+
+  .pulse-about-story-subcontent {
+    margin-top: 14px;
+  }
+
+  .pulse-about-story-subtitle {
+    font-size: 16px;
+  }
+
+  .pulse-about-story-subcontent .pulse-about-story-description {
+    margin-top: 6px;
+  }
+
+  .pulse-about-story-divider {
+    margin: 16px 0 10px;
+  }
+
+  .pulse-about-story-highlight {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+IPAD MINI
+768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-story-section {
+    padding: 85px 0;
+  }
+
+  .pulse-about-story-container {
+    width: 88%;
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  /* CONTENT FIRST */
+  .pulse-about-story-content {
+    order: 1;
+
+    height: auto;
+    max-width: 620px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  /* IMAGE SECOND */
+  .pulse-about-story-visual {
+    order: 2;
+    height: 450px;
+  }
+
+  .pulse-about-story-image-wrap {
+    max-width: 500px;
+  }
+
+  .pulse-about-story-image {
+    border-radius: 26px;
+  }
+
+  .pulse-about-story-image-accent {
+    right: -20px;
+    bottom: -20px;
+
+    width: 160px;
+    height: 160px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag {
+    justify-content: center;
+    margin: 0 auto 17px;
+  }
+
+  .pulse-about-story-title {
+    font-size: 42px;
+    letter-spacing: -1.2px;
+  }
+
+  .pulse-about-story-description {
+    max-width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 1.75;
+  }
+
+  .pulse-about-story-subcontent {
+    margin-top: 22px;
+  }
+
+  .pulse-about-story-subcontent .pulse-about-story-description {
+    margin-top: 9px;
+  }
+
+  .pulse-about-story-divider {
+    margin: 27px auto 15px;
+  }
+
+  .pulse-about-story-highlight {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-story-section {
+    padding: 65px 0;
+  }
+
+  .pulse-about-story-container {
+    width: 88%;
+    gap: 38px;
+  }
+
+  .pulse-about-story-visual {
+    height: 300px;
+  }
+
+  .pulse-about-story-image-wrap {
+    max-width: 100%;
+  }
+
+  .pulse-about-story-image {
+    border-radius: 20px;
+  }
+
+  .pulse-about-story-image-accent {
+    right: -12px;
+    bottom: -12px;
+
+    width: 105px;
+    height: 105px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag {
+    gap: 7px;
+    margin-bottom: 13px;
+
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .pulse-about-story-content .pulse-section-tag-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-about-story-title {
+    font-size: 30px;
+    line-height: 1.16;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-about-story-description {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .pulse-about-story-subcontent {
+    margin-top: 17px;
+  }
+
+  .pulse-about-story-subtitle {
+    font-size: 16px;
+  }
+
+  .pulse-about-story-subcontent .pulse-about-story-description {
+    margin-top: 6px;
+  }
+
+  .pulse-about-story-divider {
+    width: 55px;
+    margin: 20px auto 12px;
+  }
+
+  .pulse-about-story-highlight {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+ABOUT APPROACH SECTION
+========================================================= */
+
+.pulse-about-approach-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.pulse-about-approach-container {
+  width: min(1200px, 88%);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+SECTION HEADER
+========================================================= */
+
+.pulse-about-approach-header {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.pulse-about-approach-header .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pulse-about-approach-header .pulse-section-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--primary-color);
+}
+
+.pulse-about-approach-header .pulse-section-tag-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.pulse-about-approach-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(38px, 3vw, 54px);
+  font-weight: var(--fw-bold);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.pulse-about-approach-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.pulse-about-approach-description {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.8;
+  opacity: 0.72;
+}
+
+/* =========================================================
+APPROACH CARDS
+========================================================= */
+
+.pulse-about-approach-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.pulse-about-approach-card {
+  position: relative;
+  min-height: 290px;
+  padding: 32px 30px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 24px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.pulse-about-approach-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.pulse-about-approach-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-about-approach-card:hover::before {
+  transform: scale(1.2);
+}
+
+/* =========================================================
+CARD ICON
+========================================================= */
+
+.pulse-about-approach-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  background: var(--primary-soft);
+  color: var(--primary-color);
+}
+
+.pulse-about-approach-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+CARD CONTENT
+========================================================= */
+
+.pulse-about-approach-card-content {
+  position: relative;
+  z-index: 1;
+  padding-right: 18px;
+}
+
+.pulse-about-approach-card-content h3 {
+  margin: 0 0 13px;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+.pulse-about-approach-card-content p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.75;
+  opacity: 0.7;
+}
+
+/* =========================================================
+CARD ARROW
+========================================================= */
+
+.pulse-about-approach-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  color: var(--secondary-color);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.pulse-about-approach-arrow svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+.pulse-about-approach-card:hover .pulse-about-approach-arrow {
+  transform: translate(3px, -3px);
+  background: var(--secondary-color);
+  color: var(--white);
+}
+
+/* =========================================================
+NEST HUB
+1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-approach-section {
+    padding: 70px 0;
+  }
+
+  .pulse-about-approach-container {
+    width: 90%;
+  }
+
+  .pulse-about-approach-header {
+    max-width: 650px;
+    margin-bottom: 38px;
+  }
+
+  .pulse-about-approach-header .pulse-section-tag {
+    margin-bottom: 13px;
+  }
+
+  .pulse-about-approach-title {
+    font-size: 40px;
+  }
+
+  .pulse-about-approach-description {
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+
+  .pulse-about-approach-cards {
+    gap: 16px;
+  }
+
+  .pulse-about-approach-card {
+    min-height: 245px;
+    padding: 25px 23px;
+    border-radius: 20px;
+  }
+
+  .pulse-about-approach-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+  }
+
+  .pulse-about-approach-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pulse-about-approach-card-content h3 {
+    margin-bottom: 9px;
+    font-size: 19px;
+  }
+
+  .pulse-about-approach-card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pulse-about-approach-arrow {
+    right: 18px;
+    bottom: 18px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================================================
+IPAD MINI
+768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-approach-section {
+    padding: 80px 0;
+  }
+
+  .pulse-about-approach-container {
+    width: 88%;
+  }
+
+  .pulse-about-approach-header {
+    max-width: 600px;
+    margin-bottom: 42px;
+  }
+
+  .pulse-about-approach-title {
+    font-size: 40px;
+  }
+
+  .pulse-about-approach-description {
+    max-width: 540px;
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+
+  .pulse-about-approach-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .pulse-about-approach-card {
+    min-height: auto;
+    padding: 27px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    border-radius: 20px;
+  }
+
+  .pulse-about-approach-icon {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+  }
+
+  .pulse-about-approach-card-content {
+    padding-right: 35px;
+  }
+
+  .pulse-about-approach-card-content h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .pulse-about-approach-card-content p {
+    font-size: var(--fs-body);
+    line-height: 1.65;
+  }
+
+  .pulse-about-approach-arrow {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-approach-section {
+    padding: 65px 0;
+  }
+
+  .pulse-about-approach-container {
+    width: 88%;
+  }
+
+  .pulse-about-approach-header {
+    margin-bottom: 32px;
+  }
+
+  .pulse-about-approach-header .pulse-section-tag {
+    gap: 7px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .pulse-about-approach-header .pulse-section-tag-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .pulse-about-approach-header .pulse-section-tag-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-about-approach-title {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-about-approach-description {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .pulse-about-approach-cards {
+    gap: 14px;
+  }
+
+  .pulse-about-approach-card {
+    min-height: 0;
+    padding: 22px 20px;
+    gap: 15px;
+    border-radius: 18px;
+  }
+
+  .pulse-about-approach-card::before {
+    top: -65px;
+    right: -65px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .pulse-about-approach-icon {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .pulse-about-approach-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pulse-about-approach-card-content {
+    padding-right: 22px;
+  }
+
+  .pulse-about-approach-card-content h3 {
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .pulse-about-approach-card-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-about-approach-arrow {
+    right: 13px;
+    bottom: 13px;
+    width: 29px;
+    height: 29px;
+  }
+
+  .pulse-about-approach-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+/* =========================================================
+HUMAN FIRST SECTION
+========================================================= */
+
+.pulse-about-human-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+/* =========================================================
+CONTAINER
+========================================================= */
+
+.pulse-about-human-container {
+  width: min(1200px, 88%);
+  max-width: 1200px;
+  min-height: 520px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 75px;
+}
+
+/* =========================================================
+IMAGE SIDE
+========================================================= */
+
+.pulse-about-human-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulse-about-human-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  height: 500px;
+  overflow: visible;
+}
+
+/* =========================================================
+IMAGE
+========================================================= */
+
+.pulse-about-human-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+}
+
+/* =========================================================
+IMAGE DECORATION
+========================================================= */
+
+.pulse-about-human-image-accent {
+  position: absolute;
+  z-index: 1;
+  right: -24px;
+  bottom: -24px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  pointer-events: none;
+}
+
+/* =========================================================
+CONTENT SIDE
+========================================================= */
+
+.pulse-about-human-content {
+  width: 100%;
+  max-width: 590px;
+}
+
+/* =========================================================
+SECTION TAG
+========================================================= */
+
+.pulse-about-human-content .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 22px;
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pulse-about-human-content .pulse-section-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-about-human-content .pulse-section-tag-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+/* =========================================================
+TITLE
+========================================================= */
+
+.pulse-about-human-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(40px, 3.3vw, 58px);
+  font-weight: var(--fw-bold);
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+}
+
+.pulse-about-human-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* =========================================================
+DESCRIPTION
+========================================================= */
+
+.pulse-about-human-description {
+  max-width: 560px;
+  margin: 25px 0 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.85;
+  opacity: 0.72;
+}
+
+/* =========================================================
+DIVIDER
+========================================================= */
+
+.pulse-about-human-divider {
+  width: 75px;
+  height: 2px;
+  margin: 32px 0 18px;
+  border-radius: 10px;
+  background: var(--secondary-color);
+}
+
+/* =========================================================
+HIGHLIGHT
+========================================================= */
+
+.pulse-about-human-highlight {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+}
+
+/* =========================================================
+NEST HUB
+1024 × 600
+========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-human-section {
+    padding: 70px 0;
+  }
+
+  .pulse-about-human-container {
+    width: 90%;
+    min-height: 430px;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+  }
+
+  .pulse-about-human-image-wrap {
+    max-width: 360px;
+    height: 390px;
+  }
+
+  .pulse-about-human-image {
+    border-radius: 24px;
+  }
+
+  .pulse-about-human-image-accent {
+    right: -18px;
+    bottom: -18px;
+    width: 135px;
+    height: 135px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag {
+    margin-bottom: 15px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pulse-about-human-title {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-human-description {
+    margin-top: 17px;
+    line-height: 1.65;
+  }
+
+  .pulse-about-human-divider {
+    margin: 24px 0 14px;
+  }
+
+  .pulse-about-human-highlight {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+IPAD MINI
+768 × 1024
+========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-human-section {
+    padding: 85px 0;
+  }
+
+  .pulse-about-human-container {
+    width: 88%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .pulse-about-human-visual {
+    order: 2;
+  }
+
+  .pulse-about-human-content {
+    order: 1;
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pulse-about-human-image-wrap {
+    max-width: 500px;
+    height: 460px;
+  }
+
+  .pulse-about-human-image {
+    border-radius: 26px;
+  }
+
+  .pulse-about-human-image-accent {
+    right: -20px;
+    bottom: -20px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag {
+    justify-content: center;
+    margin-bottom: 17px;
+  }
+
+  .pulse-about-human-title {
+    font-size: 42px;
+    letter-spacing: -1.2px;
+  }
+
+  .pulse-about-human-description {
+    max-width: 570px;
+    margin: 20px auto 0;
+    line-height: 1.75;
+  }
+
+  .pulse-about-human-divider {
+    margin: 28px auto 17px;
+  }
+
+  .pulse-about-human-highlight {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+360 × 740
+========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-human-section {
+    padding: 65px 0;
+  }
+
+  .pulse-about-human-container {
+    width: 88%;
+    gap: 38px;
+  }
+
+  .pulse-about-human-image-wrap {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .pulse-about-human-image {
+    border-radius: 20px;
+  }
+
+  .pulse-about-human-image-accent {
+    right: -12px;
+    bottom: -12px;
+    width: 105px;
+    height: 105px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag {
+    gap: 7px;
+    margin-bottom: 13px;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .pulse-about-human-content .pulse-section-tag-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-about-human-title {
+    font-size: 30px;
+    line-height: 1.16;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-about-human-description {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .pulse-about-human-divider {
+    width: 55px;
+    margin: 23px auto 13px;
+  }
+
+  .pulse-about-human-highlight {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   PULSE HAVEN — MEET OUR PROFESSIONALS
+   Responsive section styles
+   ========================================================= */
+
+.pulse-about-professionals-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.pulse-about-professionals-section::before,
+.pulse-about-professionals-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.pulse-about-professionals-section::before {
+  width: 340px;
+  height: 340px;
+  top: -190px;
+  right: -120px;
+  background: var(--primary-soft);
+}
+
+.pulse-about-professionals-section::after {
+  width: 260px;
+  height: 260px;
+  left: -150px;
+  bottom: -150px;
+  background: var(--secondary-soft);
+}
+
+/* Container */
+.pulse-about-professionals-container {
+  width: min(1200px, 88%);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.pulse-about-professionals-header {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.pulse-about-professionals-header .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.4px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.pulse-about-professionals-header .pulse-section-tag-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-about-professionals-header .pulse-section-tag-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+.pulse-about-professionals-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(36px, 3.2vw, 54px);
+  font-weight: var(--fw-bold);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  overflow-wrap: anywhere;
+}
+
+.pulse-about-professionals-title span {
+  display: inline;
+  color: var(--primary-color);
+}
+
+.pulse-about-professionals-description {
+  max-width: 680px;
+  margin: 18px auto 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+  opacity: 0.82;
+}
+
+/* Professionals grid */
+.pulse-about-professionals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 26px;
+  width: 100%;
+}
+
+/* Professional card */
+.pulse-about-professional-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--primary-soft);
+  border-radius: 24px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pulse-about-professional-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 18px 42px rgba(24, 33, 47, 0.16);
+}
+
+/* Image */
+.pulse-about-professional-image-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: var(--primary-soft);
+}
+
+.pulse-about-professional-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s ease;
+}
+
+.pulse-about-professional-card:hover .pulse-about-professional-image {
+  transform: scale(1.045);
+}
+
+/* Image icon */
+.pulse-about-professional-icon {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 13px;
+  background: var(--white);
+  color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-about-professional-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+/* Card content */
+.pulse-about-professional-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 24px 26px 27px;
+}
+
+.pulse-about-professional-number {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--secondary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.4px;
+  line-height: 1.4;
+}
+
+.pulse-about-professional-name {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  letter-spacing: -0.35px;
+  overflow-wrap: anywhere;
+}
+
+.pulse-about-professional-role {
+  margin: 7px 0 0;
+  color: var(--primary-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.45;
+}
+
+.pulse-about-professional-description {
+  max-width: 100%;
+  margin: 11px 0 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  line-height: 1.65;
+  opacity: 0.82;
+}
+
+/* Keyboard accessibility and reduced motion */
+.pulse-about-professional-card:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-about-professional-card,
+  .pulse-about-professional-image {
+    transition: none;
+  }
+
+  .pulse-about-professional-card:hover,
+  .pulse-about-professional-card:hover .pulse-about-professional-image {
+    transform: none;
+  }
+}
+
+/* Nest Hub — 1024 × 600 */
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-professionals-section {
+    padding: 64px 0;
+  }
+
+  .pulse-about-professionals-container {
+    width: min(92%, 960px);
+  }
+
+  .pulse-about-professionals-header {
+    margin-bottom: 34px;
+  }
+
+  .pulse-about-professionals-title {
+    font-size: clamp(34px, 4vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-professionals-description {
+    margin-top: 13px;
+    line-height: 1.55;
+  }
+
+  .pulse-about-professionals-grid {
+    gap: 18px;
+  }
+
+  .pulse-about-professional-card {
+    border-radius: 20px;
+  }
+
+  .pulse-about-professional-image-wrap {
+    height: 220px;
+  }
+
+  .pulse-about-professional-icon {
+    right: 13px;
+    bottom: 13px;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .pulse-about-professional-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pulse-about-professional-content {
+    padding: 18px 19px 21px;
+  }
+
+  .pulse-about-professional-name {
+    font-size: 18px;
+  }
+
+  .pulse-about-professional-description {
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet / iPad Mini — 768 × 1024 */
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-professionals-section {
+    padding: 78px 0;
+  }
+
+  .pulse-about-professionals-container {
+    width: min(90%, 680px);
+  }
+
+  .pulse-about-professionals-header {
+    max-width: 620px;
+    margin-bottom: 38px;
+  }
+
+  .pulse-about-professionals-title {
+    font-size: clamp(34px, 5.5vw, 43px);
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-professionals-description {
+    margin-top: 16px;
+    line-height: 1.65;
+  }
+
+  .pulse-about-professionals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .pulse-about-professional-image-wrap {
+    height: 250px;
+  }
+
+  .pulse-about-professional-content {
+    padding: 21px 21px 23px;
+  }
+
+  .pulse-about-professional-name {
+    font-size: 20px;
+  }
+
+  /* Keep the final card centered when there are three cards. */
+  .pulse-about-professional-card:nth-child(3):last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+}
+
+/* Smaller tablets and large phones */
+@media screen and (max-width: 600px) {
+  .pulse-about-professionals-section {
+    padding: 68px 0;
+  }
+
+  .pulse-about-professionals-container {
+    width: min(90%, 460px);
+  }
+
+  .pulse-about-professionals-header {
+    margin-bottom: 30px;
+  }
+
+  .pulse-about-professionals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pulse-about-professional-card:nth-child(3):last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .pulse-about-professional-image-wrap {
+    height: clamp(220px, 62vw, 290px);
+  }
+}
+
+/* Samsung Galaxy S8+ — 360 × 740 */
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-professionals-section {
+    padding: 58px 0;
+  }
+
+  .pulse-about-professionals-container {
+    width: 90%;
+  }
+
+  .pulse-about-professionals-header {
+    margin-bottom: 27px;
+  }
+
+  .pulse-about-professionals-header .pulse-section-tag {
+    gap: 7px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .pulse-about-professionals-header .pulse-section-tag-icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+  }
+
+  .pulse-about-professionals-header .pulse-section-tag-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-about-professionals-title {
+    font-size: 29px;
+    line-height: 1.15;
+    letter-spacing: -0.7px;
+  }
+
+  .pulse-about-professionals-description {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-about-professionals-grid {
+    gap: 18px;
+  }
+
+  .pulse-about-professional-card {
+    border-radius: 18px;
+  }
+
+  .pulse-about-professional-image-wrap {
+    height: 230px;
+  }
+
+  .pulse-about-professional-icon {
+    right: 12px;
+    bottom: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .pulse-about-professional-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pulse-about-professional-content {
+    padding: 18px 18px 21px;
+  }
+
+  .pulse-about-professional-number {
+    margin-bottom: 6px;
+  }
+
+  .pulse-about-professional-name {
+    font-size: 18px;
+  }
+
+  .pulse-about-professional-role {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .pulse-about-professional-description {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   PULSE HAVEN — ABOUT PAGE CTA SECTION
+   ========================================================= */
+
+.pulse-about-cta-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+/* CTA CONTAINER */
+.pulse-about-cta-container {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(1200px, 88%);
+  max-width: 1200px;
+  min-height: 390px;
+  margin: 0 auto;
+  padding: 64px 72px;
+  overflow: hidden;
+  border: 1px solid var(--primary-soft);
+  border-radius: 32px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+/* DECORATIVE BACKGROUND SHAPES */
+.pulse-about-cta-container::before,
+.pulse-about-cta-container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  animation: pulseAboutCtaFloat 7s ease-in-out infinite;
+}
+
+.pulse-about-cta-container::before {
+  top: -90px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: var(--primary-soft);
+}
+
+.pulse-about-cta-container::after {
+  right: -100px;
+  bottom: -110px;
+  width: 280px;
+  height: 280px;
+  background: var(--secondary-soft);
+  animation-delay: -3s;
+}
+
+/* CTA CONTENT */
+.pulse-about-cta-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 760px;
+}
+
+/* SECTION TAG */
+.pulse-about-cta-content .pulse-section-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 0 20px;
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.pulse-about-cta-content .pulse-section-tag-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-about-cta-content .pulse-section-tag-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+}
+
+/* CTA TITLE */
+.pulse-about-cta-title {
+  max-width: 100%;
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(36px, 3.2vw, 56px);
+  font-weight: var(--fw-bold);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  overflow-wrap: anywhere;
+}
+
+.pulse-about-cta-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* CTA DESCRIPTION */
+.pulse-about-cta-description {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+  opacity: 0.82;
+}
+
+/* CTA BUTTON */
+.pulse-about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  max-width: 100%;
+  min-height: 48px;
+  margin-top: 28px;
+  padding: 13px 22px;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pulse-about-cta-button svg {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.pulse-about-cta-button:hover {
+  transform: translateY(-3px);
+  border-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-about-cta-button:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.pulse-about-cta-button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+/* FLOATING ANIMATION */
+@keyframes pulseAboutCtaFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(18px, -14px, 0) scale(1.06);
+  }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .pulse-about-cta-container::before,
+  .pulse-about-cta-container::after,
+  .pulse-about-cta-button,
+  .pulse-about-cta-button svg {
+    animation: none;
+    transition: none;
+  }
+
+  .pulse-about-cta-button:hover,
+  .pulse-about-cta-button:hover svg {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   NEST HUB — 1024 × 600
+   ========================================================= */
+
+@media screen and (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-cta-section {
+    padding: 64px 0;
+  }
+
+  .pulse-about-cta-container {
+    width: 90%;
+    min-height: 320px;
+    padding: 48px 52px;
+    border-radius: 26px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pulse-about-cta-title {
+    font-size: clamp(34px, 4vw, 40px);
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-cta-description {
+    max-width: 600px;
+    margin-top: 13px;
+    line-height: 1.55;
+  }
+
+  .pulse-about-cta-button {
+    margin-top: 21px;
+    padding: 12px 19px;
+  }
+
+  .pulse-about-cta-container::before {
+    width: 190px;
+    height: 190px;
+  }
+
+  .pulse-about-cta-container::after {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+   ========================================================= */
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-cta-section {
+    padding: 78px 0;
+  }
+
+  .pulse-about-cta-container {
+    width: 90%;
+    min-height: 350px;
+    padding: 54px 38px;
+    border-radius: 26px;
+  }
+
+  .pulse-about-cta-content {
+    max-width: 620px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag {
+    margin-bottom: 16px;
+  }
+
+  .pulse-about-cta-title {
+    font-size: clamp(34px, 5.5vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  .pulse-about-cta-description {
+    max-width: 570px;
+    margin-top: 16px;
+    line-height: 1.65;
+  }
+
+  .pulse-about-cta-button {
+    margin-top: 24px;
+  }
+
+  .pulse-about-cta-container::before {
+    width: 210px;
+    height: 210px;
+  }
+
+  .pulse-about-cta-container::after {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+/* SMALL TABLETS AND PHONES */
+@media screen and (max-width: 600px) {
+  .pulse-about-cta-section {
+    padding: 64px 0;
+  }
+
+  .pulse-about-cta-container {
+    width: min(90%, 460px);
+    min-height: 0;
+    padding: 44px 24px;
+    border-radius: 22px;
+  }
+
+  .pulse-about-cta-title {
+    font-size: clamp(30px, 7vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-about-cta-description {
+    margin-top: 13px;
+    font-size: var(--fs-small);
+    line-height: 1.6;
+  }
+
+  .pulse-about-cta-button {
+    margin-top: 22px;
+  }
+
+  .pulse-about-cta-container::before {
+    width: 170px;
+    height: 170px;
+  }
+
+  .pulse-about-cta-container::after {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+   ========================================================= */
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-cta-section {
+    padding: 56px 0;
+  }
+
+  .pulse-about-cta-container {
+    width: 90%;
+    min-height: 0;
+    padding: 38px 18px;
+    border-radius: 20px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag {
+    gap: 7px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag-icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+  }
+
+  .pulse-about-cta-content .pulse-section-tag-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-about-cta-title {
+    font-size: 29px;
+    line-height: 1.15;
+    letter-spacing: -0.7px;
+  }
+
+  .pulse-about-cta-description {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-about-cta-button {
+    gap: 7px;
+    min-height: 44px;
+    margin-top: 20px;
+    padding: 11px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .pulse-about-cta-button svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pulse-about-cta-container::before {
+    top: -70px;
+    left: -70px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .pulse-about-cta-container::after {
+    right: -70px;
+    bottom: -75px;
+    width: 170px;
+    height: 170px;
+  }
+}

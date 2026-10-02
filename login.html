@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseHaven</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="login.css" />
+
+    <script src="https://unpkg.com/lucide@0.468.0" defer></script>
+    <script src="components/component.js" defer></script>
+    <script src="global.js" defer></script>
+    <script src="login.js" defer></script>
+  </head>
+  <body>
+    <!-- =========================================================
+       PULSE HAVEN — LOGIN PAGE
+  ========================================================= -->
+
+    <main class="login-page">
+      <!-- =========================================================
+         PREMIUM ANIMATED BACKGROUND
+    ========================================================= -->
+
+      <div class="login-bg-animation" aria-hidden="true">
+        <!-- Soft glowing orbs -->
+        <span class="login-bg-orb login-bg-orb-one"></span>
+        <span class="login-bg-orb login-bg-orb-two"></span>
+        <span class="login-bg-orb login-bg-orb-three"></span>
+        <span class="login-bg-orb login-bg-orb-four"></span>
+
+        <!-- Floating particles -->
+        <span class="login-bg-particle particle-one"></span>
+        <span class="login-bg-particle particle-two"></span>
+        <span class="login-bg-particle particle-three"></span>
+        <span class="login-bg-particle particle-four"></span>
+        <span class="login-bg-particle particle-five"></span>
+        <span class="login-bg-particle particle-six"></span>
+        <span class="login-bg-particle particle-seven"></span>
+        <span class="login-bg-particle particle-eight"></span>
+
+        <!-- Floating rings -->
+        <span class="login-bg-ring ring-one"></span>
+        <span class="login-bg-ring ring-two"></span>
+        <span class="login-bg-ring ring-three"></span>
+
+        <!-- Animated flowing lines -->
+        <span class="login-bg-line line-one"></span>
+        <span class="login-bg-line line-two"></span>
+        <span class="login-bg-line line-three"></span>
+
+        <!-- Medical decorative elements -->
+        <span class="login-bg-symbol symbol-one">
+          <i data-lucide="heart-pulse"></i>
+        </span>
+
+        <span class="login-bg-symbol symbol-two">
+          <i data-lucide="activity"></i>
+        </span>
+
+        <span class="login-bg-symbol symbol-three">
+          <i data-lucide="plus"></i>
+        </span>
+
+        <!-- Subtle background grid -->
+        <span class="login-bg-grid"></span>
+      </div>
+
+      <!-- =========================================================
+         FLOATING PAGE CONTROLS
+         TOP RIGHT CORNER
+    ========================================================= -->
+
+      <div class="login-page-controls">
+        <!-- RTL Toggle -->
+        <button
+          type="button"
+          class="login-control-btn"
+          id="rtlToggle"
+          aria-label="Toggle RTL"
+          title="Toggle text direction"
+        >
+          <i data-lucide="languages"></i>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button
+          type="button"
+          class="login-control-btn"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+
+      <!-- =========================================================
+         CENTERED LOGIN CARD
+    ========================================================= -->
+
+      <section class="login-container">
+        <!-- =======================================================
+           CENTERED LOGO AND BRAND
+      ======================================================== -->
+
+        <a
+          href="home1.html"
+          class="login-brand"
+          aria-label="Pulse Haven Home"
+        >
+          <div class="login-brand-row">
+            <img
+              src="../images/brand.png"
+              alt="Pulse Haven Logo"
+              class="login-brand-image"
+            />
+
+            <div class="login-brand-text">
+              <div class="login-brand-name">
+                <span class="login-brand-primary">Pulse</span
+                ><span class="login-brand-secondary"> Haven</span>
+              </div>
+
+              <div class="login-brand-tagline">where care matters</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- =======================================================
+           LOGIN INTRO
+      ======================================================== -->
+
+        <div class="login-intro">
+          <span class="login-intro-label"> WELCOME BACK </span>
+
+          <p>
+            Sign in to your account to manage your health and stay connected
+            with your care.
+          </p>
+        </div>
+
+        <!-- =======================================================
+           LOGIN FORM
+      ======================================================== -->
+
+        <form class="login-form" id="loginForm">
+          <!-- =====================================================
+             EMAIL ADDRESS
+        ====================================================== -->
+
+          <div class="login-field">
+            <label for="loginEmail"> Email Address </label>
+
+            <div class="login-input-wrapper">
+              <i data-lucide="mail" aria-hidden="true"></i>
+
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- =====================================================
+             PASSWORD
+        ====================================================== -->
+
+          <div class="login-field">
+            <label for="loginPassword"> Password </label>
+
+            <div class="login-input-wrapper">
+              <i data-lucide="lock" aria-hidden="true"></i>
+
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                class="login-password-toggle"
+                id="loginPasswordToggle"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- =====================================================
+             REMEMBER ME AND FORGOT PASSWORD
+        ====================================================== -->
+
+          <div class="login-options">
+            <label class="login-remember">
+              <input type="checkbox" id="loginRemember" name="remember" />
+
+              <span>Remember Me</span>
+            </label>
+
+            <a
+              href="../forgot-password/forgot-password.html"
+              class="login-forgot"
+            >
+              Forgot Password?
+            </a>
+          </div>
+
+          <!-- =====================================================
+             LOGIN BUTTON
+        ====================================================== -->
+
+          <button type="submit" class="login-submit">
+            <span>Sign In</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- =====================================================
+             SOCIAL LOGIN DIVIDER
+        ====================================================== -->
+
+          <div class="login-divider">
+            <span></span>
+
+            <p>Or continue with</p>
+
+            <span></span>
+          </div>
+
+          <!-- =====================================================
+             SOCIAL LOGIN OPTIONS
+             GOOGLE AND APPLE ONLY
+        ====================================================== -->
+
+          <div class="login-social-options">
+            <!-- GOOGLE -->
+
+            <button
+              type="button"
+              class="login-social-btn login-google"
+              aria-label="Continue with Google"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="social-google-icon"
+              >
+                <path
+                  fill="#4285F4"
+                  d="M21.35 12.27c0-.79-.07-1.55-.22-2.27H12v4.3h5.22a4.46 4.46 0 0 1-1.94 2.93v2.43h3.14c1.84-1.69 2.93-4.18 2.93-7.39z"
+                />
+
+                <path
+                  fill="#34A853"
+                  d="M12 21.75c2.63 0 4.84-.87 6.45-2.36l-3.14-2.43c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.3v2.5A9.74 9.74 0 0 0 12 21.75z"
+                />
+
+                <path
+                  fill="#FBBC05"
+                  d="M6.54 13.85A5.85 5.85 0 0 1 6.23 12c0-.64.11-1.27.31-1.85v-2.5H3.3A9.75 9.75 0 0 0 2.25 12c0 1.57.38 3.06 1.05 4.35l3.24-2.5z"
+                />
+
+                <path
+                  fill="#EA4335"
+                  d="M12 6.12c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.2 14.63 2.25 12 2.25a9.74 9.74 0 0 0-8.7 5.4l3.24 2.5C6.31 7.84 8.46 6.12 12 6.12z"
+                />
+              </svg>
+
+              <span>Google</span>
+            </button>
+
+            <!-- APPLE -->
+
+            <button
+              type="button"
+              class="login-social-btn login-apple"
+              aria-label="Continue with Apple"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16.365 1.43c0 1.14-.417 2.207-1.11 3.006-.748.858-1.97 1.52-3.007 1.43-.13-1.08.4-2.22 1.11-3.006.78-.86 2.14-1.5 3.007-1.43ZM20.94 17.06c-.49 1.1-.72 1.59-1.35 2.56-.88 1.35-2.12 3.04-3.65 3.05-1.35.01-1.7-.89-3.54-.88-1.84.01-2.23.89-3.58.88-1.53-.01-2.71-1.54-3.59-2.89-2.45-3.75-2.71-8.15-1.2-10.5 1.07-1.67 2.76-2.65 4.35-2.65 1.62 0 2.64.89 3.99.89 1.31 0 2.11-.89 4-.89 1.43 0 2.94.78 4.01 2.12-3.53 1.94-2.96 6.99.56 8.31Z"
+                />
+              </svg>
+
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- =====================================================
+             SIGN UP LINK
+        ====================================================== -->
+
+          <p class="login-signup-link">
+            Don't have an account?
+
+            <a href="/signup.html">
+              Sign Up
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

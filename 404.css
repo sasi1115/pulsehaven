@@ -1,0 +1,1235 @@
+/* =========================================================
+   PULSE HAVEN - 404 ERROR PAGE
+   COMPACT 100VH LAYOUT
+========================================================= */
+
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.error-page,
+.error-page * {
+  box-sizing: border-box;
+}
+
+.error-page {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 0;
+  padding: 12px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 12% 18%,
+      var(--primary-soft),
+      var(--light-bg) 55%
+    ),
+    var(--light-bg);
+  color: var(--text-color);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.error-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.error-orb {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.error-orb-one {
+  top: 6%;
+  left: -100px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, var(--primary-soft), var(--light-bg) 70%);
+  animation: errorOrbOne 12s ease-in-out infinite;
+}
+
+.error-orb-two {
+  right: -100px;
+  bottom: 3%;
+  width: 290px;
+  height: 290px;
+  background: radial-gradient(
+    circle,
+    var(--secondary-soft),
+    var(--light-bg) 70%
+  );
+  animation: errorOrbTwo 14s ease-in-out infinite;
+}
+
+.error-orb-three {
+  top: 42%;
+  right: 12%;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, var(--primary-soft), var(--light-bg) 70%);
+  animation: errorOrbOne 10s ease-in-out infinite reverse;
+}
+
+/* Decorative lines */
+
+.error-line {
+  position: absolute;
+  display: block;
+  height: 1px;
+  opacity: 0.7;
+  background: linear-gradient(
+    90deg,
+    var(--light-bg),
+    var(--primary-soft),
+    var(--light-bg)
+  );
+}
+
+.error-line-one {
+  top: 23%;
+  left: -8%;
+  width: 38%;
+  transform: rotate(-28deg);
+}
+
+.error-line-two {
+  right: -8%;
+  bottom: 21%;
+  width: 38%;
+  background: linear-gradient(
+    90deg,
+    var(--light-bg),
+    var(--secondary-soft),
+    var(--light-bg)
+  );
+  transform: rotate(-28deg);
+}
+
+/* Decorative circles */
+
+.error-circle {
+  position: absolute;
+  display: block;
+  border: 1px solid var(--primary-soft);
+  border-radius: 50%;
+}
+
+.error-circle-one {
+  top: 14%;
+  right: 17%;
+  width: 58px;
+  height: 58px;
+  animation: errorCircleRotate 18s linear infinite;
+}
+
+.error-circle-two {
+  bottom: 12%;
+  left: 14%;
+  width: 80px;
+  height: 80px;
+  border-color: var(--secondary-soft);
+  animation: errorCircleRotate 24s linear infinite reverse;
+}
+
+/* =========================================================
+   FLOATING MEDICAL CARDS
+========================================================= */
+
+.error-floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 13px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  animation: errorFloating 6s ease-in-out infinite;
+}
+
+.error-floating-card i {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color);
+  stroke-width: 1.7;
+}
+
+.error-card-one {
+  top: 23%;
+  left: 14%;
+}
+
+.error-card-two {
+  top: 37%;
+  right: 12%;
+  border-color: var(--secondary-soft);
+  animation-delay: 1.5s;
+}
+
+.error-card-two i {
+  color: var(--secondary-color);
+}
+
+.error-card-three {
+  right: 19%;
+  bottom: 15%;
+  animation-delay: 2.5s;
+}
+
+.error-card-three i {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   FLOATING DOCUMENTS
+========================================================= */
+
+.error-document {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 55px;
+  height: 69px;
+  padding: 13px 9px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 10px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  opacity: 0.55;
+  animation: errorFloating 8s ease-in-out infinite;
+}
+
+.error-document span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 20px;
+  background: var(--primary-soft);
+}
+
+.error-document span:first-child {
+  width: 65%;
+  background: var(--secondary-soft);
+}
+
+.error-document span:last-child {
+  width: 75%;
+}
+
+.error-document-one {
+  top: 17%;
+  right: 29%;
+}
+
+.error-document-two {
+  bottom: 15%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+/* =========================================================
+   TOP CONTROLS
+========================================================= */
+
+.error-controls {
+  position: absolute;
+  top: 16px;
+  right: 3%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rtl-toggle,
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 10px;
+  background: var(--light-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.rtl-toggle:hover,
+.theme-toggle:hover {
+ background-color: var(--primary-color);
+ 
+  
+}
+
+.rtl-toggle[aria-pressed="true"] {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.theme-toggle[aria-pressed="true"] {
+  border-color: var(--secondary-color);
+  background: var(--secondary-soft);
+}
+
+.theme-toggle i {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+.rtl-toggle:focus-visible,
+.theme-toggle:focus-visible,
+.error-home-btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   MAIN ERROR CONTENT
+========================================================= */
+
+.error-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(1000px, 92%);
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 35px 0 10px;
+  text-align: center;
+}
+
+/* =========================================================
+   LOGO AND BRAND
+========================================================= */
+
+.error-brand {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  margin-bottom: 11px;
+  color: var(--text-color);
+  text-decoration: none;
+  direction: ltr;
+  transition: opacity 0.25s ease;
+}
+
+.error-brand:hover {
+  opacity: 0.82;
+}
+
+.error-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+}
+
+.error-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+.error-brand-name {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 25px;
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.error-brand-primary {
+  color: var(--primary-color);
+}
+
+.error-brand-secondary {
+  margin-left: 0.14em;
+  color: var(--secondary-color);
+}
+
+.error-tagline {
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+}
+
+/* =========================================================
+   ERROR NUMBER
+========================================================= */
+
+.error-number-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.error-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: clamp(110px, 10vw, 155px);
+  font-weight: var(--fw-bold);
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+  font-variant-numeric: lining-nums;
+}
+
+.error-four {
+  display: inline-block;
+  color: var(--primary-color);
+  line-height: 0.9;
+  animation: errorFourEntrance 0.7s ease both;
+}
+
+.error-four-two {
+  animation-delay: 0.12s;
+}
+
+/* =========================================================
+   ANIMATED ZERO
+========================================================= */
+
+.error-zero {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 0.83em;
+  height: 0.83em;
+  margin: 0 1px;
+  border: 1px solid var(--primary-soft);
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  box-shadow: var(--box-shadow);
+  vertical-align: middle;
+  animation: errorZeroPulse 3s ease-in-out infinite;
+}
+
+.error-zero::before {
+  position: absolute;
+  inset: -7%;
+  border: 1px solid var(--secondary-soft);
+  border-radius: 50%;
+  content: "";
+  animation: errorZeroOrbit 6s linear infinite;
+}
+
+.error-zero-ring {
+  position: absolute;
+  inset: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.065em solid var(--primary-color);
+  border-top-color: var(--secondary-color);
+  border-radius: 50%;
+  animation: errorZeroRotate 6s linear infinite;
+}
+
+.error-zero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53%;
+  height: 53%;
+  border: 1px solid var(--secondary-soft);
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  color: var(--secondary-color);
+  animation: errorZeroCounterRotate 6s linear infinite;
+}
+
+.error-zero-inner i {
+  width: 68%;
+  height: 68%;
+  stroke-width: 2;
+}
+
+/* =========================================================
+   PAGE NOT FOUND LABEL
+========================================================= */
+
+.error-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 9px;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  letter-spacing: 0.2em;
+}
+
+.error-eyebrow-dot {
+  display: block;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 3px var(--secondary-soft);
+  animation: errorDotPulse 2s ease-in-out infinite;
+}
+
+/* =========================================================
+   ERROR HEADING AND DESCRIPTION
+========================================================= */
+
+.error-heading {
+  width: 100%;
+  max-width: 720px;
+}
+
+.error-heading h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(24px, 2vw, 34px);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.error-heading h2 span {
+  display: block;
+  margin-top: 2px;
+  color: var(--primary-color);
+}
+
+.error-description {
+  max-width: 590px;
+  margin: 11px auto 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+  opacity: 0.78;
+}
+
+/* =========================================================
+   BACK TO HOME BUTTON
+========================================================= */
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.error-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 155px;
+  min-height: 40px;
+  padding: 9px 19px;
+  border: 1px solid var(--primary-color);
+  border-radius: 11px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-size: var(--fs-button);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  text-decoration: none;
+  box-shadow: var(--box-shadow);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.error-home-btn i {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.error-home-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* =========================================================
+   RTL LAYOUT
+========================================================= */
+
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-brand {
+  flex-direction: row-reverse;
+}
+
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-brand-text {
+  align-items: flex-end;
+  text-align: right;
+  direction: rtl;
+}
+
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-brand-name {
+  direction: ltr;
+}
+
+/* Keep the error number in its normal reading order. */
+
+.error-number {
+  direction: ltr;
+}
+
+/* RTL heading and description */
+
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-heading,
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-description,
+:is(html[dir="rtl"], body[dir="rtl"], .rtl-mode, .rtl) .error-eyebrow {
+  direction: rtl;
+}
+
+/* =========================================================
+   NEST HUB
+   1024 x 600
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .error-content {
+    width: 90%;
+    padding: 32px 0 7px;
+  }
+
+  .error-controls {
+    top: 10px;
+    right: 2.5%;
+    gap: 7px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 9px;
+    font-size: 10px;
+  }
+
+  .theme-toggle i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .error-brand {
+    gap: 7px;
+    margin-bottom: 7px;
+  }
+
+  .error-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .error-brand-name {
+    font-size: 21px;
+  }
+
+  .error-tagline {
+    font-size: 10px;
+  }
+
+  .error-number {
+    gap: 3px;
+    font-size: 108px;
+  }
+
+  .error-zero {
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .error-zero-ring {
+    border-width: 0.06em;
+  }
+
+  .error-eyebrow {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .error-eyebrow-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .error-heading h2 {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .error-heading h2 span {
+    margin-top: 1px;
+  }
+
+  .error-description {
+    max-width: 500px;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .error-actions {
+    margin-top: 11px;
+  }
+
+  .error-home-btn {
+    min-width: 135px;
+    min-height: 34px;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 9px;
+    font-size: 11px;
+  }
+
+  .error-home-btn i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .error-floating-card {
+    width: 33px;
+    height: 33px;
+    border-radius: 10px;
+  }
+
+  .error-floating-card i {
+    width: 16px;
+    height: 16px;
+  }
+
+  .error-document {
+    width: 42px;
+    height: 54px;
+    gap: 5px;
+    padding: 10px 7px;
+  }
+
+  .error-orb-one {
+    width: 190px;
+    height: 190px;
+  }
+
+  .error-orb-two {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 x 1024
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .error-content {
+    width: 92%;
+    padding: 45px 0 12px;
+  }
+
+  .error-controls {
+    top: 16px;
+    right: 4%;
+    gap: 8px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+  }
+
+  .error-brand {
+    gap: 9px;
+    margin-bottom: 12px;
+  }
+
+  .error-logo {
+    width: 43px;
+    height: 43px;
+  }
+
+  .error-brand-name {
+    font-size: 25px;
+  }
+
+  .error-tagline {
+    font-size: var(--fs-label);
+  }
+
+  .error-number {
+    gap: 4px;
+    font-size: 130px;
+  }
+
+  .error-zero {
+    width: 0.82em;
+    height: 0.82em;
+  }
+
+  .error-eyebrow {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-size: var(--fs-label);
+  }
+
+  .error-heading h2 {
+    font-size: 32px;
+  }
+
+  .error-description {
+    max-width: 540px;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .error-actions {
+    margin-top: 15px;
+  }
+
+  .error-home-btn {
+    min-width: 145px;
+    min-height: 39px;
+    padding: 8px 17px;
+  }
+
+  .error-floating-card-one {
+    top: 19%;
+    left: 4%;
+  }
+
+  .error-card-two {
+    top: 41%;
+    right: 3%;
+  }
+
+  .error-card-three {
+    right: 6%;
+    bottom: 16%;
+  }
+
+  .error-document-one {
+    top: 16%;
+    right: 12%;
+  }
+
+  .error-document-two {
+    bottom: 12%;
+    left: 5%;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+
+   360 x 740
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .error-page {
+    padding: 8px;
+  }
+
+  .error-content {
+    width: 100%;
+    padding: 36px 0 8px;
+  }
+
+  .error-controls {
+    top: 9px;
+    right: 3%;
+    gap: 6px;
+  }
+
+  .rtl-toggle,
+  .theme-toggle {
+    min-width: 29px;
+    height: 29px;
+    padding: 0 7px;
+    border-radius: 8px;
+    font-size: 9px;
+  }
+
+  .theme-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .error-brand {
+    gap: 7px;
+    margin-bottom: 9px;
+  }
+
+  .error-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .error-brand-name {
+    font-size: 19px;
+  }
+
+  .error-brand-text {
+    gap: 1px;
+  }
+
+  .error-tagline {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+
+  .error-number {
+    gap: 2px;
+    font-size: clamp(76px, 29vw, 100px);
+  }
+
+  .error-zero {
+    width: 0.79em;
+    height: 0.79em;
+    margin: 0;
+  }
+
+  .error-zero::before {
+    inset: -8%;
+  }
+
+  .error-zero-ring {
+    border-width: 0.055em;
+  }
+
+  .error-eyebrow {
+    gap: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .error-eyebrow-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .error-heading {
+    width: 100%;
+  }
+
+  .error-heading h2 {
+    font-size: 23px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .error-heading h2 span {
+    margin-top: 1px;
+  }
+
+  .error-description {
+    max-width: 310px;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .error-actions {
+    margin-top: 13px;
+  }
+
+  .error-home-btn {
+    min-width: 132px;
+    min-height: 35px;
+    gap: 6px;
+    padding: 7px 13px;
+    border-radius: 9px;
+    font-size: 11px;
+  }
+
+  .error-home-btn i {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Subtle mobile background */
+
+  .error-orb-one {
+    top: 10%;
+    left: -145px;
+    width: 205px;
+    height: 205px;
+  }
+
+  .error-orb-two {
+    right: -150px;
+    bottom: 4%;
+    width: 215px;
+    height: 215px;
+  }
+
+  .error-orb-three {
+    display: none;
+  }
+
+  .error-circle-one {
+    top: 14%;
+    right: 5%;
+    width: 37px;
+    height: 37px;
+  }
+
+  .error-circle-two {
+    bottom: 9%;
+    left: 4%;
+    width: 52px;
+    height: 52px;
+  }
+
+  .error-floating-card {
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+  }
+
+  .error-floating-card i {
+    width: 13px;
+    height: 13px;
+  }
+
+  .error-card-one {
+    top: 29%;
+    left: 1%;
+  }
+
+  .error-card-two {
+    top: 43%;
+    right: 1%;
+  }
+
+  .error-card-three {
+    right: 3%;
+    bottom: 13%;
+  }
+
+  .error-document {
+    width: 35px;
+    height: 46px;
+    gap: 4px;
+    padding: 9px 6px;
+    opacity: 0.35;
+  }
+
+  .error-document span {
+    height: 2px;
+  }
+
+  .error-document-one {
+    top: 22%;
+    right: 3%;
+  }
+
+  .error-document-two {
+    bottom: 15%;
+    left: 2%;
+  }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes errorFloating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes errorZeroPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.045);
+  }
+}
+
+@keyframes errorZeroRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes errorZeroCounterRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes errorZeroOrbit {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.96);
+    opacity: 0.5;
+  }
+}
+
+@keyframes errorFourEntrance {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes errorDotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px var(--secondary-soft);
+  }
+
+  50% {
+    box-shadow: 0 0 0 5px var(--secondary-soft);
+  }
+}
+
+@keyframes errorOrbOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(12px, -10px);
+  }
+}
+
+@keyframes errorOrbTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-12px, 10px);
+  }
+}
+
+@keyframes errorCircleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .error-page *,
+  .error-page *::before,
+  .error-page *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

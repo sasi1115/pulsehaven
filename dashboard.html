@@ -1,0 +1,1435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pulse Haven</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0" defer></script>
+    <script src="components/component.js" defer></script>
+    <script src="global.js" defer></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+
+  <body>
+    <!-- =========================================================
+         PATIENT DASHBOARD
+    ========================================================== -->
+
+    <div class="dashboard-layout">
+      <!-- =======================================================
+           MOBILE / TABLET OVERLAY
+      ======================================================== -->
+
+      <div class="dashboard-overlay" id="dashboardOverlay"></div>
+
+      <!-- =======================================================
+           SIDEBAR
+      ======================================================== -->
+
+      <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <!-- SIDEBAR BRAND -->
+
+        <div class="dashboard-sidebar-header">
+          <a href="home1.html" class="dashboard-brand">
+            <div class="dashboard-brand-row">
+              <img src="images/brand.png" alt="Pulse Haven Logo" />
+
+              <div class="dashboard-brand-text">
+                <div class="dashboard-brand-name">
+                  <span class="dashboard-brand-primary"> Pulse </span>
+                  <span class="dashboard-brand-secondary"> Haven </span>
+                </div>
+
+                <div class="dashboard-brand-tagline">WHERE CARE MATTERS</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- MOBILE / TABLET CLOSE -->
+
+          <button
+            type="button"
+            class="dashboard-sidebar-close"
+            id="dashboardSidebarClose"
+            aria-label="Close navigation"
+          >
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav
+          class="dashboard-navigation"
+          aria-label="Patient dashboard navigation"
+        >
+          <!-- MAIN -->
+
+          <div class="dashboard-nav-group">
+            <span class="dashboard-nav-label"> MAIN </span>
+
+            <button
+              type="button"
+              class="dashboard-nav-item active"
+              data-section="overview"
+            >
+              <i data-lucide="layout-dashboard"></i>
+              <span>Overview</span>
+            </button>
+          </div>
+
+          <!-- APPOINTMENTS -->
+
+          <div class="dashboard-nav-group">
+            <span class="dashboard-nav-label"> APPOINTMENTS </span>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="schedule-visit"
+            >
+              <i data-lucide="calendar-plus"></i>
+              <span>Schedule Visit</span>
+            </button>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="appointment-history"
+            >
+              <i data-lucide="calendar-clock"></i>
+              <span>Appointments</span>
+            </button>
+          </div>
+
+          <!-- HEALTH -->
+
+          <div class="dashboard-nav-group">
+            <span class="dashboard-nav-label"> HEALTH </span>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="vitals"
+            >
+              <i data-lucide="heart-pulse"></i>
+              <span>Vitals History</span>
+            </button>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="visit-notes"
+            >
+              <i data-lucide="notebook-pen"></i>
+              <span>Visit Notes</span>
+            </button>
+          </div>
+
+          <!-- REMINDERS -->
+
+          <div class="dashboard-nav-group">
+            <span class="dashboard-nav-label"> REMINDERS </span>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="reminders"
+            >
+              <i data-lucide="bell-ring"></i>
+              <span>Appointment Reminders</span>
+            </button>
+          </div>
+
+          <!-- ACCOUNT -->
+
+          <div class="dashboard-nav-group">
+            <span class="dashboard-nav-label"> ACCOUNT </span>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="subscription"
+            >
+              <i data-lucide="credit-card"></i>
+              <span>Subscription</span>
+            </button>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="payments"
+            >
+              <i data-lucide="receipt-text"></i>
+              <span>Payments</span>
+            </button>
+
+            <button
+              type="button"
+              class="dashboard-nav-item"
+              data-section="profile"
+            >
+              <i data-lucide="user-round"></i>
+              <span>Profile</span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="dashboard-sidebar-footer">
+          <button type="button" class="dashboard-logout" id="dashboardLogout">
+            <i data-lucide="log-out"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- =======================================================
+           DASHBOARD MAIN
+      ======================================================== -->
+
+      <main class="dashboard-main">
+        <!-- =====================================================
+             TOP NAVBAR
+        ====================================================== -->
+
+        <header class="dashboard-navbar">
+          <!-- LEFT NAVBAR -->
+
+          <div class="dashboard-navbar-left">
+            <!-- MOBILE / TABLET MENU -->
+
+            <button
+              type="button"
+              class="dashboard-menu-toggle"
+              id="dashboardMenuToggle"
+              aria-label="Open navigation"
+              aria-expanded="false"
+            >
+              <i data-lucide="menu"></i>
+            </button>
+
+            <!-- CURRENT PAGE -->
+
+            <div class="dashboard-page-title">
+              <span id="dashboardPageTitle"> Admin Dashboard </span>
+            </div>
+          </div>
+
+          <!-- RIGHT NAVBAR -->
+
+          <div class="dashboard-navbar-right">
+            <button
+              type="button"
+              class="dashboard-navbar-control"
+              id="rtlToggle"
+              aria-label="Toggle RTL"
+            >
+              <span>RTL</span>
+            </button>
+
+            <!-- DARK / LIGHT MODE -->
+            <button
+              type="button"
+              class="dashboard-navbar-control"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <i data-lucide="sun"></i>
+            </button>
+
+            <!-- NOTIFICATIONS -->
+
+            <!-- <button
+              type="button"
+              class="dashboard-navbar-control dashboard-notification-button"
+              id="dashboardNotificationButton"
+              aria-label="Notifications"
+            >
+              <i data-lucide="bell"></i>
+
+              <span class="dashboard-notification-dot"></span>
+            </button> -->
+
+            <!-- PROFILE -->
+
+            <div class="dashboard-profile-wrapper">
+              <button
+                type="button"
+                class="dashboard-profile-button"
+                id="dashboardProfileButton"
+                aria-expanded="false"
+              >
+                <span class="dashboard-profile-avatar"> S </span>
+
+                <span class="dashboard-profile-info">
+                  <strong> Sarah </strong>
+
+                  <small> Pulse Haven Patient </small>
+                </span>
+
+                <i data-lucide="chevron-down"></i>
+              </button>
+
+              <!-- PROFILE DROPDOWN -->
+
+              <div
+                class="dashboard-profile-dropdown"
+                id="dashboardProfileDropdown"
+              >
+                <div class="dashboard-profile-dropdown-header">
+                  <span class="dashboard-profile-large-avatar"> S </span>
+
+                  <div>
+                    <strong> Sarah </strong>
+
+                    <span> patient@pulsehaven.com </span>
+                  </div>
+                </div>
+
+                <div class="dashboard-profile-dropdown-divider"></div>
+
+                <button
+                  type="button"
+                  class="dashboard-dropdown-item"
+                  data-section="profile"
+                >
+                  <i data-lucide="user-round"></i>
+                  <span>My Profile</span>
+                </button>
+
+                <div class="dashboard-profile-dropdown-divider"></div>
+
+                <button
+                  type="button"
+                  class="dashboard-dropdown-item dashboard-dropdown-logout"
+                  id="dashboardDropdownLogout"
+                >
+                  <i data-lucide="log-out"></i>
+                  <span>Logout</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- =====================================================
+             DASHBOARD CONTENT
+        ====================================================== -->
+
+        <div class="dashboard-content">
+          <!-- ===================================================
+               OVERVIEW
+          ==================================================== -->
+
+          <section
+            class="dashboard-section dashboard-overview-section active"
+            id="overviewSection"
+            data-page="overview"
+          >
+            <!-- WELCOME -->
+
+            <div class="dashboard-welcome">
+              <div>
+                <span class="dashboard-section-tag">
+                  <i data-lucide="sparkles"></i>
+                  Health Overview
+                </span>
+
+                <h1>Welcome back, Sarah.</h1>
+
+                <p>
+                  Stay on top of your health with convenient in-home vitals
+                  checks, upcoming visits, and your latest health information.
+                </p>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 OVERVIEW STATS
+            ================================================== -->
+
+            <div class="dashboard-stats-grid">
+              <!-- BLOOD PRESSURE -->
+
+              <div class="dashboard-stat-item">
+                <div class="dashboard-stat-icon">
+                  <i data-lucide="heart-pulse"></i>
+                </div>
+
+                <div class="dashboard-stat-content">
+                  <span> BLOOD PRESSURE </span>
+
+                  <strong> 120/80 </strong>
+
+                  <small> Last recorded </small>
+                </div>
+              </div>
+
+              <!-- HEART RATE -->
+
+              <div class="dashboard-stat-item">
+                <div class="dashboard-stat-icon">
+                  <i data-lucide="activity"></i>
+                </div>
+
+                <div class="dashboard-stat-content">
+                  <span> HEART RATE </span>
+
+                  <strong> 72 bpm </strong>
+
+                  <small> Resting heart rate </small>
+                </div>
+              </div>
+
+              <!-- LAST VISIT -->
+
+              <div class="dashboard-stat-item">
+                <div class="dashboard-stat-icon">
+                  <i data-lucide="stethoscope"></i>
+                </div>
+
+                <div class="dashboard-stat-content">
+                  <span> LAST VISIT </span>
+
+                  <strong> Sep 18 </strong>
+
+                  <small> In-home vitals check </small>
+                </div>
+              </div>
+
+              <!-- NEXT VISIT -->
+
+              <div class="dashboard-stat-item">
+                <div class="dashboard-stat-icon">
+                  <i data-lucide="calendar-check"></i>
+                </div>
+
+                <div class="dashboard-stat-content">
+                  <span> NEXT VISIT </span>
+
+                  <strong> Sep 30 </strong>
+
+                  <small> Nurse visit scheduled </small>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 UPCOMING VISIT + VITALS
+            ================================================== -->
+
+            <div class="dashboard-overview-grid">
+              <!-- UPCOMING VISIT -->
+
+              <div class="dashboard-content-panel dashboard-upcoming-pickup">
+                <div class="dashboard-panel-header">
+                  <div>
+                    <span class="dashboard-panel-label">
+                      NEXT APPOINTMENT
+                    </span>
+
+                    <h2>Upcoming Nurse Visit</h2>
+                  </div>
+
+                  <span class="dashboard-status-badge"> Confirmed </span>
+                </div>
+
+                <div class="dashboard-pickup-details">
+                  <div class="dashboard-pickup-date">
+                    <span> SEP </span>
+
+                    <strong> 30 </strong>
+                  </div>
+
+                  <div class="dashboard-pickup-info">
+                    <strong> In-Home Vitals Check </strong>
+
+                    <span> Wednesday, 10:00 AM </span>
+
+                    <small> Nurse visit confirmed at your home. </small>
+                  </div>
+                </div>
+
+                <div class="dashboard-panel-actions">
+                  <button
+                    type="button"
+                    class="dashboard-primary-button"
+                    data-section="schedule-visit"
+                  >
+                    Schedule Visit
+                  </button>
+
+                  <button
+                    type="button"
+                    class="dashboard-secondary-button"
+                    data-section="appointment-history"
+                  >
+                    View Appointments
+                  </button>
+                </div>
+              </div>
+
+              <!-- VITALS -->
+
+              <div class="dashboard-content-panel dashboard-delivery-preview">
+                <div class="dashboard-panel-header">
+                  <div>
+                    <span class="dashboard-panel-label"> HEALTH </span>
+
+                    <h2>Latest Vitals</h2>
+                  </div>
+
+                  <i data-lucide="heart-pulse"></i>
+                </div>
+
+                <div class="dashboard-mini-timeline">
+                  <div class="dashboard-timeline-item completed">
+                    <span class="dashboard-timeline-icon">
+                      <i data-lucide="heart-pulse"></i>
+                    </span>
+
+                    <div>
+                      <strong> Blood Pressure </strong>
+
+                      <small> 120/80 mmHg </small>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-timeline-line"></div>
+
+                  <div class="dashboard-timeline-item current">
+                    <span class="dashboard-timeline-icon">
+                      <i data-lucide="activity"></i>
+                    </span>
+
+                    <div>
+                      <strong> Heart Rate </strong>
+
+                      <small> 72 bpm </small>
+                    </div>
+                  </div>
+
+                  <div class="dashboard-timeline-line"></div>
+
+                  <div class="dashboard-timeline-item">
+                    <span class="dashboard-timeline-icon">
+                      <i data-lucide="thermometer"></i>
+                    </span>
+
+                    <div>
+                      <strong> Temperature </strong>
+
+                      <small> 98.4 °F </small>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="dashboard-text-button"
+                  data-section="vitals"
+                >
+                  View Vitals History
+                </button>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 NURSE NOTES + REMINDERS
+            ================================================== -->
+
+            <div class="dashboard-overview-grid">
+              <!-- NURSE NOTES -->
+
+              <div class="dashboard-content-panel dashboard-impact-preview">
+                <div class="dashboard-panel-header">
+                  <div>
+                    <span class="dashboard-panel-label"> NURSE VISIT </span>
+
+                    <h2>Latest Visit Notes</h2>
+                  </div>
+
+                  <i data-lucide="notebook-pen"></i>
+                </div>
+
+                <div class="dashboard-impact-summary">
+                  <div>
+                    <strong> Sep 18 </strong>
+
+                    <span> Visit Date </span>
+                  </div>
+
+                  <div>
+                    <strong> Normal </strong>
+
+                    <span> Vitals </span>
+                  </div>
+
+                  <div>
+                    <strong> 15 min </strong>
+
+                    <span> Visit </span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="dashboard-text-button"
+                  data-section="visit-notes"
+                >
+                  View Visit Notes
+                </button>
+              </div>
+
+              <!-- REMINDERS -->
+
+              <div
+                class="dashboard-content-panel dashboard-subscription-preview"
+              >
+                <div class="dashboard-panel-header">
+                  <div>
+                    <span class="dashboard-panel-label"> REMINDERS </span>
+
+                    <h2>Appointment Reminders</h2>
+                  </div>
+
+                  <span class="dashboard-status-badge"> On </span>
+                </div>
+
+                <div class="dashboard-subscription-price">
+                  <strong> 2 </strong>
+
+                  <span> upcoming reminders </span>
+                </div>
+
+                <p>Receive reminders before your scheduled nurse visits.</p>
+
+                <button
+                  type="button"
+                  class="dashboard-secondary-button"
+                  data-section="reminders"
+                >
+                  Manage Reminders
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               SCHEDULE VISIT
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="scheduleVisitSection"
+            data-page="schedule-visit"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="calendar-plus"></i>
+                Appointments
+              </span>
+
+              <h1>Schedule a Home Visit</h1>
+
+              <p>
+                Choose a convenient date and time for your in-home vitals check.
+              </p>
+            </div>
+
+            <div class="dashboard-form-panel">
+              <div class="dashboard-form-group">
+                <label for="visitDate"> Select Date </label>
+
+                <input type="date" id="visitDate" name="visitDate" />
+              </div>
+
+              <div class="dashboard-form-group">
+                <label for="visitTime"> Select Time Slot </label>
+
+                <select id="visitTime" name="visitTime">
+                  <option value="">Choose a time slot</option>
+
+                  <option value="09:00">9:00 AM - 10:00 AM</option>
+
+                  <option value="10:00">10:00 AM - 11:00 AM</option>
+
+                  <option value="11:00">11:00 AM - 12:00 PM</option>
+
+                  <option value="14:00">2:00 PM - 3:00 PM</option>
+
+                  <option value="16:00">4:00 PM - 5:00 PM</option>
+                </select>
+              </div>
+
+              <div class="dashboard-form-group">
+                <label for="visitType"> Visit Type </label>
+
+                <select id="visitType" name="visitType">
+                  <option value="">Select visit type</option>
+
+                  <option value="vitals">In-Home Vitals Check</option>
+
+                  <option value="medication">Medication Review</option>
+
+                  <option value="wellness">Wellness Visit</option>
+                </select>
+              </div>
+
+              <div class="dashboard-form-group">
+                <label for="visitNotes"> Additional Notes </label>
+
+                <textarea
+                  id="visitNotes"
+                  name="visitNotes"
+                  rows="4"
+                  placeholder="Add any information the nurse should know before the visit..."
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="dashboard-primary-button"
+                id="scheduleVisitButton"
+              >
+                Schedule Home Visit
+              </button>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               APPOINTMENT HISTORY
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="appointmentHistorySection"
+            data-page="appointment-history"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="calendar-clock"></i>
+                Appointments
+              </span>
+
+              <h1>Appointment History</h1>
+
+              <p>Review your upcoming and completed in-home health visits.</p>
+            </div>
+
+            <div class="dashboard-table-panel">
+              <div class="dashboard-table-header">
+                <h2>Recent Appointments</h2>
+
+                <span> 8 completed visits </span>
+              </div>
+
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Visit Type</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Sep 30, 2026</td>
+
+                      <td>10:00 AM</td>
+
+                      <td>Vitals Check</td>
+
+                      <td>
+                        <span class="dashboard-table-status scheduled">
+                          Confirmed
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Sep 18, 2026</td>
+
+                      <td>10:00 AM</td>
+
+                      <td>Vitals Check</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Completed
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Sep 05, 2026</td>
+
+                      <td>11:00 AM</td>
+
+                      <td>Wellness Visit</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Completed
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Aug 22, 2026</td>
+
+                      <td>10:00 AM</td>
+
+                      <td>Medication Review</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Completed
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               VITALS HISTORY
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="vitalsSection"
+            data-page="vitals"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="heart-pulse"></i>
+                Health Tracking
+              </span>
+
+              <h1>Vitals History</h1>
+
+              <p>
+                Track your blood pressure and other vital measurements over
+                time.
+              </p>
+            </div>
+
+            <!-- VITALS STATS -->
+
+            <div class="dashboard-impact-grid">
+              <div class="dashboard-impact-stat">
+                <span> BLOOD PRESSURE </span>
+
+                <strong> 120/80 </strong>
+
+                <small> mmHg · Last recorded </small>
+              </div>
+
+              <div class="dashboard-impact-stat">
+                <span> HEART RATE </span>
+
+                <strong> 72 </strong>
+
+                <small> bpm · Resting </small>
+              </div>
+
+              <div class="dashboard-impact-stat">
+                <span> TEMPERATURE </span>
+
+                <strong> 98.4°F </strong>
+
+                <small> Last recorded </small>
+              </div>
+            </div>
+
+            <!-- VITALS TABLE -->
+
+            <div class="dashboard-table-panel">
+              <div class="dashboard-table-header">
+                <h2>Recent Measurements</h2>
+
+                <span> September 2026 </span>
+              </div>
+
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Blood Pressure</th>
+                      <th>Heart Rate</th>
+                      <th>Temperature</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Sep 18, 2026</td>
+
+                      <td>120/80 mmHg</td>
+
+                      <td>72 bpm</td>
+
+                      <td>98.4°F</td>
+                    </tr>
+
+                    <tr>
+                      <td>Sep 05, 2026</td>
+
+                      <td>122/82 mmHg</td>
+
+                      <td>74 bpm</td>
+
+                      <td>98.6°F</td>
+                    </tr>
+
+                    <tr>
+                      <td>Aug 22, 2026</td>
+
+                      <td>118/79 mmHg</td>
+
+                      <td>70 bpm</td>
+
+                      <td>98.2°F</td>
+                    </tr>
+
+                    <tr>
+                      <td>Aug 08, 2026</td>
+
+                      <td>121/81 mmHg</td>
+
+                      <td>73 bpm</td>
+
+                      <td>98.5°F</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               NURSE VISIT NOTES
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="visitNotesSection"
+            data-page="visit-notes"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="notebook-pen"></i>
+                Nurse Visits
+              </span>
+
+              <h1>Nurse Visit Notes</h1>
+
+              <p>
+                Review notes and observations recorded during your in-home
+                visits.
+              </p>
+            </div>
+
+            <div class="dashboard-content-panel">
+              <div class="dashboard-panel-header">
+                <div>
+                  <span class="dashboard-panel-label"> LATEST VISIT </span>
+
+                  <h2>In-Home Vitals Check</h2>
+                  <br />
+                </div>
+
+                <span class="dashboard-status-badge"> Sep 18, 2026 </span>
+              </div>
+
+              <div class="dashboard-form-panel">
+                <div class="dashboard-form-group">
+                  <label> Nurse </label>
+
+                  <input type="text" value="Emily Johnson" readonly />
+                </div>
+
+                <div class="dashboard-form-group">
+                  <label> Visit Summary </label>
+
+                  <textarea rows="5" readonly>
+Vitals were checked during the home visit. Blood pressure and heart rate were recorded. Patient was comfortable during the visit and no immediate concerns were noted.</textarea
+                  >
+                </div>
+
+                <div class="dashboard-form-group">
+                  <label> Follow-up </label>
+
+                  <textarea rows="4" readonly>
+Continue monitoring blood pressure and attend the next scheduled vitals check.</textarea
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               APPOINTMENT REMINDERS
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="remindersSection"
+            data-page="reminders"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="bell-ring"></i>
+                Reminders
+              </span>
+
+              <h1>Appointment Reminders</h1>
+
+              <p>
+                Manage reminders so you never miss your scheduled home health
+                visits.
+              </p>
+            </div>
+
+            <div class="dashboard-form-panel">
+              <div class="dashboard-form-group">
+                <label> Appointment Reminders </label>
+
+                <select id="appointmentReminder">
+                  <option value="enabled">Enabled</option>
+
+                  <option value="disabled">Disabled</option>
+                </select>
+              </div>
+
+              <div class="dashboard-form-group">
+                <label> Reminder Time </label>
+
+                <select id="reminderTime">
+                  <option value="24">24 hours before</option>
+
+                  <option value="12">12 hours before</option>
+
+                  <option value="2">2 hours before</option>
+                </select>
+              </div>
+
+              <button
+                type="button"
+                class="dashboard-primary-button"
+                id="saveReminderButton"
+              >
+                Save Reminder Settings
+              </button>
+            </div>
+          </section>
+          <section
+            class="dashboard-section"
+            id="subscriptionSection"
+            data-page="subscription"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="credit-card"></i>
+                Subscription
+              </span>
+
+              <h1>Manage Your Plan</h1>
+
+              <p>
+                View your current Pulse Haven care plan and available healthcare
+                services.
+              </p>
+            </div>
+
+            <!-- CURRENT PLAN -->
+
+            <div class="dashboard-current-plan">
+              <div>
+                <span class="dashboard-panel-label"> CURRENT PLAN </span>
+
+                <h2>Vitals Check</h2>
+
+                <p>
+                  A simple home visit for routine vitals monitoring and health
+                  tracking.
+                </p>
+              </div>
+
+              <div class="dashboard-current-plan-price">
+                <strong> ₹249 </strong>
+
+                <span> / visit </span>
+              </div>
+            </div>
+
+            <!-- AVAILABLE PLANS -->
+
+            <div class="dashboard-plans-grid">
+              <!-- VITALS CHECK -->
+
+              <article class="dashboard-plan-item current">
+                <span class="dashboard-plan-status"> CURRENT PLAN </span>
+
+                <h2>Vitals Check</h2>
+
+                <p>
+                  A simple home visit for routine vitals monitoring and health
+                  tracking.
+                </p>
+
+                <div class="dashboard-plan-price">
+                  ₹249
+                  <span> / visit </span>
+                </div>
+
+                <ul>
+                  <li>
+                    <i data-lucide="check"></i>
+                    Blood Pressure Monitoring
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Pulse and Vital Signs Check
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    SpO₂ and Temperature Check
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Digital Visit Record
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Nurse Home Visit
+                  </li>
+                </ul>
+              </article>
+
+              <!-- WELLNESS VISIT -->
+
+              <article class="dashboard-plan-item">
+                <span class="dashboard-plan-popular"> MOST POPULAR </span>
+
+                <h2>Wellness Visit</h2>
+
+                <p>
+                  A more complete home visit combining vitals monitoring with
+                  wellness support.
+                </p>
+
+                <div class="dashboard-plan-price">
+                  ₹499
+                  <span> / visit </span>
+                </div>
+
+                <ul>
+                  <li>
+                    <i data-lucide="check"></i>
+                    Everything in Vitals Check
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Wellness Assessment
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Medication Review
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Health Observations
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Nurse Visit Notes
+                  </li>
+                </ul>
+
+                <button
+                  type="button"
+                  class="dashboard-secondary-button"
+                  data-plan="wellness"
+                >
+                  Choose Plan
+                </button>
+              </article>
+
+              <!-- COMPLETE CARE -->
+
+              <article class="dashboard-plan-item">
+                <span class="dashboard-plan-status"> ONGOING SUPPORT </span>
+
+                <h2>Complete Care</h2>
+
+                <p>
+                  Comprehensive home monitoring and wellness support for ongoing
+                  care needs.
+                </p>
+
+                <div class="dashboard-plan-price">
+                  ₹799
+                  <span> / visit </span>
+                </div>
+
+                <ul>
+                  <li>
+                    <i data-lucide="check"></i>
+                    Everything in Wellness Visit
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Detailed Vitals Review
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Vitals History Review
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Personalized Care Notes
+                  </li>
+
+                  <li>
+                    <i data-lucide="check"></i>
+                    Ongoing Wellness Support
+                  </li>
+                </ul>
+
+                <button
+                  type="button"
+                  class="dashboard-secondary-button"
+                  data-plan="complete"
+                >
+                  Choose Plan
+                </button>
+              </article>
+            </div>
+          </section>
+
+          <!-- =================================================== 
+                PAYMENTS 
+==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="paymentsSection"
+            data-page="payments"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="receipt-text"></i>
+                Payments
+              </span>
+
+              <h1>Payment History</h1>
+
+              <p>Review your Pulse Haven visit payments and billing history.</p>
+            </div>
+
+            <div class="dashboard-table-panel">
+              <div class="dashboard-table-header">
+                <h2>Recent Payments</h2>
+
+                <span> 2026 </span>
+              </div>
+
+              <div class="dashboard-table-wrapper">
+                <table class="dashboard-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Plan</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>Sep 28, 2026</td>
+
+                      <td>Wellness Visit</td>
+
+                      <td>₹499</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Paid
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Sep 18, 2026</td>
+
+                      <td>Vitals Check</td>
+
+                      <td>₹249</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Paid
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Sep 08, 2026</td>
+
+                      <td>Complete Care</td>
+
+                      <td>₹799</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Paid
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Aug 27, 2026</td>
+
+                      <td>Vitals Check</td>
+
+                      <td>₹249</td>
+
+                      <td>
+                        <span class="dashboard-table-status completed">
+                          Paid
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================================================
+               PROFILE
+          ==================================================== -->
+
+          <section
+            class="dashboard-section"
+            id="profileSection"
+            data-page="profile"
+          >
+            <div class="dashboard-section-heading">
+              <span class="dashboard-section-tag">
+                <i data-lucide="user-round"></i>
+                My Profile
+              </span>
+
+              <h1>Profile Settings</h1>
+
+              <p>Manage your Pulse Haven patient account information.</p>
+            </div>
+
+            <div class="dashboard-profile-panel">
+              <!-- PROFILE HEADER -->
+
+              <div class="dashboard-profile-panel-header">
+                <div class="dashboard-profile-large-avatar">S</div>
+
+                <div>
+                  <h2>Sarah</h2>
+
+                  <p>Pulse Haven Patient</p>
+                </div>
+              </div>
+
+              <!-- PROFILE FORM -->
+
+              <div class="dashboard-profile-form">
+                <div class="dashboard-form-group">
+                  <label for="profileFirstName"> First Name </label>
+
+                  <input type="text" id="profileFirstName" value="Sarah" />
+                </div>
+
+                <div class="dashboard-form-group">
+                  <label for="profileLastName"> Last Name </label>
+
+                  <input
+                    type="text"
+                    id="profileLastName"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+
+                <div class="dashboard-form-group">
+                  <label for="profileEmail"> Email Address </label>
+
+                  <input
+                    type="email"
+                    id="profileEmail"
+                    value="patient@pulsehaven.com"
+                  />
+                </div>
+
+                <div class="dashboard-form-group">
+                  <label for="profilePhone"> Phone Number </label>
+
+                  <input
+                    type="tel"
+                    id="profilePhone"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="dashboard-primary-button"
+                id="saveProfileButton"
+              >
+                Save Changes
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

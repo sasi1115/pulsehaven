@@ -1,0 +1,3821 @@
+/* =========================================================
+   HOME2 HERO SECTION
+========================================================= */
+
+.pulse-home2-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+  isolation: isolate;
+}
+
+.pulse-home2-hero-container {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.pulse-home2-hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 600px;
+  padding: 50px 0;
+}
+
+.pulse-home2-hero-tag {
+  position: relative;
+}
+
+.pulse-home2-hero-title {
+  max-width: 590px;
+  margin: 28px 0 20px;
+  color: var(--text-color);
+  font-size: clamp(52px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.pulse-home2-hero-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.pulse-home2-hero-description {
+  max-width: 535px;
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  line-height: 1.75;
+  opacity: 0.76;
+}
+
+.pulse-home2-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.pulse-home2-hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 28px;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+.pulse-home2-hero-trust-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 5px var(--secondary-soft);
+}
+
+/* =========================================================
+   VITALS VISUAL
+========================================================= */
+
+.pulse-home2-vitals-visual {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-home2-vitals-glow {
+  position: absolute;
+  width: 470px;
+  height: 470px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--primary-soft);
+  filter: blur(15px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.pulse-home2-vitals-system {
+  position: relative;
+  width: 470px;
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* =========================================================
+   ORBIT RINGS
+========================================================= */
+
+.pulse-home2-vitals-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.16;
+}
+
+.pulse-home2-vitals-orbit.orbit-one {
+  width: 360px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  animation: pulseHome2OrbitOne 18s linear infinite;
+}
+
+.pulse-home2-vitals-orbit.orbit-two {
+  width: 430px;
+  height: 430px;
+  transform: translate(-50%, -50%);
+  border-color: var(--secondary-color);
+  opacity: 0.12;
+  animation: pulseHome2OrbitTwo 24s linear infinite reverse;
+}
+
+/* =========================================================
+   CONNECTOR LINES
+========================================================= */
+
+.pulse-home2-vitals-connector {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.pulse-home2-vitals-connector.connector-top,
+.pulse-home2-vitals-connector.connector-bottom {
+  left: 50%;
+  width: 1px;
+  height: 92px;
+  transform: translateX(-50%);
+}
+
+.pulse-home2-vitals-connector.connector-top {
+  top: 0;
+}
+
+.pulse-home2-vitals-connector.connector-bottom {
+  bottom: 0;
+}
+
+.pulse-home2-vitals-connector.connector-left,
+.pulse-home2-vitals-connector.connector-right {
+  top: 50%;
+  width: 92px;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.pulse-home2-vitals-connector.connector-left {
+  left: 0;
+}
+
+.pulse-home2-vitals-connector.connector-right {
+  right: 0;
+}
+
+/* =========================================================
+   CENTER HEART
+========================================================= */
+
+.pulse-home2-vitals-center {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.pulse-home2-heart-ring {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: pulseHome2HeartRing 3s ease-out infinite;
+}
+
+.pulse-home2-heart {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  background: var(--light-bg);
+  color: var(--primary-color);
+  box-shadow:
+    0 18px 45px rgba(24, 33, 47, 0.12),
+    0 0 0 12px var(--primary-soft);
+  z-index: 4;
+  animation: pulseHome2HeartBeat 2.4s ease-in-out infinite;
+}
+
+.pulse-home2-heart svg {
+  width: 39px;
+  height: 39px;
+  stroke-width: 1.8;
+}
+
+/* =========================================================
+   ECG LINE
+========================================================= */
+
+.pulse-home2-pulse-line {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 300px;
+  height: 80px;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.pulse-home2-pulse-line svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.pulse-home2-pulse-line path {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: pulseHome2Ecg 3.2s ease-in-out infinite;
+}
+
+/* =========================================================
+   VITAL NODES
+========================================================= */
+
+.pulse-home2-vital-node {
+  position: absolute;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 92px;
+  padding: 11px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.pulse-home2-vital-node-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 5px var(--secondary-soft);
+  animation: pulseHome2Node 2.8s ease-in-out infinite;
+}
+
+.pulse-home2-vital-label {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.pulse-home2-vital-node small {
+  color: var(--text-color);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.3;
+  opacity: 0.58;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   NODE POSITIONS
+========================================================= */
+
+.pulse-home2-vital-bp {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pulse-home2-vital-bp .pulse-home2-vital-node-dot {
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pulse-home2-vital-hr {
+  top: 50%;
+  left: -4px;
+  transform: translateY(-50%);
+}
+
+.pulse-home2-vital-hr .pulse-home2-vital-node-dot {
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pulse-home2-vital-o2 {
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%);
+}
+
+.pulse-home2-vital-o2 .pulse-home2-vital-node-dot {
+  left: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pulse-home2-vital-home {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pulse-home2-vital-home .pulse-home2-vital-node-dot {
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================================================
+   VISUAL CAPTION
+========================================================= */
+
+.pulse-home2-vitals-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 38px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  color: var(--text-color);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  opacity: 0.52;
+  white-space: nowrap;
+}
+
+.pulse-home2-vitals-caption-line {
+  width: 28px;
+  height: 1px;
+  background: var(--secondary-color);
+  opacity: 0.6;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes pulseHome2HeartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  12% {
+    transform: scale(1.06);
+  }
+
+  24% {
+    transform: scale(0.98);
+  }
+
+  36% {
+    transform: scale(1.04);
+  }
+
+  52% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseHome2HeartRing {
+  0% {
+    transform: scale(0.82);
+    opacity: 0.3;
+  }
+
+  70%,
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseHome2Node {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseHome2Ecg {
+  0% {
+    stroke-dashoffset: 360;
+  }
+
+  48%,
+  72% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -360;
+  }
+}
+
+@keyframes pulseHome2OrbitOne {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseHome2OrbitTwo {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-home2-heart,
+  .pulse-home2-heart-ring,
+  .pulse-home2-pulse-line path,
+  .pulse-home2-vital-node-dot,
+  .pulse-home2-vitals-orbit {
+    animation: none;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-home2-hero-container {
+    width: 90%;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 20px;
+  }
+
+  .pulse-home2-hero-content {
+    padding: 30px 0;
+  }
+
+  .pulse-home2-hero-title {
+    margin: 20px 0 14px;
+    font-size: clamp(40px, 5vw, 54px);
+  }
+
+  .pulse-home2-hero-description {
+    max-width: 440px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pulse-home2-hero-actions {
+    margin-top: 24px;
+  }
+
+  .pulse-home2-hero-trust {
+    margin-top: 20px;
+    font-size: 11px;
+  }
+
+  .pulse-home2-vitals-visual {
+    height: 470px;
+  }
+
+  .pulse-home2-vitals-system {
+    width: 360px;
+    height: 360px;
+  }
+
+  .pulse-home2-vitals-glow {
+    width: 350px;
+    height: 350px;
+  }
+
+  .pulse-home2-vitals-orbit.orbit-one {
+    width: 275px;
+    height: 275px;
+  }
+
+  .pulse-home2-vitals-orbit.orbit-two {
+    width: 330px;
+    height: 330px;
+  }
+
+  .pulse-home2-vitals-center {
+    width: 150px;
+    height: 150px;
+  }
+
+  .pulse-home2-heart-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pulse-home2-heart {
+    width: 76px;
+    height: 76px;
+  }
+
+  .pulse-home2-heart svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .pulse-home2-pulse-line {
+    width: 235px;
+    height: 62px;
+  }
+
+  .pulse-home2-vital-node {
+    min-width: 78px;
+    padding: 9px 11px;
+    border-radius: 13px;
+  }
+
+  .pulse-home2-vital-label {
+    font-size: 12px;
+  }
+
+  .pulse-home2-vital-node small {
+    font-size: 8px;
+  }
+
+  .pulse-home2-vitals-caption {
+    bottom: 18px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-home2-hero-section {
+    min-height: auto;
+    padding-top: 30px;
+  }
+
+  .pulse-home2-hero-container {
+    width: 88%;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 80px 0 60px;
+  }
+
+  .pulse-home2-hero-content {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    text-align: center;
+  }
+
+  .pulse-home2-hero-tag {
+    margin: 0 auto;
+  }
+
+  .pulse-home2-hero-title {
+    max-width: 620px;
+    margin: 24px auto 16px;
+    font-size: clamp(46px, 8vw, 64px);
+  }
+
+  .pulse-home2-hero-description {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .pulse-home2-hero-actions {
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .pulse-home2-hero-trust {
+    justify-content: center;
+    margin-top: 22px;
+  }
+
+  .pulse-home2-vitals-visual {
+    width: 100%;
+    height: 470px;
+    margin-top: 10px;
+  }
+
+  .pulse-home2-vitals-system {
+    width: 390px;
+    height: 390px;
+  }
+
+  .pulse-home2-vitals-glow {
+    width: 390px;
+    height: 390px;
+  }
+
+  .pulse-home2-vitals-orbit.orbit-one {
+    width: 300px;
+    height: 300px;
+  }
+
+  .pulse-home2-vitals-orbit.orbit-two {
+    width: 360px;
+    height: 360px;
+  }
+
+  .pulse-home2-vitals-caption {
+    bottom: 12px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-home2-hero-container {
+    width: 91%;
+    padding: 45px 0 35px;
+    gap: 0;
+  }
+
+  .pulse-home2-hero-content {
+    padding: 10px 0 0;
+  }
+
+  .pulse-home2-hero-title {
+    margin: 19px auto 13px;
+    font-size: 39px;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+  }
+
+  .pulse-home2-hero-description {
+    max-width: 320px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-home2-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .pulse-home2-hero-actions .pulse-btn {
+    width: 100%;
+  }
+
+  .pulse-home2-hero-trust {
+    margin-top: 17px;
+    font-size: 9px;
+  }
+
+  .pulse-home2-vitals-visual {
+    height: 320px;
+    margin-top: 5px;
+  }
+
+  .pulse-home2-vitals-system {
+    width: 265px;
+    height: 265px;
+  }
+
+  .pulse-home2-vitals-glow {
+    width: 255px;
+    height: 255px;
+    filter: blur(12px);
+  }
+
+  .pulse-home2-vitals-orbit.orbit-one {
+    width: 200px;
+    height: 200px;
+  }
+
+  .pulse-home2-vitals-orbit.orbit-two {
+    width: 240px;
+    height: 240px;
+  }
+
+  .pulse-home2-vitals-center {
+    width: 112px;
+    height: 112px;
+  }
+
+  .pulse-home2-heart-ring {
+    width: 92px;
+    height: 92px;
+  }
+
+  .pulse-home2-heart {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pulse-home2-heart svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .pulse-home2-pulse-line {
+    width: 175px;
+    height: 46px;
+    bottom: -2px;
+  }
+
+  .pulse-home2-vital-node {
+    min-width: 59px;
+    padding: 7px 7px;
+    border-radius: 10px;
+  }
+
+  .pulse-home2-vital-label {
+    font-size: 9px;
+  }
+
+  .pulse-home2-vital-node small {
+    display: none;
+  }
+
+  .pulse-home2-vital-bp {
+    top: 1px;
+  }
+
+  .pulse-home2-vital-hr {
+    left: -2px;
+  }
+
+  .pulse-home2-vital-o2 {
+    right: -2px;
+  }
+
+  .pulse-home2-vital-home {
+    bottom: 1px;
+  }
+
+  .pulse-home2-vitals-caption {
+    display: none;
+  }
+
+  .pulse-home2-vitals-connector.connector-top,
+  .pulse-home2-vitals-connector.connector-bottom {
+    height: 60px;
+  }
+
+  .pulse-home2-vitals-connector.connector-left,
+  .pulse-home2-vitals-connector.connector-right {
+    width: 60px;
+  }
+}
+
+/* HOW PULSEHAVEN WORKS SECTION */
+
+.pulse-home2-process-section {
+  padding-top: 70px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.pulse-home2-process-container {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.pulse-home2-process-visual {
+  position: relative;
+  width: 100%;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-home2-process-image-wrap {
+  position: relative;
+  width: min(100%, 570px);
+  height: 560px;
+}
+
+.pulse-home2-process-image-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 34px 150px 34px 34px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-home2-process-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-soft);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.pulse-home2-process-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.pulse-home2-process-image-wrap:hover .pulse-home2-process-image {
+  transform: scale(1.035);
+}
+
+.pulse-home2-process-image-label {
+  position: absolute;
+  right: -34px;
+  bottom: 42px;
+  min-width: 245px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  z-index: 3;
+}
+
+.pulse-home2-process-image-label-icon {
+  width: 39px;
+  height: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--primary-soft);
+  color: var(--primary-color);
+}
+
+.pulse-home2-process-image-label-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.pulse-home2-process-image-label-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pulse-home2-process-image-label-title {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.pulse-home2-process-image-label-text {
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+  line-height: 1.4;
+  opacity: 0.58;
+}
+
+.pulse-home2-process-content {
+  position: relative;
+  max-width: 620px;
+  padding: 40px 0;
+}
+
+.pulse-home2-process-title {
+  max-width: 600px;
+  margin: 26px 0 18px;
+  color: var(--text-color);
+  font-size: clamp(42px, 4vw, 62px);
+  font-weight: var(--fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.pulse-home2-process-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.pulse-home2-process-description {
+  max-width: 560px;
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.75;
+  opacity: 0.7;
+}
+
+.pulse-home2-process-steps {
+  position: relative;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pulse-home2-process-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  padding: 0 0 25px;
+}
+
+.pulse-home2-process-step-number {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-soft);
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  z-index: 2;
+}
+
+.pulse-home2-process-step-content {
+  padding-top: 3px;
+}
+
+.pulse-home2-process-step-content h3 {
+  margin: 0 0 6px;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+}
+
+.pulse-home2-process-step-content p {
+  max-width: 430px;
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  line-height: 1.6;
+  opacity: 0.62;
+}
+
+.pulse-home2-process-button {
+  margin-top: 8px;
+}
+
+/* NEST HUB — 1024 × 600 */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-home2-process-container {
+    width: 90%;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 38px;
+  }
+
+  .pulse-home2-process-visual {
+    min-height: 460px;
+  }
+
+  .pulse-home2-process-image-wrap {
+    width: min(100%, 430px);
+    height: 430px;
+  }
+
+  .pulse-home2-process-image-frame {
+    border-radius: 28px 110px 28px 28px;
+  }
+
+  .pulse-home2-process-image-label {
+    right: -20px;
+    bottom: 25px;
+    min-width: 190px;
+    padding: 11px 13px;
+    gap: 10px;
+  }
+
+  .pulse-home2-process-image-label-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+  }
+
+  .pulse-home2-process-image-label-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pulse-home2-process-image-label-title {
+    font-size: 10px;
+  }
+
+  .pulse-home2-process-image-label-text {
+    font-size: 9px;
+  }
+
+  .pulse-home2-process-content {
+    padding: 25px 0;
+  }
+
+  .pulse-home2-process-title {
+    margin: 18px 0 12px;
+    font-size: clamp(34px, 4vw, 46px);
+  }
+
+  .pulse-home2-process-description {
+    max-width: 470px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-home2-process-steps {
+    margin-top: 22px;
+  }
+
+  .pulse-home2-process-step {
+    grid-template-columns: 38px 1fr;
+    gap: 13px;
+    padding-bottom: 15px;
+  }
+
+  .pulse-home2-process-step:not(:last-child)::after {
+    top: 34px;
+    left: 18px;
+  }
+
+  .pulse-home2-process-step-number {
+    width: 38px;
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .pulse-home2-process-step-content h3 {
+    font-size: 13px;
+  }
+
+  .pulse-home2-process-step-content p {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .pulse-home2-process-button {
+    margin-top: 2px;
+  }
+}
+
+/* IPAD MINI — 768 × 1024 */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-home2-process-section {
+    min-height: auto;
+  }
+
+  .pulse-home2-process-container {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 80px 0;
+  }
+
+  .pulse-home2-process-content {
+    order: 1;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  .pulse-home2-process-step-content h3 {
+    text-align:center;
+  }
+
+ 
+
+  .pulse-home2-process-visual {
+    order: 2;
+    min-height: auto;
+  }
+
+  .pulse-home2-process-tag {
+    margin: 0 auto;
+  }
+
+  .pulse-home2-process-title {
+    max-width: 620px;
+    margin: 24px auto 17px;
+    font-size: clamp(42px, 7vw, 58px);
+  }
+
+  .pulse-home2-process-description {
+    max-width: 570px;
+    margin: 0 auto;
+    font-size: var(--fs-body);
+  }
+
+  .pulse-home2-process-steps {
+    max-width: 560px;
+    margin: 32px auto 0;
+    text-align: left;
+  }
+
+  .pulse-home2-process-button {
+    margin-top: 8px;
+  }
+
+  .pulse-home2-process-image-wrap {
+    width: min(100%, 570px);
+    height: 500px;
+  }
+
+  .pulse-home2-process-image-label {
+    right: -20px;
+    bottom: 35px;
+  }
+}
+
+/* SAMSUNG GALAXY S8+ — 360 × 740 */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-home2-process-container {
+    width: 91%;
+    gap: 32px;
+    padding: 55px 0 50px;
+  }
+
+  .pulse-home2-process-content {
+    width: 100%;
+  }
+
+  .pulse-home2-process-title {
+    margin: 20px auto 14px;
+    font-size: 36px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
+
+  .pulse-home2-process-description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .pulse-home2-process-steps {
+    margin-top: 25px;
+  }
+
+  .pulse-home2-process-step {
+    grid-template-columns: 36px 1fr;
+    gap: 11px;
+    padding-bottom: 19px;
+  }
+
+  .pulse-home2-process-step:not(:last-child)::after {
+    top: 32px;
+    left: 17px;
+    height: calc(100% - 25px);
+  }
+
+  .pulse-home2-process-step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-process-step-content {
+    padding-top: 1px;
+  }
+
+  .pulse-home2-process-step-content h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .pulse-home2-process-step-content p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .pulse-home2-process-button {
+    margin-top: 2px;
+  }
+
+  .pulse-home2-process-visual {
+    min-height: auto;
+  }
+
+  .pulse-home2-process-image-wrap {
+    width: 100%;
+    height: 390px;
+  }
+
+  .pulse-home2-process-image-frame {
+    border-radius: 24px 90px 24px 24px;
+  }
+
+  .pulse-home2-process-image-label {
+    right: 8px;
+    bottom: 20px;
+    min-width: 185px;
+    padding: 10px 12px;
+    gap: 9px;
+    border-radius: 14px;
+  }
+
+  .pulse-home2-process-image-label-icon {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .pulse-home2-process-image-label-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pulse-home2-process-image-label-title {
+    font-size: 10px;
+  }
+
+  .pulse-home2-process-image-label-text {
+    font-size: 8px;
+  }
+}
+/* SERVICES SECTION */
+
+.pulse-home2-services-section {
+  padding-top: 70px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.pulse-home2-services-container {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 75px 0;
+}
+
+.pulse-home2-services-header {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.pulse-home2-services-tag {
+  justify-content: center;
+}
+
+.pulse-home2-services-title {
+  max-width: 680px;
+  margin: 22px auto 14px;
+  color: var(--text-color);
+  font-size: clamp(40px, 3.8vw, 58px);
+  font-weight: var(--fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.pulse-home2-services-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.pulse-home2-services-description {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+  opacity: 0.68;
+}
+
+.pulse-home2-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.pulse-home2-service-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.pulse-home2-service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary-color);
+}
+
+.pulse-home2-service-image {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
+  background: var(--primary-soft);
+}
+
+.pulse-home2-service-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.pulse-home2-service-card:hover .pulse-home2-service-image img {
+  transform: scale(1.045);
+}
+
+.pulse-home2-service-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--primary-soft);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.pulse-home2-service-content {
+  min-height: 178px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 23px 21px;
+}
+
+.pulse-home2-service-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+}
+
+.pulse-home2-service-text {
+  max-width: 340px;
+  margin: 9px 0 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  line-height: 1.6;
+  opacity: 0.64;
+}
+
+.pulse-home2-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.pulse-home2-service-link svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.pulse-home2-service-link:hover {
+  color: var(--secondary-color);
+  gap: 10px;
+}
+
+.pulse-home2-service-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* NEST HUB — 1024 × 600 */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-home2-services-section {
+    min-height: auto;
+  }
+
+  .pulse-home2-services-container {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .pulse-home2-services-header {
+    margin-bottom: 28px;
+  }
+
+  .pulse-home2-services-title {
+    margin: 17px auto 10px;
+    font-size: clamp(32px, 3.8vw, 44px);
+  }
+
+  .pulse-home2-services-description {
+    max-width: 470px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .pulse-home2-services-grid {
+    gap: 15px;
+  }
+
+  .pulse-home2-service-card {
+    border-radius: 19px;
+  }
+
+  .pulse-home2-service-image {
+    height: 155px;
+  }
+
+  .pulse-home2-service-content {
+    min-height: 135px;
+    padding: 16px 17px 15px;
+  }
+
+  .pulse-home2-service-title {
+    font-size: 14px;
+  }
+
+  .pulse-home2-service-text {
+    margin-top: 6px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .pulse-home2-service-link {
+    padding-top: 10px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-service-link svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+/* IPAD MINI — 768 × 1024 */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-home2-services-section {
+    min-height: auto;
+  }
+
+  .pulse-home2-services-container {
+    width: 88%;
+    padding: 70px 0;
+  }
+
+  .pulse-home2-services-header {
+    max-width: 640px;
+    margin-bottom: 38px;
+  }
+
+  .pulse-home2-services-title {
+    margin: 21px auto 13px;
+    font-size: clamp(40px, 6.8vw, 54px);
+  }
+
+  .pulse-home2-services-description {
+    max-width: 520px;
+    font-size: var(--fs-body);
+  }
+
+  .pulse-home2-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px;
+  }
+
+  .pulse-home2-service-card {
+    border-radius: 22px;
+  }
+
+  .pulse-home2-service-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 9.5px);
+  }
+
+  .pulse-home2-service-image {
+    height: 205px;
+  }
+
+  .pulse-home2-service-content {
+    min-height: 170px;
+    padding: 20px 21px 19px;
+  }
+
+  .pulse-home2-service-title {
+    font-size: var(--fs-subtitle);
+  }
+
+  .pulse-home2-service-text {
+    max-width: 310px;
+    margin-top: 8px;
+  }
+
+  .pulse-home2-service-link {
+    padding-top: 14px;
+  }
+}
+
+/* SAMSUNG GALAXY S8+ — 360 × 740 */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-home2-services-container {
+    width: 91%;
+    padding: 52px 0 48px;
+  }
+
+  .pulse-home2-services-header {
+    margin-bottom: 27px;
+  }
+
+  .pulse-home2-services-title {
+    margin: 18px auto 11px;
+    font-size: 34px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
+
+  .pulse-home2-services-description {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .pulse-home2-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pulse-home2-service-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .pulse-home2-service-card {
+    border-radius: 19px;
+  }
+
+  .pulse-home2-service-image {
+    height: 185px;
+  }
+
+  .pulse-home2-service-content {
+    min-height: 160px;
+    padding: 18px 18px 17px;
+  }
+
+  .pulse-home2-service-title {
+    font-size: 16px;
+  }
+
+  .pulse-home2-service-text {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .pulse-home2-service-link {
+    padding-top: 14px;
+    font-size: 12px;
+  }
+
+  .pulse-home2-service-link svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+/* PATIENT PORTAL SECTION */
+
+.pulse-home2-portal-section {
+  padding-top: 70px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.pulse-home2-portal-container {
+  position: relative;
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.pulse-home2-portal-header {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.pulse-home2-portal-tag {
+  justify-content: center;
+}
+
+.pulse-home2-portal-title {
+  max-width: 650px;
+  margin: 22px auto 14px;
+  color: var(--text-color);
+  font-size: clamp(40px, 3.7vw, 56px);
+  font-weight: var(--fw-bold);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.pulse-home2-portal-title span {
+  display: block;
+  color: var(--primary-color);
+}
+
+.pulse-home2-portal-description {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.7;
+  opacity: 0.68;
+}
+
+.pulse-home2-portal-preview {
+  position: relative;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-home2-portal-topbar {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--light-bg);
+}
+
+.pulse-home2-portal-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pulse-home2-portal-brand-icon {
+  width: 33px;
+  height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-home2-portal-brand-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.pulse-home2-portal-brand-name {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.pulse-home2-portal-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse-home2-portal-profile-avatar {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  color: var(--secondary-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.pulse-home2-portal-profile-name {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.pulse-home2-portal-profile svg {
+  width: 14px;
+  height: 14px;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.pulse-home2-portal-body {
+  padding: 34px 40px 30px;
+}
+
+.pulse-home2-portal-welcome {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.pulse-home2-portal-eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--primary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.pulse-home2-portal-welcome-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(25px, 2.2vw, 32px);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.pulse-home2-portal-welcome-text {
+  margin: 6px 0 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+  opacity: 0.58;
+}
+
+.pulse-home2-portal-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.pulse-home2-portal-card {
+  min-width: 0;
+  padding: 21px 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-home2-portal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pulse-home2-portal-card-icon {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  color: var(--primary-color);
+}
+
+.pulse-home2-portal-card-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.pulse-home2-portal-card-label {
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  opacity: 0.58;
+}
+
+.pulse-home2-portal-visit-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 17px;
+}
+
+.pulse-home2-portal-visit-date strong {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.pulse-home2-portal-visit-date div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pulse-home2-portal-visit-date span {
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  opacity: 0.6;
+}
+
+.pulse-home2-portal-visit-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.pulse-home2-portal-visit-info strong {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+.pulse-home2-portal-visit-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+  opacity: 0.58;
+}
+
+.pulse-home2-portal-visit-info svg {
+  width: 13px;
+  height: 13px;
+}
+
+.pulse-home2-portal-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 15px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.pulse-home2-portal-card-link:hover {
+  gap: 10px;
+  color: var(--secondary-color);
+}
+
+.pulse-home2-portal-card-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.pulse-home2-portal-reminder-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.pulse-home2-portal-reminder-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 6px var(--secondary-soft);
+}
+
+.pulse-home2-portal-reminder-content div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pulse-home2-portal-reminder-content strong {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+}
+
+.pulse-home2-portal-reminder-content span {
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+  opacity: 0.58;
+}
+
+.pulse-home2-portal-reminder-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 17px;
+  color: var(--secondary-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+}
+
+.pulse-home2-portal-reminder-status svg {
+  width: 14px;
+  height: 14px;
+}
+
+.pulse-home2-portal-notes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 16px;
+  padding: 17px 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+}
+
+.pulse-home2-portal-notes-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pulse-home2-portal-notes-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pulse-home2-portal-notes-header h4 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+}
+
+.pulse-home2-portal-notes-header a {
+  width: 31px;
+  height: 31px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary-color);
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.pulse-home2-portal-notes-header a:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translate(2px, -2px);
+}
+
+.pulse-home2-portal-notes-header a svg {
+  width: 14px;
+  height: 14px;
+}
+
+.pulse-home2-portal-note-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 245px;
+}
+
+.pulse-home2-portal-note-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--secondary-soft);
+  color: var(--secondary-color);
+}
+
+.pulse-home2-portal-note-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pulse-home2-portal-note-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.pulse-home2-portal-note-content strong {
+  color: var(--text-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+
+.pulse-home2-portal-note-content span {
+  color: var(--text-color);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-normal);
+  opacity: 0.55;
+  white-space: nowrap;
+}
+
+.pulse-home2-portal-note-arrow {
+  display: none;
+}
+
+/* NEST HUB — 1024 × 600 */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-home2-portal-section {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .pulse-home2-portal-container {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .pulse-home2-portal-header {
+    margin-bottom: 26px;
+  }
+
+  .pulse-home2-portal-title {
+    margin: 16px auto 10px;
+    font-size: clamp(32px, 3.6vw, 42px);
+  }
+
+  .pulse-home2-portal-description {
+    max-width: 460px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .pulse-home2-portal-preview {
+    border-radius: 22px;
+  }
+
+  .pulse-home2-portal-topbar {
+    min-height: 54px;
+    padding: 0 20px;
+  }
+
+  .pulse-home2-portal-brand-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+  }
+
+  .pulse-home2-portal-brand-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-home2-portal-profile-avatar {
+    width: 27px;
+    height: 27px;
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-profile-name {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-body {
+    padding: 23px 27px 22px;
+  }
+
+  .pulse-home2-portal-welcome {
+    margin-bottom: 17px;
+  }
+
+  .pulse-home2-portal-eyebrow {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-welcome-title {
+    font-size: 24px;
+  }
+
+  .pulse-home2-portal-welcome-text {
+    margin-top: 3px;
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-cards {
+    gap: 12px;
+  }
+
+  .pulse-home2-portal-card {
+    padding: 15px 17px;
+    border-radius: 15px;
+  }
+
+  .pulse-home2-portal-card-icon {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+  }
+
+  .pulse-home2-portal-card-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-home2-portal-card-label {
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-visit-date {
+    margin-top: 11px;
+  }
+
+  .pulse-home2-portal-visit-date strong {
+    font-size: 28px;
+  }
+
+  .pulse-home2-portal-visit-info {
+    margin-top: 9px;
+  }
+
+  .pulse-home2-portal-visit-info strong {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-visit-info span {
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-card-link {
+    margin-top: 9px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-reminder-content {
+    margin-top: 14px;
+  }
+
+  .pulse-home2-portal-reminder-content strong {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-reminder-content span {
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-reminder-status {
+    margin-top: 10px;
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-notes {
+    gap: 20px;
+    margin-top: 11px;
+    padding: 12px 17px;
+    border-radius: 15px;
+  }
+
+  .pulse-home2-portal-notes-header {
+    gap: 10px;
+  }
+
+  .pulse-home2-portal-notes-header h4 {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-note-item {
+    min-width: 205px;
+    gap: 9px;
+  }
+
+  .pulse-home2-portal-note-icon {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+  }
+
+  .pulse-home2-portal-note-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pulse-home2-portal-note-content strong {
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-note-content span {
+    font-size: 9px;
+  }
+}
+
+/* IPAD MINI — 768 × 1024 */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-home2-portal-section {
+    min-height: auto;
+  }
+
+  .pulse-home2-portal-container {
+    width: 88%;
+    padding: 65px 0;
+  }
+
+  .pulse-home2-portal-header {
+    max-width: 620px;
+    margin-bottom: 35px;
+  }
+
+  .pulse-home2-portal-title {
+    margin: 20px auto 12px;
+    font-size: clamp(38px, 6.5vw, 52px);
+  }
+
+  .pulse-home2-portal-description {
+    max-width: 510px;
+  }
+
+  .pulse-home2-portal-preview {
+    border-radius: 24px;
+  }
+
+  .pulse-home2-portal-topbar {
+    min-height: 62px;
+    padding: 0 22px;
+  }
+
+  .pulse-home2-portal-body {
+    padding: 28px 28px 27px;
+  }
+
+  .pulse-home2-portal-welcome {
+    margin-bottom: 21px;
+  }
+
+  .pulse-home2-portal-welcome-title {
+    font-size: 28px;
+  }
+
+  .pulse-home2-portal-cards {
+    gap: 14px;
+  }
+
+  .pulse-home2-portal-card {
+    padding: 19px;
+    border-radius: 17px;
+  }
+
+  .pulse-home2-portal-visit-date {
+    margin-top: 15px;
+  }
+
+  .pulse-home2-portal-visit-date strong {
+    font-size: 33px;
+  }
+
+  .pulse-home2-portal-visit-info {
+    margin-top: 12px;
+  }
+
+  .pulse-home2-portal-card-link {
+    margin-top: 13px;
+  }
+
+  .pulse-home2-portal-reminder-content {
+    margin-top: 18px;
+  }
+
+  .pulse-home2-portal-reminder-status {
+    margin-top: 15px;
+  }
+
+  .pulse-home2-portal-notes {
+    gap: 20px;
+    margin-top: 14px;
+    padding: 16px 20px;
+    border-radius: 17px;
+  }
+
+  .pulse-home2-portal-note-item {
+    min-width: 220px;
+  }
+}
+
+/* SAMSUNG GALAXY S8+ — 360 × 740 */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-home2-portal-container {
+    width: 91%;
+    padding: 52px 0 48px;
+  }
+
+  .pulse-home2-portal-header {
+    margin-bottom: 27px;
+  }
+
+  .pulse-home2-portal-title {
+    margin: 17px auto 10px;
+    font-size: 33px;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+  }
+
+  .pulse-home2-portal-description {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .pulse-home2-portal-preview {
+    border-radius: 19px;
+  }
+
+  .pulse-home2-portal-topbar {
+    min-height: 52px;
+    padding: 0 14px;
+  }
+
+  .pulse-home2-portal-brand {
+    gap: 7px;
+  }
+
+  .pulse-home2-portal-brand-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+  }
+
+  .pulse-home2-portal-brand-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .pulse-home2-portal-brand-name {
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-profile {
+    gap: 5px;
+  }
+
+  .pulse-home2-portal-profile-avatar {
+    width: 26px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-profile-name {
+    display: none;
+  }
+
+  .pulse-home2-portal-profile svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .pulse-home2-portal-body {
+    padding: 23px 15px 18px;
+  }
+
+  .pulse-home2-portal-welcome {
+    margin-bottom: 18px;
+  }
+
+  .pulse-home2-portal-eyebrow {
+    margin-bottom: 6px;
+    font-size: 8px;
+  }
+
+  .pulse-home2-portal-welcome-title {
+    font-size: 22px;
+  }
+
+  .pulse-home2-portal-welcome-text {
+    margin-top: 4px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-cards {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .pulse-home2-portal-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .pulse-home2-portal-card-icon {
+    width: 29px;
+    height: 29px;
+    border-radius: 7px;
+  }
+
+  .pulse-home2-portal-card-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .pulse-home2-portal-card-label {
+    font-size: 8px;
+  }
+
+  .pulse-home2-portal-visit-date {
+    margin-top: 12px;
+  }
+
+  .pulse-home2-portal-visit-date strong {
+    font-size: 29px;
+  }
+
+  .pulse-home2-portal-visit-info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .pulse-home2-portal-visit-info strong {
+    font-size: 12px;
+  }
+
+  .pulse-home2-portal-visit-info span {
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-card-link {
+    margin-top: 11px;
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-reminder-content {
+    margin-top: 15px;
+  }
+
+  .pulse-home2-portal-reminder-content strong {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-reminder-content span {
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-reminder-status {
+    margin-top: 12px;
+    font-size: 9px;
+  }
+
+  .pulse-home2-portal-notes {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 11px;
+    padding: 14px 15px;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .pulse-home2-portal-notes-header {
+    justify-content: center;
+    gap: 9px;
+  }
+
+  .pulse-home2-portal-notes-header > div {
+    align-items: center;
+  }
+
+  .pulse-home2-portal-notes-header h4 {
+    font-size: 11px;
+  }
+
+  .pulse-home2-portal-notes-header a {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pulse-home2-portal-notes-header a svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .pulse-home2-portal-note-item {
+    min-width: 0;
+    justify-content: center;
+    gap: 9px;
+  }
+
+  .pulse-home2-portal-note-icon {
+    width: 29px;
+    height: 29px;
+    border-radius: 7px;
+  }
+
+  .pulse-home2-portal-note-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .pulse-home2-portal-note-content {
+    align-items: flex-start;
+  }
+
+  .pulse-home2-portal-note-content strong {
+    font-size: 10px;
+  }
+
+  .pulse-home2-portal-note-content span {
+    font-size: 8px;
+  }
+}
+
+/* PULSE HAVEN — HOME 2 PROCESS SECTION */
+
+.pulse-process-section {
+  
+  position: relative;
+  width: 100%;
+  padding: 100px 24px;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.pulse-process-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pulse-process-header {
+  max-width: 720px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.pulse-process-header .pulse-section-tag {
+  margin-bottom: 20px;
+}
+
+.pulse-process-title {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+.pulse-process-title span {
+  color: var(--primary-color);
+}
+.pulse-process-description {
+  max-width: 580px;
+  margin: 16px auto 0;
+  color: var(--text-color);
+  opacity: 0.72;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.8;
+}
+
+.pulse-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.pulse-process-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 240px;
+  padding: 24px 21px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--light-bg);
+  border: 1px solid
+    color-mix(in srgb, var(--secondary-color) 18%, var(--light-bg));
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.pulse-process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: -1;
+  width: 42px;
+  height: 3px;
+  border-radius: 0 0 5px 5px;
+  background: var(--secondary-color);
+  opacity: 0.85;
+  transition:
+    width 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.pulse-process-card::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  z-index: -1;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--secondary-soft);
+  opacity: 0.65;
+  pointer-events: none;
+  transition:
+    transform 0.4s ease,
+    opacity 0.35s ease;
+}
+
+.pulse-process-card-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  margin-bottom: 22px;
+  color: var(--primary-color);
+  background: var(--primary-soft);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 18%, transparent);
+  border-radius: 16px;
+  transition:
+    transform 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.pulse-process-card-icon svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.pulse-process-card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.pulse-process-card-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+  letter-spacing: 0.11em;
+}
+
+.pulse-process-card-content h3 {
+  margin: 0 0 10px;
+  color: var(--text-color);
+  font-size: 19px;
+  font-weight: var(--fw-bold);
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+}
+
+.pulse-process-card-content p {
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.72;
+  font-size: 13px;
+  font-weight: var(--fw-normal);
+  line-height: 1.75;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pulse-process-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+  }
+
+  .pulse-process-card:hover::before {
+    width: 72px;
+    opacity: 1;
+  }
+
+  .pulse-process-card:hover::after {
+    transform: scale(1.35);
+    opacity: 0.95;
+  }
+
+  .pulse-process-card:hover .pulse-process-card-icon {
+    transform: translateY(-3px);
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-process-section {
+    padding: 58px 24px;
+  }
+
+  .pulse-process-header {
+    margin-bottom: 32px;
+  }
+
+  .pulse-process-header .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-process-title {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-process-description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .pulse-process-grid {
+    gap: 14px;
+  }
+
+  .pulse-process-card {
+    min-height: 205px;
+    padding: 19px 16px;
+    border-radius: 16px;
+  }
+
+  .pulse-process-card::before {
+    left: 16px;
+  }
+
+  .pulse-process-card-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 16px;
+    border-radius: 13px;
+  }
+
+  .pulse-process-card-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .pulse-process-card-label {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+
+  .pulse-process-card-content h3 {
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  .pulse-process-card-content p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-process-section {
+    padding: 76px 24px;
+  }
+
+  .pulse-process-header {
+    max-width: 600px;
+    margin-bottom: 38px;
+  }
+
+  .pulse-process-title {
+    font-size: 36px;
+    letter-spacing: -0.9px;
+  }
+
+  .pulse-process-description {
+    max-width: 500px;
+    font-size: 15px;
+  }
+
+  .pulse-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .pulse-process-card {
+    min-height: 225px;
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .pulse-process-card-icon {
+    width: 49px;
+    height: 49px;
+    margin-bottom: 18px;
+  }
+
+  .pulse-process-card-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .pulse-process-card-label {
+    font-size: 10px;
+  }
+
+  .pulse-process-card-content h3 {
+    font-size: 18px;
+  }
+
+  .pulse-process-card-content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-process-section {
+    padding: 58px 16px;
+  }
+
+  .pulse-process-header {
+    margin-bottom: 28px;
+  }
+
+  .pulse-process-header .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-process-title {
+    font-size: 27px;
+    letter-spacing: -0.6px;
+    line-height: 1.25;
+  }
+
+  .pulse-process-description {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .pulse-process-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .pulse-process-card {
+    min-height: 0;
+    padding: 18px 17px;
+    border-radius: 16px;
+  }
+
+  .pulse-process-card::before {
+    left: 17px;
+    width: 36px;
+  }
+
+  .pulse-process-card-icon {
+    width: 43px;
+    height: 43px;
+    margin-bottom: 13px;
+    border-radius: 12px;
+  }
+
+  .pulse-process-card-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .pulse-process-card-label {
+    margin-bottom: 6px;
+    font-size: 9px;
+    letter-spacing: 0.09em;
+  }
+
+  .pulse-process-card-content h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .pulse-process-card-content p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-process-card,
+  .pulse-process-card::before,
+  .pulse-process-card::after,
+  .pulse-process-card-icon {
+    transition: none;
+  }
+
+  .pulse-process-card:hover,
+  .pulse-process-card:hover .pulse-process-card-icon {
+    transform: none;
+  }
+}
+/* PULSE HAVEN — HOME 2 FAQ SECTION */
+
+.pulse-faq-section {
+  width: 100%;
+  padding: 90px 24px;
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+.pulse-faq-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pulse-faq-header {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.pulse-faq-title {
+  margin: 20px 0 14px;
+  color: var(--text-color);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.pulse-faq-title span {
+  color: var(--primary-color);
+}
+.pulse-faq-description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--text-color);
+  opacity: 0.75;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.pulse-faq-list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 70%;
+}
+
+.pulse-faq-item {
+  width: 100%;
+  overflow: hidden;
+  background: var(--light-bg);
+  border: 1px solid var(--text-color);
+  border-radius: 14px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.pulse-faq-item:hover {
+  border: 1px solid var(--secondary-color);
+}
+
+.pulse-faq-item[open] {
+  border-color: color-mix(in srgb, var(--text-color) 24%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--text-color) 8%, transparent);
+}
+
+.pulse-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 72px;
+  padding: 20px 24px;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pulse-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.pulse-faq-question::marker {
+  content: "";
+}
+
+.pulse-faq-question:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+  border-radius: 12px;
+}
+
+.pulse-faq-toggle {
+  position: relative;
+  display: flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+  border-radius: 50%;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pulse-faq-toggle::before,
+.pulse-faq-toggle::after {
+  position: absolute;
+  width: 10px;
+  height: 1.5px;
+  background: var(--text-color);
+  border-radius: 2px;
+  content: "";
+  transition: transform 0.3s ease;
+}
+
+.pulse-faq-toggle::after {
+  transform: rotate(90deg);
+}
+
+.pulse-faq-item[open] .pulse-faq-toggle::after {
+  transform: rotate(0deg);
+}
+
+.pulse-faq-answer {
+  padding: 0 24px 22px;
+  animation: pulse-faq-reveal 0.25s ease;
+}
+
+.pulse-faq-answer p {
+  max-width: 960px;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.78;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+@keyframes pulse-faq-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-faq-section {
+    padding: 48px 24px;
+  }
+
+  .pulse-faq-header {
+    margin-bottom: 26px;
+  }
+
+  .pulse-faq-title {
+    margin-top: 14px;
+    font-size: 32px;
+  }
+
+  .pulse-faq-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pulse-faq-list {
+    gap: 10px;
+  }
+
+  .pulse-faq-question {
+    min-height: 58px;
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+
+  .pulse-faq-answer {
+    padding: 0 20px 16px;
+  }
+
+  .pulse-faq-answer p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-faq-section {
+    padding: 64px 22px;
+  }
+
+  .pulse-faq-header {
+    margin-bottom: 32px;
+  }
+
+  .pulse-faq-title {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+
+  .pulse-faq-description {
+    max-width: 560px;
+    font-size: 15px;
+  }
+
+  .pulse-faq-list {
+    gap: 12px;
+  }
+
+  .pulse-faq-question {
+    min-height: 66px;
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .pulse-faq-answer {
+    padding: 0 20px 20px;
+  }
+
+  .pulse-faq-answer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-faq-section {
+    padding: 44px 16px;
+  }
+
+  .pulse-faq-header {
+    margin-bottom: 24px;
+  }
+
+  .pulse-faq-title {
+    margin-top: 14px;
+    margin-bottom: 10px;
+    font-size: 27px;
+    letter-spacing: -0.5px;
+  }
+
+  .pulse-faq-description {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .pulse-faq-list {
+    gap: 10px;
+  }
+
+  .pulse-faq-item {
+    border-radius: 11px;
+  }
+
+  .pulse-faq-question {
+    min-height: 58px;
+    gap: 12px;
+    padding: 14px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .pulse-faq-toggle {
+    flex-basis: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .pulse-faq-toggle::before,
+  .pulse-faq-toggle::after {
+    width: 9px;
+  }
+
+  .pulse-faq-answer {
+    padding: 0 14px 16px;
+  }
+
+  .pulse-faq-answer p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-faq-item,
+  .pulse-faq-question,
+  .pulse-faq-toggle,
+  .pulse-faq-toggle::before,
+  .pulse-faq-toggle::after {
+    transition: none;
+  }
+
+  .pulse-faq-answer {
+    animation: none;
+  }
+}
+
+/* =========================================================
+   PREMIUM CTA SECTION
+========================================================= */
+
+.pulse-home2-cta-section {
+  position: relative;
+  width: 100%;
+  padding: 95px 0;
+  background: var(--light-bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* =========================================================
+   CTA CONTAINER
+========================================================= */
+
+.pulse-home2-cta-container {
+  width: 1200px;
+  max-width: calc(100% - 40px);
+  min-height: 350px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   CTA CONTENT
+========================================================= */
+
+.pulse-home2-cta-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+/* TAGLINE */
+
+.pulse-home2-cta-content .pulse-section-tag {
+  margin-bottom: 18px;
+}
+
+/* HEADING */
+
+.pulse-home2-cta-content h2 {
+  margin: 0 auto;
+
+  max-width: 680px;
+
+  font-size: 46px;
+  line-height: 1.12;
+  font-weight: 700;
+
+  color: var(--text-color);
+}
+
+/* DESCRIPTION */
+
+.pulse-home2-cta-content p {
+  max-width: 540px;
+  margin: 20px auto 28px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--text-color);
+  opacity: 0.72;
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.pulse-home2-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 13px 21px;
+
+  width: auto;
+
+  text-decoration: none;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  border: 1px solid var(--primary-color);
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pulse-home2-cta-button i {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.pulse-home2-cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 24px rgba(30, 112, 75, 0.14);
+}
+
+/* =========================================================
+   ANIMATED BACKGROUND
+========================================================= */
+
+.pulse-home2-cta-bg {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =========================================================
+   ORGANIC ORBITS
+========================================================= */
+
+.pulse-home2-cta-orbit {
+  position: absolute;
+
+  border: 1px solid var(--primary-color);
+
+  opacity: 0.11;
+
+  pointer-events: none;
+}
+
+/* LARGE LEFT ORBIT */
+
+.pulse-home2-cta-orbit-one {
+  width: 520px;
+  height: 300px;
+
+  left: -170px;
+  top: 50%;
+
+  border-radius: 48% 52% 55% 45% / 55% 45% 55% 45%;
+
+  transform: translateY(-50%) rotate(-18deg);
+
+  animation: pulseHome2OrbitOne 14s ease-in-out infinite alternate;
+}
+
+/* LARGE RIGHT ORBIT */
+
+.pulse-home2-cta-orbit-two {
+  width: 470px;
+  height: 270px;
+
+  right: -140px;
+  top: 50%;
+
+  border-color: var(--secondary-color);
+  opacity: 0.1;
+
+  border-radius: 55% 45% 48% 52% / 45% 55% 45% 55%;
+
+  transform: translateY(-50%) rotate(20deg);
+
+  animation: pulseHome2OrbitTwo 16s ease-in-out infinite alternate;
+}
+
+/* SMALL TOP ORBIT */
+
+.pulse-home2-cta-orbit-three {
+  width: 230px;
+  height: 130px;
+
+  left: 50%;
+  top: -75px;
+
+  border-radius: 50%;
+
+  opacity: 0.08;
+
+  transform: translateX(-50%) rotate(-8deg);
+
+  animation: pulseHome2OrbitThree 11s ease-in-out infinite alternate;
+}
+
+/* =========================================================
+   SOFT FLOATING GLOWS
+========================================================= */
+
+.pulse-home2-cta-glow {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: var(--primary-color);
+
+  opacity: 0.045;
+
+  filter: blur(8px);
+
+  animation: pulseHome2Glow 9s ease-in-out infinite alternate;
+}
+
+.pulse-home2-cta-glow-one {
+  left: 20%;
+  top: 20%;
+}
+
+.pulse-home2-cta-glow-two {
+  right: 18%;
+  bottom: 15%;
+
+  background: var(--secondary-color);
+
+  animation-delay: -4s;
+}
+
+/* =========================================================
+   BACKGROUND ANIMATIONS
+========================================================= */
+
+@keyframes pulseHome2OrbitOne {
+  0% {
+    transform: translateY(-50%) rotate(-18deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(-10deg) translate3d(25px, -12px, 0);
+  }
+}
+
+@keyframes pulseHome2OrbitTwo {
+  0% {
+    transform: translateY(-50%) rotate(20deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(12deg) translate3d(-25px, 15px, 0);
+  }
+}
+
+@keyframes pulseHome2OrbitThree {
+  0% {
+    transform: translateX(-50%) rotate(-8deg) translateY(0);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(5deg) translateY(18px);
+  }
+}
+
+@keyframes pulseHome2Glow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  100% {
+    transform: translate3d(20px, -18px, 0) scale(1.15);
+  }
+}
+
+/* =========================================================
+   NEST HUB
+   1024 × 600
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-home2-cta-section {
+    padding: 65px 0;
+  }
+
+  .pulse-home2-cta-container {
+    min-height: 300px;
+  }
+
+  .pulse-home2-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .pulse-home2-cta-content p {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .pulse-home2-cta-orbit-one {
+    width: 400px;
+    height: 240px;
+    left: -180px;
+  }
+
+  .pulse-home2-cta-orbit-two {
+    width: 380px;
+    height: 220px;
+    right: -160px;
+  }
+}
+
+/* =========================================================
+   IPAD MINI
+   768 × 1024
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-home2-cta-section {
+    padding: 75px 0;
+  }
+
+  .pulse-home2-cta-container {
+    min-height: 330px;
+  }
+
+  .pulse-home2-cta-content {
+    max-width: 620px;
+  }
+
+  .pulse-home2-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .pulse-home2-cta-content p {
+    font-size: 15px;
+  }
+
+  .pulse-home2-cta-orbit-one {
+    width: 360px;
+    height: 220px;
+    left: -190px;
+  }
+
+  .pulse-home2-cta-orbit-two {
+    width: 340px;
+    height: 200px;
+    right: -180px;
+  }
+
+  .pulse-home2-cta-orbit-three {
+    width: 190px;
+    height: 110px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   360 × 800
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 800px) {
+  .pulse-home2-cta-section {
+    padding: 55px 0;
+  }
+
+  .pulse-home2-cta-container {
+    max-width: calc(100% - 30px);
+    min-height: 300px;
+  }
+
+  .pulse-home2-cta-content {
+    max-width: 320px;
+  }
+
+  .pulse-home2-cta-content .pulse-section-tag {
+    margin-bottom: 14px;
+  }
+
+  .pulse-home2-cta-content h2 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .pulse-home2-cta-content p {
+    margin: 16px auto 23px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pulse-home2-cta-button {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .pulse-home2-cta-orbit-one {
+    width: 250px;
+    height: 150px;
+    left: -160px;
+  }
+
+  .pulse-home2-cta-orbit-two {
+    width: 230px;
+    height: 140px;
+    right: -155px;
+  }
+
+  .pulse-home2-cta-orbit-three {
+    width: 150px;
+    height: 85px;
+  }
+
+  .pulse-home2-cta-glow {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-home2-cta-orbit,
+  .pulse-home2-cta-glow {
+    animation: none;
+  }
+
+  .pulse-home2-cta-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseHaven</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="home1.css" />
+
+    <script src="https://unpkg.com/lucide@0.468.0" defer></script>
+    <script src="components/component.js" defer></script>
+    <script src="global.js" defer></script>
+    <script src="home1.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <section class="pulse-hero-section" id="home">
+      <div class="pulse-hero-container">
+        <div class="pulse-hero-content">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="heart-pulse"></i>
+            </span>
+
+            <span class="pulse-section-tag-text"> AT-HOME VITALS CARE </span>
+          </div>
+
+          <h1 class="pulse-hero-title">
+            Your Vital Care,
+            <span>Right at Home.</span>
+          </h1>
+
+          <p class="pulse-hero-description">
+            Professional blood pressure and vitals monitoring from caring
+            healthcare professionals, delivered conveniently to your home.
+          </p>
+
+          <div class="pulse-hero-actions">
+            <a href="contact.html" class="pulse-btn pulse-btn-primary">
+              <span>Schedule a Visit</span>
+              <i data-lucide="calendar-check"></i>
+            </a>
+
+            <a
+              href="#services"
+              class="pulse-btn pulse-btn-secondary"
+            >
+              Explore Services
+            </a>
+          </div>
+
+          <div class="pulse-hero-trust">
+            <div class="pulse-hero-trust-item">
+              <span class="pulse-hero-trust-icon">
+                <i data-lucide="house"></i>
+              </span>
+
+              <span class="pulse-hero-trust-text"> Care at your door </span>
+            </div>
+
+            <div class="pulse-hero-trust-divider"></div>
+
+            <div class="pulse-hero-trust-item">
+              <span class="pulse-hero-trust-icon">
+                <i data-lucide="shield-check"></i>
+              </span>
+
+              <span class="pulse-hero-trust-text">
+                Professional monitoring
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pulse-hero-visual">
+          <div class="pulse-hero-glow"></div>
+
+          <div class="pulse-hero-wave">
+            <svg viewBox="0 0 600 180" aria-hidden="true" focusable="false">
+              <path
+                d="M0 92
+            H90
+            C105 92 110 91 120 88
+            L138 88
+            L154 88
+            L170 88
+            L185 88
+            L202 88
+            L220 88
+            L236 88
+            L250 88
+            L264 88
+            L278 88
+            L292 88
+            L305 88
+            L318 88
+            L330 88
+            L342 88
+            L354 88
+            L366 88
+            L378 88
+            L390 88
+            L402 88
+            L414 88
+            L426 88
+            L438 88
+            L450 88
+            L462 88
+            L474 88
+            L486 88
+            L498 88
+            L510 88
+            L522 88
+            L534 88
+            L546 88
+            L558 88
+            L570 88
+            L600 88"
+              />
+            </svg>
+          </div>
+
+          <div class="pulse-hero-image-wrap">
+            <div class="pulse-hero-image-frame">
+              <img
+                src="images/home-hero1.jpg"
+                alt="Healthcare professional checking a patient's blood pressure at home"
+                class="pulse-hero-image"
+              />
+            </div>
+
+            <div class="pulse-hero-image-overlay"></div>
+          </div>
+
+          <div class="pulse-bp-card">
+            <div class="pulse-bp-card-top">
+              <span class="pulse-bp-icon">
+                <i data-lucide="heart-pulse"></i>
+              </span>
+
+              <span class="pulse-bp-label"> Blood Pressure </span>
+            </div>
+
+            <div class="pulse-bp-reading">
+              <strong>118</strong>
+              <span>/ 76</span>
+            </div>
+
+            <div class="pulse-bp-status">
+              <span class="pulse-bp-status-dot"></span>
+              <span>Healthy reading</span>
+            </div>
+          </div>
+
+          <div class="pulse-home-visit-card">
+            <span class="pulse-home-visit-icon">
+              <i data-lucide="check"></i>
+            </span>
+
+            <div class="pulse-home-visit-content">
+              <span class="pulse-home-visit-label"> Home Visit </span>
+
+              <span class="pulse-home-visit-text"> Care at your door </span>
+            </div>
+          </div>
+
+          <div class="pulse-vitals-orbit">
+            <span class="pulse-vitals-orbit-dot"></span>
+
+            <span class="pulse-vitals-orbit-icon">
+              <i data-lucide="activity"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VITALS MONITORING SECTION -->
+
+    <section class="pulse-vitals-section" id="vitals-monitoring">
+      <div class="pulse-vitals-container">
+        <div class="pulse-vitals-header">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="heart-pulse"></i>
+            </span>
+            <span class="pulse-section-tag-text">VITALS MONITORING</span>
+          </span>
+
+          <h2 class="pulse-section-title">
+            Better health,
+            <span class="pulse-section-title-secondary">closer to home </span>
+            
+          </h2>
+
+          <p class="pulse-section-description">
+            Keep track of your vital signs with convenient in-home monitoring,
+            clear health information, and caring support from trained
+            professionals.
+          </p>
+        </div>
+
+        <div class="pulse-vitals-visual">
+          <div class="pulse-vitals-panel">
+            <div class="pulse-vitals-panel-header">
+              <div>
+                <span class="pulse-vitals-panel-label">TODAY'S VITALS</span>
+                <h3>Health at a glance</h3>
+              </div>
+
+              <span class="pulse-vitals-status">
+                <span></span>
+                Monitoring
+              </span>
+            </div>
+
+            <div class="pulse-vitals-main">
+              <div class="pulse-vitals-reading">
+                <span class="pulse-vitals-reading-label">
+                  <i data-lucide="activity"></i>
+                  Blood Pressure
+                </span>
+
+                <strong>118/76</strong>
+
+                <span class="pulse-vitals-reading-unit">mmHg</span>
+              </div>
+
+              <div class="pulse-vitals-chart">
+                <svg
+                  viewBox="0 0 420 150"
+                  role="img"
+                  aria-label="Blood pressure trend"
+                >
+                  <path
+                    d="M0 105 C35 105 40 82 72 91 S112 115 142 82 S184 62 212 82 S250 105 278 72 S320 48 350 69 S390 84 420 42"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="pulse-vitals-metrics">
+              <div class="pulse-vitals-metric">
+                <span class="pulse-vitals-metric-icon">
+                  <i data-lucide="heart"></i>
+                </span>
+
+                <div>
+                  <span>Heart Rate</span>
+                  <strong>72 <small>BPM</small></strong>
+                </div>
+              </div>
+
+              <div class="pulse-vitals-metric">
+                <span class="pulse-vitals-metric-icon">
+                  <i data-lucide="wind"></i>
+                </span>
+
+                <div>
+                  <span>Oxygen</span>
+                  <strong>98 <small>%</small></strong>
+                </div>
+              </div>
+
+              <div class="pulse-vitals-metric">
+                <span class="pulse-vitals-metric-icon">
+                  <i data-lucide="thermometer"></i>
+                </span>
+
+                <div>
+                  <span>Temperature</span>
+                  <strong>98.4 <small>°F</small></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pulse-vitals-float pulse-vitals-history">
+            <span class="pulse-vitals-float-icon">
+              <i data-lucide="chart-no-axes-combined"></i>
+            </span>
+
+            <div>
+              <span>Vitals History</span>
+              <strong>View trends over time</strong>
+            </div>
+          </div>
+
+          <div class="pulse-vitals-float pulse-vitals-notes">
+            <span class="pulse-vitals-float-icon">
+              <i data-lucide="clipboard-check"></i>
+            </span>
+
+            <div>
+              <span>Nurse Notes</span>
+              <strong>Visit details recorded</strong>
+            </div>
+          </div>
+
+          <div class="pulse-vitals-float pulse-vitals-reminder">
+            <span class="pulse-vitals-float-icon">
+              <i data-lucide="bell-ring"></i>
+            </span>
+
+            <div>
+              <span>Next Visit</span>
+              <strong>Reminder scheduled</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — CARE STATISTICS -->
+
+    <section class="pulse-stats-section" id="care-statistics">
+      <div class="pulse-stats-container">
+        <div class="pulse-stats-header">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="chart-no-axes-combined"></i>
+            </span>
+            <span class="pulse-section-tag-text">OUR IMPACT</span>
+          </span>
+
+          <h2 class="pulse-stats-title">
+            Trusted care, measured in <span>numbers.</span>
+          </h2>
+
+          <p class="pulse-stats-description">
+            Every visit represents a person receiving convenient, caring health
+            support in the comfort of home.
+          </p>
+        </div>
+
+        <div class="pulse-stats-grid">
+          <article class="pulse-stat-card pulse-stat-card-primary">
+            <span class="pulse-stat-number" data-target="10000" data-suffix="+"
+              >0</span
+            >
+
+            <div class="pulse-stat-content">
+              <span class="pulse-stat-icon">
+                <i data-lucide="users"></i>
+              </span>
+
+              <div>
+                <h3>Patients Supported</h3>
+                <p>People receiving convenient care at home.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pulse-stat-card pulse-stat-card-secondary">
+            <span class="pulse-stat-number" data-target="25000" data-suffix="+"
+              >0</span
+            >
+
+            <div class="pulse-stat-content">
+              <span class="pulse-stat-icon">
+                <i data-lucide="house-plus"></i>
+              </span>
+
+              <div>
+                <h3>Home Visits Completed</h3>
+                <p>In-home health visits delivered with care.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pulse-stat-card pulse-stat-card-accent">
+            <span class="pulse-stat-number" data-target="98" data-suffix="%"
+              >0</span
+            >
+
+            <div class="pulse-stat-content">
+              <span class="pulse-stat-icon">
+                <i data-lucide="heart-handshake"></i>
+              </span>
+
+              <div>
+                <h3>Patient Satisfaction</h3>
+                <p>Patients reporting a positive care experience.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — PERSONALIZED CARE SERVICES -->
+
+    <section class="pulse-services-section" id="services">
+      <div class="pulse-services-container">
+        <div class="pulse-services-header">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="user-round-check"></i>
+            </span>
+            <span class="pulse-section-tag-text">PERSONALIZED CARE</span>
+          </span>
+
+          <h2 class="pulse-services-title">
+            The Care that comes <span>to you.</span>
+          </h2>
+
+          <p class="pulse-services-description">
+            Convenient health support designed around your everyday needs,
+            delivered with care in the comfort of home.
+          </p>
+        </div>
+
+        <div class="pulse-services-grid">
+          <article class="pulse-service-card pulse-service-card-featured">
+            <div class="pulse-service-visual">
+              <div class="pulse-service-visual-glow"></div>
+
+              <div class="pulse-service-monitor">
+                <span class="pulse-service-monitor-label">BLOOD PRESSURE</span>
+                <strong>118/76</strong>
+                <span class="pulse-service-monitor-unit">mmHg</span>
+              </div>
+
+              <div class="pulse-service-heart-rate">
+                <span class="pulse-service-heart-icon">
+                  <i data-lucide="heart-pulse"></i>
+                </span>
+                <div>
+                  <span>HEART RATE</span>
+                  <strong>72 BPM</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="pulse-service-content">
+              <span class="pulse-service-number">01</span>
+
+              <h3>Vitals Checks</h3>
+
+              <p>
+                Convenient blood pressure, heart rate, oxygen levels and routine
+                vitals monitoring at home.
+              </p>
+
+              <a href="#" class="pulse-service-link">
+                <span>View service</span>
+                <i data-lucide="arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <div class="pulse-services-secondary">
+            <article class="pulse-service-card pulse-service-card-secondary">
+              <div class="pulse-service-card-top">
+                <span class="pulse-service-number">02</span>
+
+                <span class="pulse-service-icon">
+                  <i data-lucide="pill"></i>
+                </span>
+              </div>
+
+              <div class="pulse-service-content">
+                <h3>Medication Reviews</h3>
+
+                <p>
+                  Review medications and stay informed with caring professional
+                  support at home.
+                </p>
+
+                <a href="#" class="pulse-service-link">
+                  <span>View service</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="pulse-service-card pulse-service-card-secondary">
+              <div class="pulse-service-card-top">
+                <span class="pulse-service-number">03</span>
+
+                <span class="pulse-service-icon">
+                  <i data-lucide="heart-handshake"></i>
+                </span>
+              </div>
+
+              <div class="pulse-service-content">
+                <h3>Wellness Visits</h3>
+
+                <p>
+                  Convenient wellness check-ins that help you stay supported and
+                  connected to your everyday health.
+                </p>
+
+                <a href="#" class="pulse-service-link">
+                  <span>View service</span>
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — WHY PULSEHAVEN -->
+
+    <section class="pulse-about-section" id="why-pulsehaven">
+      <div class="pulse-about-container">
+        <div class="pulse-about-visual">
+          <div class="pulse-about-image">
+            <img
+              src="images/img2.jpg"
+              alt="Healthcare professional providing care at home"
+            />
+          </div>
+
+          <div class="pulse-about-visual-badge">
+            <span class="pulse-about-badge-icon">
+              <i data-lucide="house"></i>
+            </span>
+
+            <div>
+              <span>CARE AT HOME</span>
+              <strong>Personal. Convenient. Caring.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="pulse-about-content">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="sparkles"></i>
+            </span>
+            <span class="pulse-section-tag-text">WHY PULSEHAVEN</span>
+          </span>
+
+          <h2 class="pulse-about-title">
+            Healthcare that fits your
+            <span>everyday life.</span>
+          </h2>
+
+          <p class="pulse-about-description">
+            PulseHaven brings essential health monitoring directly to your home,
+            making everyday care more convenient, clear, and personal.
+          </p>
+
+          <div class="pulse-about-points">
+            <div class="pulse-about-point">
+              <span class="pulse-about-point-icon">
+                <i data-lucide="calendar-check"></i>
+              </span>
+              <span>Convenient home visits</span>
+            </div>
+
+            <div class="pulse-about-point">
+              <span class="pulse-about-point-icon">
+                <i data-lucide="user-round-check"></i>
+              </span>
+              <span>Caring professionals</span>
+            </div>
+
+            <div class="pulse-about-point">
+              <span class="pulse-about-point-icon">
+                <i data-lucide="file-heart"></i>
+              </span>
+              <span>Clear health information</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="pulse-btn pulse-btn-primary">
+            <span>Know About Us</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — HOW IT WORKS -->
+
+    <section class="pulse-process-section" id="how-it-works">
+      <div class="pulse-process-container">
+        <div class="pulse-process-header">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="route"></i>
+            </span>
+            <span class="pulse-section-tag-text">HOW IT WORKS</span>
+          </span>
+
+          <h2 class="pulse-process-title">
+            Simple care,
+            <span>from home.</span>
+          </h2>
+
+          <p class="pulse-process-description">
+            From booking your visit to staying informed, PulseHaven keeps your
+            everyday health care simple and convenient.
+          </p>
+        </div>
+
+        <div class="pulse-process-steps">
+          <article class="pulse-process-step">
+            <span class="pulse-process-number">01</span>
+
+            <span class="pulse-process-icon">
+              <i data-lucide="calendar-check"></i>
+            </span>
+
+            <div class="pulse-process-content">
+              <h3>Book a Visit</h3>
+              <p>Choose a convenient time for your in-home health visit.</p>
+            </div>
+          </article>
+
+          <span class="pulse-process-connector" aria-hidden="true">
+            <i data-lucide="arrow-right" class="process-arrow-horizontal"></i>
+            <i data-lucide="arrow-down" class="process-arrow-vertical"></i>
+          </span>
+
+          <article class="pulse-process-step">
+            <span class="pulse-process-number">02</span>
+
+            <span class="pulse-process-icon">
+              <i data-lucide="stethoscope"></i>
+            </span>
+
+            <div class="pulse-process-content">
+              <h3>Receive Care</h3>
+              <p>
+                Get caring health monitoring from a trained professional at
+                home.
+              </p>
+            </div>
+          </article>
+
+          <span class="pulse-process-connector" aria-hidden="true">
+            <i data-lucide="arrow-right" class="process-arrow-horizontal"></i>
+            <i data-lucide="arrow-down" class="process-arrow-vertical"></i>
+          </span>
+
+          <article class="pulse-process-step">
+            <span class="pulse-process-number">03</span>
+
+            <span class="pulse-process-icon">
+              <i data-lucide="activity"></i>
+            </span>
+
+            <div class="pulse-process-content">
+              <h3>Stay Informed</h3>
+              <p>
+                Keep track of your vitals, visit notes, and health reminders.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — PATIENT TESTIMONIALS -->
+
+    <section class="pulse-testimonials-section" id="patient-testimonials">
+      <div class="pulse-testimonials-container">
+        <!-- SECTION HEADER -->
+        <div class="pulse-testimonials-header">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="message-circle"></i>
+            </span>
+
+            <span class="pulse-section-tag-text">PATIENT STORIES</span>
+          </span>
+
+          <h2 class="pulse-testimonials-title">
+            What our patients <span>say.</span>
+          </h2>
+
+          <p class="pulse-testimonials-description">
+            Real experiences from people who choose convenient, caring health
+            support at home.
+          </p>
+        </div>
+
+        <!-- TESTIMONIAL -->
+        <div class="pulse-testimonial">
+          <!-- LEFT — PATIENT PHOTO -->
+          <div class="pulse-testimonial-photo">
+            <img
+              id="testimonial-image"
+              src="../images/testimonials/patient-01.jpg"
+              alt="PulseHaven patient"
+            />
+          </div>
+
+          <!-- RIGHT — TESTIMONIAL CONTENT -->
+          <div class="pulse-testimonial-content">
+            <span class="pulse-testimonial-number" id="testimonial-number">
+              01
+            </span>
+
+            <div class="pulse-testimonial-person">
+              <h3 id="testimonial-name">Sarah Mitchell</h3>
+
+              <span id="testimonial-role"> PulseHaven Patient </span>
+            </div>
+
+            <blockquote id="testimonial-text">
+              “The home visits made managing my health feel much easier. I felt
+              comfortable and cared for from the very first visit.”
+            </blockquote>
+
+            <div class="pulse-testimonial-footer">
+              <span class="pulse-testimonial-count">
+                <span id="testimonial-current">01</span>
+                <span>/</span>
+                <span id="testimonial-total">03</span>
+              </span>
+
+              <div class="pulse-testimonial-controls">
+                <button
+                  type="button"
+                  class="pulse-testimonial-btn"
+                  id="testimonial-prev"
+                  aria-label="Previous testimonial"
+                >
+                  <i data-lucide="arrow-left"></i>
+                </button>
+
+                <button
+                  type="button"
+                  class="pulse-testimonial-btn"
+                  id="testimonial-next"
+                  aria-label="Next testimonial"
+                >
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PULSE HAVEN — FINAL CTA -->
+
+    <section class="pulse-cta-section" id="book-care">
+      <!-- ANIMATED ECG BACKGROUND -->
+      <div class="pulse-cta-ecg" aria-hidden="true">
+        <svg
+          class="pulse-cta-ecg-line"
+          viewBox="0 0 1600 180"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 90 H180 C205 90 215 90 230 90 L250 90 L270 90 L285 55 L300 125 L315 90 L340 90 L355 35 L375 145 L395 90 H520 C545 90 555 90 575 90
+     L595 90 L615 90 L630 60 L645 120 L660 90 H820 C845 90 855 90 875 90 L895 90 L910 48 L925 132 L940 90 H1100
+     C1125 90 1135 90 1155 90 L1175 90 L1190 58 L1205 122 L1220 90 H1380 C1405 90 1415 90 1435 90 L1455 90 L1470 45 L1485 135 L1500 90
+     H1600"
+          />
+        </svg>
+
+        <span class="pulse-cta-ecg-glow"></span>
+      </div>
+
+      <!-- CTA CONTENT -->
+      <div class="pulse-cta-container">
+        <div class="pulse-cta-content">
+          <span class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="calendar-plus"></i>
+            </span>
+
+            <span class="pulse-section-tag-text">
+              READY FOR CONVENIENT CARE?
+            </span>
+          </span>
+
+          <h2 class="pulse-cta-title">
+            Care that comes to
+            <span>you.</span>
+          </h2>
+
+          <p class="pulse-cta-description">
+            Schedule a convenient home visit and get the health support you need
+            without leaving home.
+          </p>
+
+          <a href="/login.html" class="pulse-btn pulse-btn-primary">
+            <span>Book a Home Visit</span>
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+</html>

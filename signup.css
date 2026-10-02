@@ -1,0 +1,1361 @@
+/* =========================================
+   PULSE HAVEN - SIGN UP PAGE
+   Base: 1920 x 1080
+   Nest Hub: 1024 x 600
+   iPad Mini: 768 x 1024
+   Samsung Galaxy S8+: 360 x 740
+========================================= */
+
+/* =========================================
+   1. GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--light-bg);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================
+   2. MAIN PAGE
+========================================= */
+
+.signup-page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, var(--primary-soft), transparent 45%),
+    var(--light-bg);
+  transition: background 0.3s ease;
+}
+
+.dark-mode .signup-page {
+  background:
+    radial-gradient(ellipse at 50% 45%, var(--primary-soft), transparent 48%),
+    var(--dark-bg);
+}
+
+/* =========================================
+   3. ANIMATED BACKGROUND
+========================================= */
+
+.signup-bg-animation {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.signup-bg-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+}
+
+.signup-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+  animation: signupOrbFloat 9s ease-in-out infinite;
+}
+
+.signup-bg-orb-one {
+  width: 280px;
+  height: 280px;
+  top: 10%;
+  left: 9%;
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.12),
+    transparent 70%
+  );
+}
+
+.signup-bg-orb-two {
+  width: 340px;
+  height: 340px;
+  right: 8%;
+  bottom: 4%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.13), transparent 70%);
+  animation-delay: -3s;
+}
+
+.signup-bg-orb-three {
+  width: 220px;
+  height: 220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.07),
+    transparent 70%
+  );
+  animation-delay: -5s;
+}
+
+.signup-bg-ring {
+  position: absolute;
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 50%;
+  animation: signupRingRotate 22s linear infinite;
+}
+
+.signup-bg-ring-one {
+  width: 420px;
+  height: 420px;
+  top: 15%;
+  left: 10%;
+  transform: rotate(-25deg);
+}
+
+.signup-bg-ring-two {
+  width: 330px;
+  height: 330px;
+  right: 12%;
+  bottom: 8%;
+  border-color: rgba(79, 70, 229, 0.22);
+  animation-direction: reverse;
+}
+
+.signup-bg-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(14, 165, 233, 0.4),
+    transparent
+  );
+  transform-origin: center;
+}
+
+.signup-bg-line-one {
+  width: 38%;
+  top: 36%;
+  left: 3%;
+  transform: rotate(-13deg);
+}
+
+.signup-bg-line-two {
+  width: 38%;
+  right: 2%;
+  bottom: 29%;
+  transform: rotate(15deg);
+}
+
+.signup-bg-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 118px;
+  height: 136px;
+  padding: 20px 17px;
+  border: 1px solid rgba(14, 165, 233, 0.48);
+  border-radius: 14px;
+  background: rgba(14, 165, 233, 0.07);
+  box-shadow: 0 12px 35px rgba(14, 165, 233, 0.04);
+  animation: signupCardFloat 7s ease-in-out infinite;
+}
+
+.signup-bg-card svg {
+  width: 23px;
+  height: 23px;
+  color: var(--secondary-color);
+  margin-bottom: 2px;
+}
+
+.signup-bg-card span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 20px;
+  background: rgba(14, 165, 233, 0.32);
+}
+
+.signup-bg-card span:nth-of-type(2) {
+  width: 78%;
+}
+
+.signup-bg-card span:nth-of-type(3) {
+  width: 55%;
+}
+
+.signup-bg-card-one {
+  top: 25%;
+  left: 10%;
+  transform: rotate(-7deg);
+}
+
+.signup-bg-card-two {
+  right: 10%;
+  bottom: 17%;
+  transform: rotate(8deg);
+  animation-delay: -3s;
+}
+
+.signup-bg-symbol {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.07);
+  animation: signupSymbolFloat 5s ease-in-out infinite;
+}
+
+.signup-bg-symbol svg {
+  width: 19px;
+  height: 19px;
+}
+
+.signup-bg-symbol-one {
+  top: 37%;
+  left: 20%;
+}
+
+.signup-bg-symbol-two {
+  right: 23%;
+  bottom: 25%;
+  animation-delay: -2s;
+}
+
+.signup-bg-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 0 8px rgba(14, 165, 233, 0.1);
+  animation: signupDotPulse 3s ease-in-out infinite;
+}
+
+.signup-bg-dot-one {
+  top: 30%;
+  left: 27%;
+}
+
+.signup-bg-dot-two {
+  top: 45%;
+  right: 19%;
+  animation-delay: -1s;
+}
+
+.signup-bg-dot-three {
+  bottom: 22%;
+  left: 22%;
+  animation-delay: -2s;
+}
+
+.signup-bg-dot-four {
+  bottom: 48%;
+  right: 31%;
+  animation-delay: -1.5s;
+}
+
+/* =========================================
+   4. BACKGROUND ANIMATIONS
+========================================= */
+
+@keyframes signupOrbFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -22px;
+  }
+}
+
+@keyframes signupRingRotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes signupCardFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -14px;
+  }
+}
+
+@keyframes signupSymbolFloat {
+  0%,
+  100% {
+    translate: 0 0;
+    scale: 1;
+  }
+  50% {
+    translate: 0 -10px;
+    scale: 1.06;
+  }
+}
+
+@keyframes signupDotPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(14, 165, 233, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(14, 165, 233, 0.15);
+  }
+}
+
+/* =========================================
+   5. TOP-RIGHT CONTROLS
+========================================= */
+
+.signup-page-controls {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 11px;
+  color: var(--text-color);
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-color);
+  border-radius: 11px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.signup-control-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.signup-control-btn span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signup-control-btn:hover {
+  color: var(--white);
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(79, 70, 229, 0.2);
+}
+
+.signup-control-btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   6. SIGNUP CARD
+========================================= */
+
+.signup-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(500px, 100%);
+  max-height: none;
+  height: auto;
+  padding: 18px 34px 16px;
+  overflow: visible;
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 22px;
+  background: var(--light-bg);
+  box-shadow: var(--box-shadow);
+}
+
+/* Remove the card's custom scrollbar */
+.signup-container::-webkit-scrollbar {
+  display: none;
+}
+
+.signup-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.signup-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* =========================================
+   7. BRAND
+========================================= */
+
+.signup-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+}
+
+.signup-brand-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-logo-image {
+  display: block;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.signup-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.signup-brand-name {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 23px;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+
+.signup-brand-primary {
+  color: var(--primary-color);
+}
+
+.signup-brand-secondary {
+  color: var(--secondary-color);
+}
+
+.signup-brand-tagline {
+  color: var(--primary-color);
+  font-size: 12px;
+  line-height: 1.3;
+  word-spacing: 2px;
+  opacity: 0.72;
+}
+
+[dir="rtl"] .signup-brand-name {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/* =========================================
+   8. INTRO
+========================================= */
+
+.signup-intro {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.signup-eyebrow {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--secondary-color);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.signup-intro h2 {
+  color: var(--text-color);
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+  margin-bottom: 7px;
+}
+
+.signup-intro p {
+  max-width: 390px;
+  margin: 0 auto;
+  color: var(--text-color);
+  font-size: 11px;
+  line-height: 1.6;
+  opacity: 0.72;
+}
+
+/* =========================================
+   9. SIGNUP FORM
+========================================= */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.signup-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 5px;
+}
+
+.signup-field label {
+  color: var(--text-color);
+  font-size: 11px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.signup-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  gap: 12px;
+  padding: 0 13px;
+  border: 1px solid rgba(100, 116, 139, 0.28);
+  border-radius: 10px;
+  background: rgba(14, 165, 233, 0.025);
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dark-mode .signup-input-wrapper {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.signup-input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  background: var(--primary-soft);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.signup-input-wrapper > svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--secondary-color);
+  stroke-width: 1.7;
+}
+
+.signup-input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.signup-input-wrapper input::placeholder {
+  color: var(--text-color);
+  opacity: 0.55;
+}
+
+.signup-input-wrapper input:-webkit-autofill,
+.signup-input-wrapper input:-webkit-autofill:hover,
+.signup-input-wrapper input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-color);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* =========================================
+   10. PASSWORD FIELDS
+========================================= */
+
+.signup-password-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.signup-password-toggle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 30px;
+  padding: 0;
+  color: var(--text-color);
+  opacity: 0.6;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.signup-password-toggle svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+/* Hide Edge's built-in password visibility button */
+.signup-input-wrapper input::-ms-reveal {
+  display: none;
+}
+
+.signup-password-toggle:hover {
+  color: var(--secondary-color);
+  opacity: 1;
+}
+
+.signup-password-toggle:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   11. TERMS AND CONDITIONS
+========================================= */
+
+.signup-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 1px;
+}
+
+.signup-terms input {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.signup-terms label {
+  color: var(--text-color);
+  font-size: 10px;
+  line-height: 1.55;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.signup-terms a {
+  color: var(--primary-color);
+  font-weight: 650;
+  transition: color 0.2s ease;
+}
+
+.signup-terms a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* =========================================
+   12. CREATE ACCOUNT BUTTON
+========================================= */
+
+.signup-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 43px;
+  margin-top: 2px;
+  padding: 10px 18px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 750;
+  background: var(--primary-color);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(79, 70, 229, 0.13);
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.signup-submit-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  transition: transform 0.25s ease;
+}
+
+.signup-submit-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(14, 165, 233, 0.2);
+}
+
+.signup-submit-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.signup-submit-btn:active {
+  transform: translateY(0);
+}
+
+.signup-submit-btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   13. SOCIAL DIVIDER
+========================================= */
+
+.signup-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 2px 0 0;
+}
+
+.signup-divider span {
+  flex: 1;
+  height: 1px;
+  background: rgba(100, 116, 139, 0.25);
+}
+
+.signup-divider p {
+  color: var(--text-color);
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  opacity: 0.55;
+}
+
+/* =========================================
+   14. SOCIAL SIGNUP BUTTONS
+========================================= */
+
+.signup-social-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  width: 100%;
+}
+
+.signup-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 39px;
+  padding: 8px 10px;
+  color: var(--text-color);
+  font-size: 11px;
+  font-weight: 650;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  border-radius: 9px;
+  background: rgba(14, 165, 233, 0.025);
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dark-mode .signup-social-btn {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.signup-social-btn svg {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.signup-social-btn:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.signup-social-btn:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   15. SIGN IN LINK
+========================================= */
+
+.signup-login-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.signup-login-link p {
+  color: var(--text-color);
+  font-size: 10px;
+  line-height: 1.5;
+  opacity: 0.72;
+}
+
+.signup-login-link a {
+  color: var(--primary-color);
+  font-weight: 750;
+  opacity: 1;
+  transition: color 0.2s ease;
+}
+
+.signup-login-link a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* =========================================
+   17. NEST HUB
+   1024 x 600
+========================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .signup-page {
+    padding: 12px;
+  }
+
+  .signup-page-controls {
+    top: 12px;
+    right: 14px;
+    gap: 7px;
+  }
+
+  [dir="rtl"] .signup-page-controls {
+    right: auto;
+    left: 14px;
+  }
+
+  .signup-control-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 9px;
+    border-radius: 9px;
+  }
+
+  .signup-control-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .signup-container {
+    width: min(490px, 100%);
+    max-height: calc(100dvh - 24px);
+    padding: 17px 32px 14px;
+    border-radius: 21px;
+  }
+
+  .signup-brand {
+    margin-bottom: 8px;
+  }
+
+  .signup-logo-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .signup-brand-name {
+    font-size: 20px;
+  }
+
+  .signup-brand-tagline {
+    font-size: 9px;
+  }
+
+  .signup-intro {
+    margin-bottom: 9px;
+  }
+
+  .signup-eyebrow {
+    margin-bottom: 3px;
+    font-size: 9px;
+  }
+
+  .signup-intro h2 {
+    margin-bottom: 4px;
+    font-size: 20px;
+  }
+
+  .signup-intro p {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .signup-form {
+    gap: 7px;
+  }
+
+  .signup-field {
+    gap: 3px;
+  }
+
+  .signup-field label {
+    font-size: 10px;
+  }
+
+  .signup-input-wrapper {
+    height: 36px;
+    gap: 9px;
+    padding: 0 11px;
+    border-radius: 8px;
+  }
+
+  .signup-input-wrapper > svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-input-wrapper input {
+    font-size: 11px;
+  }
+
+  .signup-password-row {
+    gap: 10px;
+  }
+
+  .signup-password-toggle {
+    height: 26px;
+  }
+
+  .signup-password-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-terms {
+    gap: 6px;
+  }
+
+  .signup-terms label {
+    font-size: 9px;
+  }
+
+  .signup-submit-btn {
+    min-height: 37px;
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+
+  .signup-divider {
+    gap: 8px;
+  }
+
+  .signup-divider p {
+    font-size: 7px;
+  }
+
+  .signup-social-options {
+    gap: 8px;
+  }
+
+  .signup-social-btn {
+    min-height: 33px;
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .signup-login-link {
+    margin-top: 8px;
+  }
+
+  .signup-login-link p {
+    font-size: 9px;
+  }
+
+  .signup-bg-card {
+    scale: 0.8;
+  }
+
+  .signup-bg-ring-one {
+    width: 300px;
+    height: 300px;
+  }
+
+  .signup-bg-ring-two {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* =========================================
+   18. IPAD MINI
+   768 x 1024
+========================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .signup-page {
+    padding: 24px;
+  }
+
+  .signup-page-controls {
+    top: 20px;
+    right: 20px;
+  }
+
+  [dir="rtl"] .signup-page-controls {
+    right: auto;
+    left: 20px;
+  }
+
+  .signup-container {
+    width: min(520px, 100%);
+    max-height: calc(100dvh - 100px);
+    padding: 30px 38px 24px;
+  }
+
+  .signup-brand {
+    margin-bottom: 17px;
+  }
+
+  .signup-logo-image {
+    width: 42px;
+    height: 42px;
+  }
+
+  .signup-brand-name {
+    font-size: 23px;
+  }
+
+  .signup-intro {
+    margin-bottom: 15px;
+  }
+
+  .signup-intro h2 {
+    font-size: 23px;
+  }
+
+  .signup-intro p {
+    font-size: 11px;
+  }
+
+  .signup-form {
+    gap: 10px;
+  }
+
+  .signup-input-wrapper {
+    height: 42px;
+  }
+
+  .signup-submit-btn {
+    min-height: 43px;
+  }
+
+  .signup-social-btn {
+    min-height: 39px;
+  }
+}
+
+/* =========================================
+   19. SAMSUNG GALAXY S8+
+   360 x 740
+========================================= */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .signup-page {
+    align-items: flex-start;
+    padding: 10px 9px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .signup-page-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    gap: 6px;
+  }
+
+  [dir="rtl"] .signup-page-controls {
+    right: auto;
+    left: 10px;
+  }
+
+  .signup-control-btn {
+    min-width: 33px;
+    height: 33px;
+    padding: 0 7px;
+    border-radius: 8px;
+  }
+
+  .signup-control-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .signup-control-btn span {
+    font-size: 10px;
+  }
+
+  .signup-container {
+    width: 100%;
+    max-height: none;
+    margin: 38px auto 0;
+    padding: 17px 17px 15px;
+    border-radius: 17px;
+  }
+
+  .signup-brand {
+    margin-bottom: 9px;
+  }
+
+  .signup-brand-row {
+    gap: 8px;
+  }
+
+  .signup-logo-image {
+    width: 33px;
+    height: 33px;
+  }
+
+  .signup-brand-name {
+    font-size: 19px;
+  }
+
+  .signup-brand-tagline {
+    font-size: 8px;
+  }
+
+  .signup-intro {
+    margin-bottom: 11px;
+  }
+
+  .signup-eyebrow {
+    margin-bottom: 4px;
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .signup-intro h2 {
+    font-size: 19px;
+    margin-bottom: 5px;
+  }
+
+  .signup-intro p {
+    max-width: 285px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .signup-form {
+    gap: 8px;
+  }
+
+  .signup-field {
+    gap: 4px;
+  }
+
+  .signup-field label {
+    font-size: 10px;
+  }
+
+  .signup-input-wrapper {
+    height: 38px;
+    gap: 9px;
+    padding: 0 10px;
+    border-radius: 8px;
+  }
+
+  .signup-input-wrapper > svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-input-wrapper input {
+    font-size: 11px;
+  }
+
+  /* Stack password fields on the narrow screen. */
+  .signup-password-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .signup-password-toggle {
+    width: 24px;
+    height: 27px;
+  }
+
+  .signup-password-toggle svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-terms {
+    gap: 6px;
+  }
+
+  .signup-terms input {
+    width: 12px;
+    height: 12px;
+  }
+
+  .signup-terms label {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .signup-submit-btn {
+    min-height: 39px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .signup-submit-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-divider {
+    gap: 7px;
+  }
+
+  .signup-divider p {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .signup-social-options {
+    gap: 7px;
+  }
+
+  .signup-social-btn {
+    min-height: 35px;
+    gap: 6px;
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .signup-social-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .signup-login-link {
+    margin-top: 9px;
+  }
+
+  .signup-login-link p {
+    font-size: 9px;
+  }
+
+  .signup-bg-card {
+    display: none;
+  }
+
+  .signup-bg-symbol {
+    scale: 0.7;
+  }
+
+  .signup-bg-ring-one {
+    width: 190px;
+    height: 190px;
+  }
+
+  .signup-bg-ring-two {
+    width: 160px;
+    height: 160px;
+  }
+
+  .signup-bg-line {
+    opacity: 0.5;
+  }
+}
+
+/* =========================================
+   20. ACCESSIBILITY AND REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

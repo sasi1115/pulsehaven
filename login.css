@@ -1,0 +1,1645 @@
+/* =========================================================
+   PULSE HAVEN — LOGIN PAGE
+   Premium • Compact • Animated • Responsive
+   Base: 1920 × 1080
+========================================================= */
+
+/* =========================================================
+   1. GLOBAL LOGIN STYLES
+========================================================= */
+
+.login-page,
+.login-page * {
+  box-sizing: border-box;
+}
+
+.login-page {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 0;
+  padding: 24px;
+  overflow: hidden;
+  background: var(--light-bg);
+  color: var(--text-color);
+  font-family: inherit;
+}
+
+/* =========================================================
+   2. PREMIUM ANIMATED BACKGROUND
+========================================================= */
+
+.login-bg-animation {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 12% 20%,
+      color-mix(in srgb, var(--primary-color) 8%, transparent),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 88% 78%,
+      color-mix(in srgb, var(--secondary-color) 10%, transparent),
+      transparent 40%
+    );
+}
+
+/* Soft glowing orbs */
+
+.login-bg-orb {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  will-change: transform;
+}
+
+.login-bg-orb-one {
+  top: 12%;
+  left: 13%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--primary-color) 13%, transparent),
+    transparent 70%
+  );
+  animation: loginOrbFloatOne 12s ease-in-out infinite;
+}
+
+.login-bg-orb-two {
+  right: 10%;
+  bottom: 7%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary-color) 15%, transparent),
+    transparent 70%
+  );
+  animation: loginOrbFloatTwo 15s ease-in-out infinite;
+}
+
+.login-bg-orb-three {
+  top: 58%;
+  left: 43%;
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary-color) 8%, transparent),
+    transparent 72%
+  );
+  animation: loginOrbFloatThree 13s ease-in-out infinite;
+}
+
+.login-bg-orb-four {
+  top: -100px;
+  right: 36%;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--primary-color) 8%, transparent),
+    transparent 70%
+  );
+  animation: loginOrbFloatOne 18s ease-in-out infinite reverse;
+}
+
+/* Floating particles */
+
+.login-bg-particle {
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  opacity: 0.45;
+  box-shadow: 0 0 18px
+    color-mix(in srgb, var(--secondary-color) 30%, transparent);
+  animation: loginParticleFloat 7s ease-in-out infinite;
+}
+
+.particle-one {
+  top: 24%;
+  left: 17%;
+  width: 12px;
+  height: 12px;
+  animation-delay: 0s;
+}
+
+.particle-two {
+  top: 72%;
+  left: 12%;
+  width: 7px;
+  height: 7px;
+  animation-delay: 1s;
+}
+
+.particle-three {
+  top: 19%;
+  right: 18%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 2s;
+}
+
+.particle-four {
+  right: 12%;
+  bottom: 23%;
+  width: 11px;
+  height: 11px;
+  animation-delay: 3s;
+}
+
+.particle-five {
+  top: 43%;
+  left: 8%;
+  width: 6px;
+  height: 6px;
+  animation-delay: 1.5s;
+}
+
+.particle-six {
+  top: 60%;
+  right: 8%;
+  width: 7px;
+  height: 7px;
+  animation-delay: 2.5s;
+}
+
+.particle-seven {
+  top: 12%;
+  left: 47%;
+  width: 6px;
+  height: 6px;
+  animation-delay: 4s;
+}
+
+.particle-eight {
+  right: 36%;
+  bottom: 12%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 2s;
+}
+
+/* Floating rings */
+
+.login-bg-ring {
+  position: absolute;
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 24%, transparent);
+  border-radius: 50%;
+  animation: loginRingPulse 8s ease-in-out infinite;
+}
+
+.ring-one {
+  top: 20%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+}
+
+.ring-two {
+  bottom: 15%;
+  left: 16%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 2s;
+}
+
+.ring-three {
+  top: 44%;
+  right: 7%;
+  width: 52px;
+  height: 52px;
+  animation-delay: 4s;
+}
+
+/* Flowing background lines */
+
+.login-bg-line {
+  position: absolute;
+  display: block;
+  height: 1px;
+  transform-origin: center;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--secondary-color) 35%, transparent),
+    color-mix(in srgb, var(--primary-color) 20%, transparent),
+    transparent
+  );
+  opacity: 0.65;
+}
+
+.line-one {
+  top: 35%;
+  left: -10%;
+  width: 46%;
+  transform: rotate(16deg);
+  animation: loginLineMoveOne 12s ease-in-out infinite;
+}
+
+.line-two {
+  right: -10%;
+  bottom: 29%;
+  width: 47%;
+  transform: rotate(-17deg);
+  animation: loginLineMoveTwo 14s ease-in-out infinite;
+}
+
+.line-three {
+  top: 12%;
+  left: 33%;
+  width: 34%;
+  transform: rotate(-8deg);
+  opacity: 0.3;
+  animation: loginLineMoveOne 16s ease-in-out infinite reverse;
+}
+
+/* Medical decorative icons */
+
+.login-bg-symbol {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-color);
+  opacity: 0.22;
+  animation: loginSymbolFloat 8s ease-in-out infinite;
+}
+
+.login-bg-symbol i {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.4;
+}
+
+.symbol-one {
+  top: 26%;
+  right: 24%;
+  width: 32px;
+  height: 32px;
+}
+
+.symbol-two {
+  bottom: 27%;
+  left: 24%;
+  width: 27px;
+  height: 27px;
+  animation-delay: 2s;
+}
+
+.symbol-three {
+  top: 67%;
+  right: 17%;
+  width: 24px;
+  height: 24px;
+  animation-delay: 3s;
+}
+
+/* Subtle grid */
+
+.login-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--primary-color) 3%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--primary-color) 3%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 70px 70px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 78%);
+  opacity: 0.45;
+}
+
+/* =========================================================
+   3. BACKGROUND ANIMATIONS
+========================================================= */
+
+@keyframes loginOrbFloatOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(28px, -24px, 0) scale(1.08);
+  }
+}
+
+@keyframes loginOrbFloatTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-32px, 24px, 0) scale(1.12);
+  }
+}
+
+@keyframes loginOrbFloatThree {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(18px, -30px, 0);
+  }
+}
+
+@keyframes loginParticleFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translate3d(0, -22px, 0);
+    opacity: 0.65;
+  }
+}
+
+@keyframes loginRingPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 0.65;
+  }
+}
+
+@keyframes loginLineMoveOne {
+  0%,
+  100% {
+    translate: 0 0;
+    opacity: 0.35;
+  }
+
+  50% {
+    translate: 22px -12px;
+    opacity: 0.75;
+  }
+}
+
+@keyframes loginLineMoveTwo {
+  0%,
+  100% {
+    translate: 0 0;
+    opacity: 0.35;
+  }
+
+  50% {
+    translate: -25px 12px;
+    opacity: 0.75;
+  }
+}
+
+@keyframes loginSymbolFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* =========================================================
+   4. TOP-RIGHT PAGE CONTROLS
+========================================================= */
+
+.login-page-controls {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 45%, transparent);
+  border-radius: 12px;
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 5px 18px
+    color-mix(in srgb, var(--primary-color) 8%, transparent);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.login-control-btn svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+
+.login-control-btn:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px
+    color-mix(in srgb, var(--primary-color) 22%, transparent);
+}
+
+.login-control-btn:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   5. LOGIN CARD
+========================================================= */
+
+.login-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100svh - 72px);
+  padding: 24px 32px 22px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 13%, transparent);
+  border-radius: 22px;
+  background: var(--light-bg);
+  box-shadow:
+    0 22px 65px color-mix(in srgb, var(--primary-color) 9%, transparent),
+    0 4px 15px color-mix(in srgb, var(--secondary-color) 5%, transparent);
+  animation: loginCardAppear 0.7s ease both;
+}
+
+@keyframes loginCardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   6. LOGO AND BRAND
+========================================================= */
+
+.login-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto 15px;
+  color: inherit;
+  text-decoration: none;
+  outline-offset: 5px;
+}
+
+.login-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+}
+
+.login-brand-image {
+  display: block;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+}
+
+.login-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+}
+
+.login-brand-name {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 23px;
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.7px;
+}
+
+.login-brand-primary {
+  color: var(--primary-color);
+}
+
+.login-brand-secondary {
+  color: var(--secondary-color);
+}
+
+.login-brand-tagline {
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: var(--fw-normal);
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  opacity: 0.68;
+}
+
+/* =========================================================
+   7. LOGIN INTRO
+========================================================= */
+
+.login-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 17px;
+  text-align: center;
+}
+/* RTL: Pulse Haven first, logo next */
+
+[dir="rtl"] .login-brand-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .login-brand-text {
+  direction: ltr;
+  align-items: flex-start;
+}
+
+[dir="rtl"] .login-brand-name {
+  direction: ltr;
+  white-space: nowrap;
+}
+
+.login-intro-label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: var(--secondary-color);
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.4px;
+  line-height: 1.3;
+}
+
+.login-intro h1 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 29px;
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+
+.login-intro p {
+  max-width: 340px;
+  margin: 7px 0 0;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: var(--fw-normal);
+  line-height: 1.55;
+  opacity: 0.72;
+}
+
+/* =========================================================
+   8. LOGIN FORM
+========================================================= */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+/* =========================================================
+   9. INPUT FIELDS
+========================================================= */
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
+
+.login-field label {
+  display: block;
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  line-height: 1.4;
+}
+
+.login-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  gap: 12px;
+  padding: 0 13px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 17%, transparent);
+  border-radius: 11px;
+  background: var(--light-bg);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.login-input-wrapper > i {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  margin-right: 12px;
+  color: var(--secondary-color);
+  stroke-width: 1.8;
+}
+
+.login-input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: var(--fw-normal);
+}
+
+.login-input-wrapper input::placeholder {
+  color: var(--text-color);
+  opacity: 0.48;
+}
+
+.login-input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--primary-color) 11%, transparent);
+}
+
+/* Password visibility button */
+
+.login-password-toggle {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 32px;
+  margin-left: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-color);
+  opacity: 0.7;
+  cursor: pointer;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.login-password-toggle svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+  pointer-events: none;
+}
+/* =====================================================
+   HIDE BROWSER PASSWORD REVEAL ICON
+===================================================== */
+
+.login-input-wrapper input[type="password"]::-ms-reveal,
+.login-input-wrapper input[type="password"]::-ms-clear {
+  display: none;
+}
+
+.login-input-wrapper
+  input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+.login-password-toggle:hover {
+  color: var(--primary-color);
+  background: var(--primary-soft);
+  opacity: 1;
+}
+
+.login-password-toggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   10. REMEMBER ME AND FORGOT PASSWORD
+========================================================= */
+
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 20px;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.login-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  color: var(--text-color);
+  font-size: 11px;
+  font-weight: var(--fw-normal);
+  cursor: pointer;
+}
+
+.login-remember input {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.login-remember span {
+  line-height: 1.3;
+}
+
+.login-forgot {
+  flex: 0 0 auto;
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.login-forgot:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   11. LOGIN SUBMIT BUTTON
+========================================================= */
+
+.login-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 42px;
+  margin-top: 1px;
+  padding: 0 16px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.login-submit i {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.login-submit:hover {
+  transform: translateY(-2px);
+}
+
+.login-submit:hover i {
+  transform: translateX(3px);
+}
+
+.login-submit:active {
+  transform: translateY(0);
+}
+
+.login-submit:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   12. SOCIAL LOGIN DIVIDER
+========================================================= */
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  margin: 1px 0;
+}
+
+.login-divider span {
+  flex: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--text-color) 15%, transparent);
+}
+
+.login-divider p {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.6px;
+  opacity: 0.65;
+}
+
+/* =========================================================
+   13. GOOGLE AND APPLE BUTTONS
+========================================================= */
+
+.login-social-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 10px;
+}
+
+.login-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  height: 41px;
+  padding: 0 10px;
+  border: 1px solid color-mix(in srgb, var(--text-color) 17%, transparent);
+  border-radius: 10px;
+  background: var(--light-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.login-social-btn svg,
+.login-social-btn i {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+}
+
+.login-social-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--secondary-color);
+  box-shadow: 0 5px 14px
+    color-mix(in srgb, var(--primary-color) 9%, transparent);
+}
+
+.login-google:hover {
+  background: color-mix(in srgb, var(--secondary-color) 5%, var(--white));
+}
+
+.login-apple:hover {
+  background: var(--primary-soft);
+}
+
+.login-social-btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   14. SIGN-UP LINK
+========================================================= */
+
+.login-signup-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 4px;
+  margin: 2px 0 0;
+  color: var(--text-color);
+  font-size: 11px;
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.login-signup-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.login-signup-link a i {
+  width: 12px;
+  height: 12px;
+}
+
+.login-signup-link a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================================
+   15. RTL SUPPORT
+========================================================= */
+
+[dir="rtl"] .login-page {
+  direction: rtl;
+}
+
+[dir="rtl"] .login-page-controls {
+  right: auto;
+  left: 26px;
+}
+
+[dir="rtl"] .login-brand-row {
+  flex-direction: row;
+}
+
+[dir="rtl"] .login-brand-text {
+  align-items: flex-start;
+}
+
+[dir="rtl"] .login-input-wrapper > i {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+[dir="rtl"] .login-password-toggle {
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+[dir="rtl"] .login-submit i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .login-submit:hover i {
+  transform: rotate(180deg) translateX(3px);
+}
+
+/* =========================================================
+   16. ACCESSIBILITY AND MOTION
+========================================================= */
+
+.login-page button,
+.login-page a,
+.login-page input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.login-page button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-bg-animation *,
+  .login-container,
+  .login-page button,
+  .login-page a {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+========================================================= */
+
+/* =========================================================
+   NEST HUB — 1024 × 600
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .login-page {
+    padding: 10px 20px;
+  }
+
+  .login-page-controls {
+    top: 12px;
+    right: 16px;
+    gap: 7px;
+  }
+
+  .login-control-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .login-control-btn i {
+    width: 16px;
+    height: 16px;
+  }
+
+  .login-container {
+    width: min(410px, calc(100vw - 40px));
+    max-height: calc(100svh - 20px);
+    padding: 15px 26px 14px;
+    border-radius: 17px;
+    gap: 0;
+  }
+
+  .login-brand {
+    margin-bottom: 8px;
+  }
+
+  .login-brand-image {
+    width: 34px;
+    height: 34px;
+  }
+
+  .login-brand-name {
+    font-size: 19px;
+  }
+
+  .login-brand-tagline {
+    font-size: 9px;
+  }
+
+  .login-intro {
+    margin-bottom: 10px;
+  }
+
+  .login-intro-label {
+    margin-bottom: 3px;
+    font-size: 9px;
+  }
+
+  .login-intro h1 {
+    font-size: 23px;
+  }
+
+  .login-intro p {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .login-form {
+    gap: 8px;
+  }
+
+  .login-field {
+    gap: 4px;
+  }
+
+  .login-field label {
+    font-size: 10px;
+  }
+
+  .login-input-wrapper {
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+  }
+
+  .login-input-wrapper > i {
+    width: 15px;
+    height: 15px;
+    margin-right: 9px;
+  }
+
+  .login-input-wrapper input {
+    font-size: 10px;
+  }
+
+  .login-password-toggle {
+    width: 27px;
+    height: 28px;
+    margin-left: 4px;
+  }
+
+  .login-password-toggle i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .login-options {
+    min-height: 17px;
+  }
+
+  .login-remember,
+  .login-forgot {
+    font-size: 10px;
+  }
+
+  .login-remember input {
+    width: 12px;
+    height: 12px;
+  }
+
+  .login-submit {
+    height: 35px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .login-submit i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login-divider {
+    gap: 9px;
+  }
+
+  .login-divider p {
+    font-size: 9px;
+  }
+
+  .login-social-options {
+    gap: 8px;
+  }
+
+  .login-social-btn {
+    height: 34px;
+    gap: 7px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .login-social-btn svg,
+  .login-social-btn i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .login-signup-link {
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .login-bg-orb-one {
+    width: 170px;
+    height: 170px;
+  }
+
+  .login-bg-orb-two {
+    width: 210px;
+    height: 210px;
+  }
+
+  .login-bg-orb-three {
+    width: 130px;
+    height: 130px;
+  }
+
+  .login-bg-symbol {
+    opacity: 0.15;
+  }
+}
+
+/* =========================================================
+   IPAD MINI — 768 × 1024
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .login-page {
+    padding: 24px 20px;
+  }
+
+  .login-page-controls {
+    top: 18px;
+    right: 20px;
+    gap: 8px;
+  }
+
+  .login-control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .login-control-btn i {
+    width: 17px;
+    height: 17px;
+  }
+
+  .login-container {
+    width: min(420px, 100%);
+    max-height: calc(100svh - 70px);
+    padding: 23px 29px 21px;
+    border-radius: 20px;
+  }
+
+  .login-brand {
+    margin-bottom: 13px;
+  }
+
+  .login-brand-image {
+    width: 39px;
+    height: 39px;
+  }
+
+  .login-brand-name {
+    font-size: 22px;
+  }
+
+  .login-brand-tagline {
+    font-size: 10px;
+  }
+
+  .login-intro {
+    margin-bottom: 16px;
+  }
+
+  .login-intro h1 {
+    font-size: 27px;
+  }
+
+  .login-intro p {
+    max-width: 320px;
+    font-size: 11px;
+  }
+
+  .login-form {
+    gap: 11px;
+  }
+
+  .login-field {
+    gap: 5px;
+  }
+
+  .login-field label {
+    font-size: 11px;
+  }
+
+  .login-input-wrapper {
+    height: 43px;
+    border-radius: 10px;
+  }
+
+  .login-input-wrapper input {
+    font-size: 11px;
+  }
+
+  .login-options {
+    min-height: 19px;
+  }
+
+  .login-remember,
+  .login-forgot {
+    font-size: 11px;
+  }
+
+  .login-submit {
+    height: 40px;
+    font-size: 11px;
+  }
+
+  .login-social-btn {
+    height: 39px;
+    font-size: 11px;
+  }
+
+  .login-signup-link {
+    font-size: 11px;
+  }
+
+  .login-bg-orb-one {
+    width: 200px;
+    height: 200px;
+  }
+
+  .login-bg-orb-two {
+    width: 230px;
+    height: 230px;
+  }
+
+  .login-bg-ring {
+    opacity: 0.5;
+  }
+
+  [dir="rtl"] .login-page-controls {
+    right: auto;
+    left: 20px;
+  }
+}
+
+/* =========================================================
+   SAMSUNG GALAXY S8+ — 360 × 740
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .login-page {
+    padding: 48px 12px 10px;
+  }
+
+  .login-page-controls {
+    top: 9px;
+    right: 12px;
+    gap: 7px;
+  }
+
+  .login-control-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .login-control-btn i {
+    width: 15px;
+    height: 15px;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 330px;
+    max-height: calc(100svh - 58px);
+    padding: 15px 19px 13px;
+    border-radius: 16px;
+  }
+
+  .login-brand {
+    margin-bottom: 9px;
+  }
+
+  .login-brand-row {
+    gap: 7px;
+  }
+
+  .login-brand-image {
+    width: 33px;
+    height: 33px;
+  }
+
+  .login-brand-name {
+    font-size: 19px;
+    letter-spacing: -0.5px;
+  }
+
+  .login-brand-tagline {
+    font-size: 9px;
+  }
+
+  .login-intro {
+    margin-bottom: 10px;
+  }
+
+  .login-intro-label {
+    margin-bottom: 3px;
+    font-size: 9px;
+    letter-spacing: 1.1px;
+  }
+
+  .login-intro h1 {
+    font-size: 23px;
+  }
+
+  .login-intro p {
+    max-width: 275px;
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .login-form {
+    gap: 8px;
+  }
+
+  .login-field {
+    gap: 4px;
+  }
+
+  .login-field label {
+    font-size: 10px;
+  }
+
+  .login-input-wrapper {
+    height: 37px;
+    padding: 0 10px;
+    border-radius: 8px;
+  }
+
+  .login-input-wrapper > i {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+
+  .login-input-wrapper input {
+    font-size: 10px;
+  }
+
+  .login-password-toggle {
+    width: 25px;
+    height: 28px;
+    margin-left: 3px;
+  }
+
+  .login-password-toggle i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login-options {
+    min-height: 17px;
+    gap: 6px;
+  }
+
+  .login-remember {
+    gap: 5px;
+    font-size: 9px;
+  }
+
+  .login-remember input {
+    width: 12px;
+    height: 12px;
+  }
+
+  .login-forgot {
+    font-size: 9px;
+  }
+
+  .login-submit {
+    height: 35px;
+    gap: 7px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .login-submit i {
+    width: 13px;
+    height: 13px;
+  }
+
+  .login-divider {
+    gap: 8px;
+  }
+
+  .login-divider p {
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .login-social-options {
+    gap: 7px;
+  }
+
+  .login-social-btn {
+    height: 34px;
+    gap: 6px;
+    padding: 0 6px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .login-social-btn svg,
+  .login-social-btn i {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login-signup-link {
+    gap: 3px;
+    margin-top: 0;
+    font-size: 9px;
+  }
+
+  .login-signup-link a i {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Keep background decoration subtle on small screens */
+
+  .login-bg-orb-one {
+    top: 5%;
+    left: -20%;
+    width: 130px;
+    height: 130px;
+  }
+
+  .login-bg-orb-two {
+    right: -20%;
+    bottom: 4%;
+    width: 160px;
+    height: 160px;
+  }
+
+  .login-bg-orb-three,
+  .login-bg-orb-four {
+    width: 100px;
+    height: 100px;
+  }
+
+  .login-bg-particle {
+    width: 5px;
+    height: 5px;
+  }
+
+  .login-bg-ring {
+    opacity: 0.35;
+  }
+
+  .login-bg-symbol {
+    opacity: 0.12;
+  }
+
+  .login-bg-grid {
+    background-size: 45px 45px;
+  }
+
+  [dir="rtl"] .login-page-controls {
+    right: auto;
+    left: 12px;
+  }
+
+  [dir="rtl"] .login-input-wrapper > i {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  [dir="rtl"] .login-password-toggle {
+    margin-left: 0;
+    margin-right: 3px;
+  }
+}

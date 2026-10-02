@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseHaven</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="servicedetail.css" />
+
+    <script src="https://unpkg.com/lucide@0.468.0" defer></script>
+    <script src="components/component.js" defer></script>
+    <script src="global.js" defer></script>
+    <script src="servicedetail.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <!-- =========================================================
+       SERVICE DETAIL HERO
+  ========================================================== -->
+
+    <section class="pulse-service-detail-hero">
+      
+      <div class="pulse-service-detail-hero-overlay"></div>
+
+      <div class="pulse-service-detail-hero-container">
+        <div class="pulse-service-detail-hero-content">
+          <!-- SECTION TAG -->
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="heart-pulse"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-hero-tag">
+              HOME VITALS MONITORING
+            </span>
+          </div>
+
+          <!-- HEADING -->
+          <h1 id="service-hero-title">
+            Professional vitals care,
+            <span>right at your doorstep.</span>
+          </h1>
+
+          <!-- DESCRIPTION -->
+          <p id="service-hero-description">
+            Stay connected to your health with convenient blood pressure and
+            vital monitoring delivered in the comfort of your home.
+          </p>
+
+          <!-- CTA -->
+          <a
+            href="#"
+            class="pulse-btn pulse-btn-primary"
+            id="service-hero-button"
+          >
+            Schedule a Home Visit
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- HERO VISUAL -->
+        <div class="pulse-service-detail-hero-visual">
+          <div class="pulse-service-detail-hero-image">
+            <img
+              id="service-hero-image"
+              src="images/service1.jpg"
+              alt="Pulse Haven home healthcare service"
+            />
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       WHAT WE CHECK
+  ========================================================== -->
+
+    <section class="pulse-service-checks-section">
+      
+      <div class="pulse-service-checks-container">
+        <!-- SECTION HEADER -->
+        <div class="pulse-service-checks-header">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="activity"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-checks-tag">
+              WHAT WE CHECK
+            </span>
+          </div>
+
+          <h2 id="service-checks-title">
+            Understand what we monitor
+            <span>during your visit.</span>
+          </h2>
+
+          <p id="service-checks-description">
+            Your visit focuses on key measurements relevant to the selected
+            service, helping keep your care information clear and organized.
+          </p>
+        </div>
+
+        <!-- CHECK CARDS -->
+        <div class="pulse-service-checks-grid" id="service-checks-grid">
+          <!-- CHECK 01 -->
+          <article class="pulse-service-check-card">
+            <div class="pulse-service-check-number">01</div>
+
+            <div class="pulse-service-check-icon">
+              <i id="service-check-icon-1" data-lucide="heart-pulse"></i>
+            </div>
+
+            <div class="pulse-service-check-content">
+              <h3 id="service-check-title-1">Blood Pressure</h3>
+
+              <p id="service-check-description-1">
+                Your blood pressure reading is recorded as part of your routine
+                vital assessment.
+              </p>
+            </div>
+          </article>
+
+          <!-- CHECK 02 -->
+          <article class="pulse-service-check-card">
+            <div class="pulse-service-check-number">02</div>
+
+            <div class="pulse-service-check-icon">
+              <i id="service-check-icon-2" data-lucide="activity"></i>
+            </div>
+
+            <div class="pulse-service-check-content">
+              <h3 id="service-check-title-2">Pulse Rate</h3>
+
+              <p id="service-check-description-2">
+                Your pulse is checked and recorded as part of the overall vital
+                assessment.
+              </p>
+            </div>
+          </article>
+
+          <!-- CHECK 03 -->
+          <article class="pulse-service-check-card">
+            <div class="pulse-service-check-number">03</div>
+
+            <div class="pulse-service-check-icon">
+              <i id="service-check-icon-3" data-lucide="thermometer"></i>
+            </div>
+
+            <div class="pulse-service-check-content">
+              <h3 id="service-check-title-3">Temperature</h3>
+
+              <p id="service-check-description-3">
+                Body temperature can be checked as part of the routine
+                assessment.
+              </p>
+            </div>
+          </article>
+
+          <!-- CHECK 04 -->
+          <article class="pulse-service-check-card">
+            <div class="pulse-service-check-number">04</div>
+
+            <div class="pulse-service-check-icon">
+              <i id="service-check-icon-4" data-lucide="gauge"></i>
+            </div>
+
+            <div class="pulse-service-check-content">
+              <h3 id="service-check-title-4">Oxygen Level</h3>
+
+              <p id="service-check-description-4">
+                Blood oxygen saturation can be measured when included in your
+                home vitals assessment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       WHAT HAPPENS DURING YOUR VISIT
+  ========================================================== -->
+
+    <section class="pulse-service-visit-section">
+      
+      <div class="pulse-service-visit-container">
+        <!-- IMAGE -->
+        <div class="pulse-service-visit-visual">
+          <div class="pulse-service-visit-image">
+            <img
+              id="service-visit-image"
+              src="images/service2.jpg"
+              alt="Pulse Haven professional providing care at home"
+            />
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="pulse-service-visit-content">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="stethoscope"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-visit-tag">
+              YOUR VISIT
+            </span>
+          </div>
+
+          <h2 id="service-visit-title">
+            Know what to expect
+            <span>during your home visit.</span>
+          </h2>
+
+          <p id="service-visit-description">
+            From arrival to completion, your visit follows a simple, organized
+            process designed around your comfort.
+          </p>
+
+          <!-- VISIT STEPS -->
+          <div class="pulse-service-visit-steps" id="service-visit-steps">
+            <!-- STEP 01 -->
+            <div class="pulse-service-visit-step">
+              <span class="pulse-service-visit-step-number"> 01 </span>
+
+              <div class="pulse-service-visit-step-content">
+                <h3 id="service-visit-step-title-1">Arrival</h3>
+
+                <p id="service-visit-step-description-1">
+                  Your scheduled care professional arrives at your home for the
+                  planned visit.
+                </p>
+              </div>
+            </div>
+
+            <!-- STEP 02 -->
+            <div class="pulse-service-visit-step">
+              <span class="pulse-service-visit-step-number"> 02 </span>
+
+              <div class="pulse-service-visit-step-content">
+                <h3 id="service-visit-step-title-2">Assessment</h3>
+
+                <p id="service-visit-step-description-2">
+                  The required checks or activities are completed according to
+                  your selected service.
+                </p>
+              </div>
+            </div>
+
+            <!-- STEP 03 -->
+            <div class="pulse-service-visit-step">
+              <span class="pulse-service-visit-step-number"> 03 </span>
+
+              <div class="pulse-service-visit-step-content">
+                <h3 id="service-visit-step-title-3">Documentation</h3>
+
+                <p id="service-visit-step-description-3">
+                  Relevant visit information is recorded for your care history.
+                </p>
+              </div>
+            </div>
+
+            <!-- STEP 04 -->
+            <div class="pulse-service-visit-step">
+              <span class="pulse-service-visit-step-number"> 04 </span>
+
+              <div class="pulse-service-visit-step-content">
+                <h3 id="service-visit-step-title-4">Completion</h3>
+
+                <p id="service-visit-step-description-4">
+                  Your visit is completed and your available information remains
+                  connected to your care records.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       WHAT'S INCLUDED
+  ========================================================== -->
+
+    <section class="pulse-service-included-section">
+      
+      <div class="pulse-service-included-container">
+        <!-- HEADER -->
+        <div class="pulse-service-included-header">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="clipboard-check"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-included-tag">
+              WHAT'S INCLUDED
+            </span>
+          </div>
+
+          <h2 id="service-included-title">
+            Everything you need for a
+            <span>clear and convenient visit.</span>
+          </h2>
+
+          <p id="service-included-description">
+            Your selected service includes the care activities and information
+            needed to make your visit straightforward.
+          </p>
+        </div>
+
+        <!-- INCLUDED ITEMS -->
+        <div class="pulse-service-included-grid" id="service-included-grid">
+          <!-- ITEM 01 -->
+          <article class="pulse-service-included-card">
+            <span class="pulse-service-included-icon">
+              <i id="service-included-icon-1" data-lucide="home"></i>
+            </span>
+
+            <div>
+              <h3 id="service-included-title-1">In-Home Service</h3>
+
+              <p id="service-included-description-1">
+                Receive your selected service in the comfort of your own home.
+              </p>
+            </div>
+          </article>
+
+          <!-- ITEM 02 -->
+          <article class="pulse-service-included-card">
+            <span class="pulse-service-included-icon">
+              <i id="service-included-icon-2" data-lucide="clipboard-check"></i>
+            </span>
+
+            <div>
+              <h3 id="service-included-title-2">Visit Documentation</h3>
+
+              <p id="service-included-description-2">
+                Important information from your visit is recorded for your care
+                history.
+              </p>
+            </div>
+          </article>
+
+          <!-- ITEM 03 -->
+          <article class="pulse-service-included-card">
+            <span class="pulse-service-included-icon">
+              <i
+                id="service-included-icon-3"
+                data-lucide="layout-dashboard"
+              ></i>
+            </span>
+
+            <div>
+              <h3 id="service-included-title-3">Connected Records</h3>
+
+              <p id="service-included-description-3">
+                Review available visit information through your patient
+                dashboard.
+              </p>
+            </div>
+          </article>
+
+          <!-- ITEM 04 -->
+          <article class="pulse-service-included-card">
+            <span class="pulse-service-included-icon">
+              <i id="service-included-icon-4" data-lucide="calendar-clock"></i>
+            </span>
+
+            <div>
+              <h3 id="service-included-title-4">Scheduled Visit</h3>
+
+              <p id="service-included-description-4">
+                Choose a convenient appointment time for your selected service.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       WHO IS THIS FOR
+  ========================================================== -->
+
+    <section class="pulse-service-audience-section">
+      
+      <div class="pulse-service-audience-container">
+        <!-- HEADER -->
+        <div class="pulse-service-audience-header">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="users-round"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-audience-tag">
+              WHO IT'S FOR
+            </span>
+          </div>
+
+          <h2 id="service-audience-title">
+            A convenient option for
+            <span>different care needs.</span>
+          </h2>
+
+          <p id="service-audience-description">
+            This service can support people who want professional care or
+            routine monitoring without leaving home.
+          </p>
+        </div>
+
+        <!-- AUDIENCE CARDS -->
+        <div class="pulse-service-audience-grid" id="service-audience-grid">
+          <!-- AUDIENCE 01 -->
+          <article class="pulse-service-audience-card">
+            <span class="pulse-service-audience-number"> 01 </span>
+
+            <div class="pulse-service-audience-icon">
+              <i id="service-audience-icon-1" data-lucide="repeat-2"></i>
+            </div>
+
+            <h3 id="service-audience-title-1">Routine Monitoring</h3>
+
+            <p id="service-audience-description-1">
+              For people who regularly keep track of their health measurements.
+            </p>
+          </article>
+
+          <!-- AUDIENCE 02 -->
+          <article class="pulse-service-audience-card">
+            <span class="pulse-service-audience-number"> 02 </span>
+
+            <div class="pulse-service-audience-icon">
+              <i id="service-audience-icon-2" data-lucide="house"></i>
+            </div>
+
+            <h3 id="service-audience-title-2">Home-Based Care</h3>
+
+            <p id="service-audience-description-2">
+              For people who prefer receiving routine care in a familiar
+              environment.
+            </p>
+          </article>
+
+          <!-- AUDIENCE 03 -->
+          <article class="pulse-service-audience-card">
+            <span class="pulse-service-audience-number"> 03 </span>
+
+            <div class="pulse-service-audience-icon">
+              <i
+                id="service-audience-icon-3"
+                data-lucide="chart-no-axes-combined"
+              ></i>
+            </div>
+
+            <h3 id="service-audience-title-3">Ongoing Tracking</h3>
+
+            <p id="service-audience-description-3">
+              For people who want their service information organized over time.
+            </p>
+          </article>
+
+          <!-- AUDIENCE 04 -->
+          <article class="pulse-service-audience-card">
+            <span class="pulse-service-audience-number"> 04 </span>
+
+            <div class="pulse-service-audience-icon">
+              <i id="service-audience-icon-4" data-lucide="clock-3"></i>
+            </div>
+
+            <h3 id="service-audience-title-4">Convenient Check-Ins</h3>
+
+            <p id="service-audience-description-4">
+              For people looking for a simpler way to arrange routine care
+              visits.
+            </p>
+          </article>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       BEFORE YOUR VISIT
+  ========================================================== -->
+
+    <section class="pulse-service-preparation-section">
+      
+      <div class="pulse-service-preparation-container">
+        <!-- CONTENT -->
+        <div class="pulse-service-preparation-content">
+          <div class="pulse-section-tag">
+            <span class="pulse-section-tag-icon">
+              <i data-lucide="notebook-pen"></i>
+            </span>
+
+            <span class="pulse-section-tag-text" id="service-preparation-tag">
+              BEFORE YOUR VISIT
+            </span>
+          </div>
+
+          <h2 id="service-preparation-title">
+            A few simple things to
+            <span>keep in mind.</span>
+          </h2>
+
+          <p id="service-preparation-description">
+            A little preparation can help make your scheduled visit comfortable
+            and straightforward.
+          </p>
+        </div>
+
+        <!-- PREPARATION LIST -->
+        <div
+          class="pulse-service-preparation-list"
+          id="service-preparation-list"
+        >
+          <!-- ITEM 01 -->
+          <div class="pulse-service-preparation-item">
+            <span class="pulse-service-preparation-icon">
+              <i
+                id="service-preparation-icon-1"
+                data-lucide="calendar-check"
+              ></i>
+            </span>
+
+            <div>
+              <h3 id="service-preparation-title-1">
+                Keep Your Appointment Time Available
+              </h3>
+
+              <p id="service-preparation-description-1">
+                Be available around your scheduled visit time so the service can
+                be completed comfortably.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 02 -->
+          <div class="pulse-service-preparation-item">
+            <span class="pulse-service-preparation-icon">
+              <i id="service-preparation-icon-2" data-lucide="file-text"></i>
+            </span>
+
+            <div>
+              <h3 id="service-preparation-title-2">
+                Keep Relevant Information Nearby
+              </h3>
+
+              <p id="service-preparation-description-2">
+                Have any information relevant to your selected service available
+                if needed.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 03 -->
+          <div class="pulse-service-preparation-item">
+            <span class="pulse-service-preparation-icon">
+              <i id="service-preparation-icon-3" data-lucide="armchair"></i>
+            </span>
+
+            <div>
+              <h3 id="service-preparation-title-3">
+                Choose a Comfortable Space
+              </h3>
+
+              <p id="service-preparation-description-3">
+                A comfortable and suitable space can help make your visit
+                easier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- =========================================================
+       FINAL CTA
+  ========================================================== -->
+
+    <section class="pulse-service-cta-section">
+      
+      <div class="pulse-service-cta-container">
+        <div class="pulse-service-cta-panel">
+          <div class="pulse-service-cta-content">
+            <div class="pulse-section-tag">
+              <span class="pulse-section-tag-icon">
+                <i data-lucide="calendar-check"></i>
+              </span>
+
+              <span class="pulse-section-tag-text" id="service-cta-tag">
+                READY WHEN YOU ARE
+              </span>
+            </div>
+
+            <h2 id="service-cta-title">
+              Bring your care
+              <span>closer to home.</span>
+            </h2>
+
+            <p id="service-cta-description">
+              Choose a convenient time for your selected Pulse Haven service and
+              take the next step toward simpler care at home.
+            </p>
+
+            <a
+              href="#"
+              class="pulse-btn pulse-btn-primary"
+              id="service-cta-button"
+            >
+              Schedule a Home Visit
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- CTA VISUAL -->
+          <div class="pulse-service-cta-visual">
+            <div
+              class="pulse-service-cta-orbit pulse-service-cta-orbit-one"
+            ></div>
+
+            <div
+              class="pulse-service-cta-orbit pulse-service-cta-orbit-two"
+            ></div>
+
+            <div class="pulse-service-cta-center">
+              <i data-lucide="heart-pulse"></i>
+            </div>
+
+            <span
+              class="pulse-service-cta-dot pulse-service-cta-dot-one"
+            ></span>
+
+            <span
+              class="pulse-service-cta-dot pulse-service-cta-dot-two"
+            ></span>
+
+            <span
+              class="pulse-service-cta-dot pulse-service-cta-dot-three"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+</html>
