@@ -100,7 +100,7 @@ SECTION TAG
 
   color: var(--primary-color);
 
-  font-size: var(--fs-small);
+  font-size: 12px;
   font-weight: var(--fw-bold);
   letter-spacing: 1.6px;
   text-transform: uppercase;
@@ -136,7 +136,7 @@ HERO TITLE
 
   color: var(--text-color);
 
-  font-size: clamp(48px, 3.5vw, 68px);
+  font-size:var(--fs-hero);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -2px;
@@ -397,41 +397,6 @@ FLOATING ANIMATION
   }
 }
 
-/* =========================================================
-SCROLL INDICATOR
-========================================================= */
-
-.pulse-about-hero-scroll {
-  position: absolute;
-  z-index: 5;
-
-  left: 50%;
-  bottom: 22px;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-
-  color: var(--text-color);
-
-  opacity: 0.5;
-
-  font-size: var(--fs-label);
-  font-weight: var(--fw-bold);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.pulse-about-hero-scroll svg {
-  width: 16px;
-  height: 16px;
-
-  animation: pulseAboutScroll 1.8s ease-in-out infinite;
-}
-
 @keyframes pulseAboutScroll {
   0%,
   100% {
@@ -510,10 +475,6 @@ NEST HUB
     width: 36px;
     height: 36px;
   }
-
-  .pulse-about-hero-scroll {
-    bottom: 10px;
-  }
 }
 
 /* =========================================================
@@ -591,10 +552,6 @@ TABLET / iPAD MINI
   .pulse-about-care-card {
     left: -5px;
     bottom: 18px;
-  }
-
-  .pulse-about-hero-scroll {
-    display: none;
   }
 }
 
@@ -849,7 +806,7 @@ TITLE
   margin: 0;
 
   color: var(--text-color);
-  font-size: clamp(40px, 3.2vw, 56px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
 
   line-height: 1.12;
@@ -1260,7 +1217,7 @@ TITLE
 .pulse-about-approach-title {
   margin: 0;
   color: var(--text-color);
-  font-size: clamp(38px, 3vw, 54px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.12;
   letter-spacing: -1.5px;
@@ -1800,7 +1757,7 @@ TITLE
 .pulse-about-human-title {
   margin: 0;
   color: var(--text-color);
-  font-size: clamp(40px, 3.3vw, 58px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.12;
   letter-spacing: -1.8px;
@@ -2139,7 +2096,7 @@ SAMSUNG GALAXY S8+
 .pulse-about-professionals-title {
   margin: 0;
   color: var(--text-color);
-  font-size: clamp(36px, 3.2vw, 54px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.12;
   letter-spacing: -1.5px;
@@ -2541,6 +2498,263 @@ SAMSUNG GALAXY S8+
     line-height: 1.6;
   }
 }
+/* =========================================================
+WHY CARE AT HOME
+========================================================= */
+
+.pulse-about-homecare-section {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.pulse-about-homecare-container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pulse-about-homecare-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pulse-about-homecare-header .pulse-section-tag {
+  margin-bottom: 24px;
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+}
+.pulse-section-tag-icon svg{
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.pulse-about-homecare-title {
+  max-width: 850px;
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+}
+
+.pulse-about-homecare-title span {
+  display: block;
+  color: var(--primary-color);
+ 
+}
+
+.pulse-about-homecare-intro {
+  max-width: 650px;
+  margin: 24px auto 0;
+  color: var(--secondary-color);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+}
+
+.pulse-about-homecare-content {
+  max-width: 760px;
+  margin: 30px auto 0;
+}
+
+.pulse-about-homecare-content p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-normal);
+  line-height: 1.8;
+}
+
+.pulse-about-homecare-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 42px;
+  color: var(--primary-color);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+}
+
+.pulse-about-homecare-dot {
+  color: var(--secondary-color);
+  font-size: var(--fs-body);
+}
+
+.pulse-about-homecare-divider {
+  width: 80px;
+  height: 2px;
+  margin: 38px auto 0;
+  background: var(--secondary-color);
+}
+
+.pulse-about-homecare-highlight {
+  max-width: 700px;
+  margin: 28px auto 0;
+  color: var(--text-color);
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+}
+
+/* =========================================================
+NEST HUB
+========================================================= */
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .pulse-about-homecare-section {
+    padding: 70px 0;
+  }
+
+  .pulse-about-homecare-container {
+    width: min(900px, 88%);
+  }
+
+  .pulse-about-homecare-header .pulse-section-tag {
+    margin-bottom: 18px;
+  }
+
+  .pulse-about-homecare-title {
+    max-width: 720px;
+  }
+
+  .pulse-about-homecare-intro {
+    max-width: 580px;
+    margin-top: 18px;
+  }
+
+  .pulse-about-homecare-content {
+    max-width: 680px;
+    margin-top: 22px;
+  }
+
+  .pulse-about-homecare-highlights {
+    margin-top: 30px;
+  }
+
+  .pulse-about-homecare-divider {
+    margin-top: 28px;
+  }
+
+  .pulse-about-homecare-highlight {
+    margin-top: 20px;
+  }
+}
+
+/* =========================================================
+IPAD MINI
+========================================================= */
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .pulse-about-homecare-section {
+    padding: 80px 0;
+  }
+
+  .pulse-about-homecare-container {
+    width: min(680px, 88%);
+  }
+
+  .pulse-about-homecare-title {
+    font-size: var(--fs-title);
+    line-height: 1.2;
+  }
+
+  .pulse-about-homecare-intro {
+    max-width: 600px;
+    font-size: var(--fs-subtitle);
+  }
+
+  .pulse-about-homecare-content {
+    max-width: 600px;
+    margin-top: 26px;
+  }
+
+  .pulse-about-homecare-highlights {
+    gap: 14px;
+    margin-top: 36px;
+  }
+
+  .pulse-about-homecare-divider {
+    margin-top: 32px;
+  }
+
+  .pulse-about-homecare-highlight {
+    max-width: 600px;
+    margin-top: 24px;
+  }
+}
+
+/* =========================================================
+SAMSUNG GALAXY S8+
+========================================================= */
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .pulse-about-homecare-section {
+    padding: 60px 0;
+  }
+
+  .pulse-about-homecare-container {
+    width: 88%;
+  }
+
+  .pulse-about-homecare-header .pulse-section-tag {
+    margin-bottom: 16px;
+  }
+
+  .pulse-about-homecare-title {
+    font-size: var(--fs-title);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+
+  .pulse-about-homecare-title span {
+    display: inline;
+  }
+
+  .pulse-about-homecare-intro {
+    margin-top: 18px;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+  }
+
+  .pulse-about-homecare-content {
+    margin-top: 22px;
+  }
+
+  .pulse-about-homecare-content p {
+    font-size: var(--fs-small);
+    line-height: 1.7;
+  }
+
+  .pulse-about-homecare-highlights {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 28px;
+    font-size: var(--fs-label);
+    letter-spacing: 1.2px;
+  }
+
+  .pulse-about-homecare-dot {
+    display: none;
+  }
+
+  .pulse-about-homecare-divider {
+    width: 60px;
+    margin-top: 26px;
+  }
+
+  .pulse-about-homecare-highlight {
+    margin-top: 20px;
+    font-size: var(--fs-body);
+    line-height: 1.6;
+  }
+}
 
 /* =========================================================
    PULSE HAVEN — ABOUT PAGE CTA SECTION
@@ -2654,7 +2868,7 @@ SAMSUNG GALAXY S8+
   max-width: 100%;
   margin: 0;
   color: var(--text-color);
-  font-size: clamp(36px, 3.2vw, 56px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.12;
   letter-spacing: -1.5px;

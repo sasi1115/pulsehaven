@@ -45,7 +45,7 @@
   max-width: 590px;
   margin: 28px 0 20px;
   color: var(--text-color);
-  font-size: clamp(52px, 5vw, 76px);
+  font-size: var(--fs-hero);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: -0.055em;
@@ -972,7 +972,7 @@
   max-width: 600px;
   margin: 26px 0 18px;
   color: var(--text-color);
-  font-size: clamp(42px, 4vw, 62px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -1362,7 +1362,7 @@
   max-width: 680px;
   margin: 22px auto 14px;
   color: var(--text-color);
-  font-size: clamp(40px, 3.8vw, 58px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -1730,7 +1730,7 @@
   max-width: 650px;
   margin: 22px auto 14px;
   color: var(--text-color);
-  font-size: clamp(40px, 3.7vw, 56px);
+  font-size: var(--fs-title);
   font-weight: var(--fw-bold);
   line-height: 1.08;
   letter-spacing: -0.045em;
@@ -3094,7 +3094,7 @@
 .pulse-faq-title {
   margin: 20px 0 14px;
   color: var(--text-color);
-  font-size: clamp(30px, 3vw, 42px);
+  font-size: var(--fs-title);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.8px;
@@ -3390,7 +3390,7 @@
   position: relative;
   width: 100%;
   padding: 95px 0;
-  background: var(--light-bg);
+  background: var(--secondary-soft);
   overflow: hidden;
   isolation: isolate;
 }
@@ -3431,6 +3431,7 @@
 
 .pulse-home2-cta-content .pulse-section-tag {
   margin-bottom: 18px;
+  background-color: var(--white);
 }
 
 /* HEADING */
@@ -3440,11 +3441,11 @@
 
   max-width: 680px;
 
-  font-size: 46px;
+  font-size: var(--fs-title);
   line-height: 1.12;
-  font-weight: 700;
+  font-weight: 600;
 
-  color: var(--text-color);
+  color: var(--dark-bg);
 }
 
 /* DESCRIPTION */
@@ -3456,7 +3457,7 @@
   font-size: 16px;
   line-height: 1.7;
 
-  color: var(--text-color);
+  color: var(--dark-bg);
   opacity: 0.72;
 }
 

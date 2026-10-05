@@ -33,8 +33,8 @@
   max-width: 650px;
   margin: 28px 0 20px;
   color: var(--text-color);
-  font-size: clamp(52px, 5vw, 78px);
-  font-weight: 800;
+  font-size: clamp(48px, 5vw, 42px);
+  font-weight: 600;
   line-height: 1.02;
   letter-spacing: -0.055em;
 }
@@ -94,7 +94,7 @@
 
 .pulse-hero-trust-text {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-color);
   opacity: 0.72;
   white-space: nowrap;
@@ -1814,7 +1814,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  font-size: var(--fs-hero);
+  font-size: 38px;
   font-weight: var(--fw-bold);
   line-height: 1;
   text-align: center;

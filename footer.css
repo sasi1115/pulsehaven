@@ -58,7 +58,7 @@
   align-items: center;
 
   width: fit-content;
-  gap:0px;
+  gap: 0px;
 
   text-decoration: none;
 
@@ -79,7 +79,7 @@ html[dir="rtl"] .footer-logo {
   display: block;
 
   object-fit: contain;
-  margin: 0 ;
+  margin: 0;
 }
 
 .footer-logo-text h2 {
@@ -747,16 +747,26 @@ html[dir="rtl"] .footer-logo {
 }
 
 /* Brand tagline below the footer brand name */
+
 .footer-logo-text::after {
-  content: "where care Matters";
+  content: "Where Care Matters";
   display: block;
-  margin-top: 3px;
+  margin-top: 4px;
+  width: max-content;
   color: var(--primary-color);
   font-family: "Outfit", sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.72;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .footer-logo-text::after {
+    font-size: 7px;
+    letter-spacing: 0.05em;
+  }
 }

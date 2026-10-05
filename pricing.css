@@ -28,12 +28,12 @@
 .pulse-pricing-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.68);
 
   z-index: -1;
 }
 .dark-mode .pulse-pricing-hero-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .pulse-pricing-hero-container {
@@ -59,6 +59,7 @@
   justify-content: center;
   gap: 8px;
   margin-bottom: 24px;
+  background-color: transparent;
   
 }
 

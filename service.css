@@ -106,7 +106,7 @@
   max-width: 900px;
   margin: 0;
   color: var(--white);
-  font-size: clamp(44px, 5vw, 76px);
+  font-size: var(--fs-hero);
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: -0.045em;
@@ -2665,13 +2665,13 @@
 }
 
 .pulse-services-cta-accent-left {
-  left: 8%;
+  left: 4%;
   top: 42%;
   animation: pulseCtaAccentLeft 4s ease-in-out infinite;
 }
 
 .pulse-services-cta-accent-right {
-  right: 8%;
+  right: 5%;
   top: 55%;
   color: var(--primary-color);
   animation: pulseCtaAccentRight 4.5s ease-in-out infinite;

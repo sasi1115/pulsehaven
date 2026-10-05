@@ -344,9 +344,7 @@
   transition: opacity 0.25s ease;
 }
 
-.coming-soon-brand:hover {
-  opacity: 0.82;
-}
+
 
 .coming-soon-logo {
   display: block;
