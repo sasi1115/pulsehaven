@@ -18,7 +18,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://images.openai.com/static-rsc-4/q3bTshvQed-RmBfA1Efgqr2t1baVBgQseAsA9_RBAShPCnBhMoDaE4Q_tRpQ4IGGe2CN2aVY8daeXOCItja9KeP59hSpa10WhJPzUi8NzhmBuImG9-2ppFErQnP0CFCxKDaFQ5XBLAvGrqVc-iU302Bj4yC3tP9kyDAdm7Ez6c-0h_lc8SaltU3xh45rUEsO?purpose=fullsize");
+  background-image: url("images/pricing-hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -53,11 +53,13 @@
 }
 
 .pulse-pricing-hero-content .pulse-section-tag {
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   margin-bottom: 24px;
+  
 }
 
 .pulse-pricing-hero-title {
@@ -279,11 +281,12 @@
 
 .pulse-pricing-card-popular {
   border: 2px solid var(--primary-color);
-  transform: translateY(-15px);
+  /* transform: translateY(-15px); */
 }
 
 .pulse-pricing-card-popular:hover {
   transform: translateY(-12px);
+  color:var(--primary-color)
 }
 
 .pulse-pricing-popular-badge {
@@ -311,9 +314,7 @@
   height: 13px;
 }
 
-.pulse-pricing-card-popular .pulse-pricing-card-top {
-  padding-top: 18px;
-}
+
 
 .pulse-pricing-card-top {
   display: flex;
@@ -446,6 +447,11 @@
   background: var(--primary-color);
   color: var(--white);
 }
+.pulse-pricing-card-button-primary:hover{
+  transform:-2px;
+  background-color: var(--primary-color);
+}
+
 
 .pulse-pricing-card-button-secondary {
   border: 1px solid var(--secondary-color);
@@ -458,18 +464,19 @@
   transition: transform 0.3s ease;
 }
 
-.pulse-pricing-card-button:hover {
+.pulse-pricing-card-button-secondary:hover {
   transform: translateY(-2px);
   box-shadow: var(--box-shadow);
+  background-color: var(--secondary-color);
+  color: var(--white);
 }
+
 
 .pulse-pricing-card-button:hover svg {
   transform: translateX(4px);
 }
 
-/* =========================================================
-   TABLET LANDSCAPE
-========================================================= */
+
 
 @media (max-width: 1024px) and (max-height: 600px) {
   .pulse-pricing-plans-section {
