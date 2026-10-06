@@ -45,8 +45,7 @@ body
   --primary-color: #4f46e5;
   --secondary-color: #0ea5e9;
 
-  /* --primary-color: #c026d3;
-  --secondary-color: #fb923c; */
+  
 
   --text-color: #24313a;
   --light-bg: #f7fafc;
@@ -80,8 +79,7 @@ body
   --primary-color: #4f46e5;
   --secondary-color: #0ea5e9;
 
-  /* --primary-color: #c026d3;
-  --secondary-color: #fb923c; */
+  
 
   --text-color: #ffffff;
   --light-bg: #17232b;
@@ -194,7 +192,7 @@ body
   align-items: center;
   gap: 9px;
   padding: 6px 16px 6px 7px;
-  border: 1px solid var(--secondary-color);
+  
   border-radius: 50px;
   background: var(--light-bg);
   color: var(--primary-color);
