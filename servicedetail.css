@@ -280,7 +280,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-service-detail-hero {
     min-height: auto;
     padding: 80px 0 70px;
@@ -386,7 +386,6 @@
 .pulse-service-check-card:hover {
   transform: translateY(-8px);
   border-color: var(--primary-color);
- 
 }
 
 .pulse-service-check-card:nth-child(2):hover,
@@ -482,7 +481,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-service-checks-section {
     padding: 75px 0;
   }
@@ -726,7 +725,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) and (max-height: 740px) {
   .pulse-service-visit-section {
     padding: 75px 0;
   }
@@ -1008,7 +1007,7 @@
    SAMSUNG GALAXY S8+
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px)  {
   .pulse-service-included-section {
     padding: 75px 0;
   }
@@ -1243,7 +1242,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height:740px) {
+@media (max-width: 480px) {
   .pulse-service-audience-section {
     padding: 75px 0;
   }
@@ -1423,7 +1422,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-service-preparation-section {
     padding: 75px 0;
   }
@@ -1762,7 +1761,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px)  {
   .pulse-service-cta-section {
     padding: 70px 0 80px;
   }

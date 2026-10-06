@@ -136,7 +136,7 @@ HERO TITLE
 
   color: var(--text-color);
 
-  font-size:var(--fs-hero);
+  font-size: var(--fs-hero);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -2px;
@@ -560,7 +560,7 @@ SAMSUNG GALAXY S8+
 360 × 740
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-about-hero-section {
     padding: 78px 0 50px;
   }
@@ -1065,7 +1065,7 @@ SAMSUNG GALAXY S8+
 360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .pulse-about-story-section {
     padding: 65px 0;
   }
@@ -1529,7 +1529,7 @@ SAMSUNG GALAXY S8+
 360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .pulse-about-approach-section {
     padding: 65px 0;
   }
@@ -1941,7 +1941,7 @@ SAMSUNG GALAXY S8+
 360 × 740
 ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .pulse-about-human-section {
     padding: 65px 0;
   }
@@ -2377,37 +2377,8 @@ SAMSUNG GALAXY S8+
   }
 }
 
-/* Smaller tablets and large phones */
-@media screen and (max-width: 600px) {
-  .pulse-about-professionals-section {
-    padding: 68px 0;
-  }
-
-  .pulse-about-professionals-container {
-    width: min(90%, 460px);
-  }
-
-  .pulse-about-professionals-header {
-    margin-bottom: 30px;
-  }
-
-  .pulse-about-professionals-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .pulse-about-professional-card:nth-child(3):last-child {
-    grid-column: auto;
-    width: 100%;
-  }
-
-  .pulse-about-professional-image-wrap {
-    height: clamp(220px, 62vw, 290px);
-  }
-}
-
 /* Samsung Galaxy S8+ — 360 × 740 */
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .pulse-about-professionals-section {
     padding: 58px 0;
   }
@@ -2451,7 +2422,13 @@ SAMSUNG GALAXY S8+
   }
 
   .pulse-about-professionals-grid {
+    grid-template-columns: 1fr;
     gap: 18px;
+  }
+  .pulse-about-professional-card:nth-child(3):last-child {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
   }
 
   .pulse-about-professional-card {
@@ -2527,7 +2504,7 @@ WHY CARE AT HOME
   background-color: var(--light-bg);
   color: var(--primary-color);
 }
-.pulse-section-tag-icon svg{
+.pulse-section-tag-icon svg {
   background-color: var(--primary-color);
   color: var(--white);
 }
@@ -2545,7 +2522,6 @@ WHY CARE AT HOME
 .pulse-about-homecare-title span {
   display: block;
   color: var(--primary-color);
- 
 }
 
 .pulse-about-homecare-intro {
@@ -2694,7 +2670,7 @@ IPAD MINI
 SAMSUNG GALAXY S8+
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-about-homecare-section {
     padding: 60px 0;
   }
@@ -3071,51 +3047,11 @@ SAMSUNG GALAXY S8+
   }
 }
 
-/* SMALL TABLETS AND PHONES */
-@media screen and (max-width: 600px) {
-  .pulse-about-cta-section {
-    padding: 64px 0;
-  }
-
-  .pulse-about-cta-container {
-    width: min(90%, 460px);
-    min-height: 0;
-    padding: 44px 24px;
-    border-radius: 22px;
-  }
-
-  .pulse-about-cta-title {
-    font-size: clamp(30px, 7vw, 38px);
-    line-height: 1.15;
-    letter-spacing: -0.8px;
-  }
-
-  .pulse-about-cta-description {
-    margin-top: 13px;
-    font-size: var(--fs-small);
-    line-height: 1.6;
-  }
-
-  .pulse-about-cta-button {
-    margin-top: 22px;
-  }
-
-  .pulse-about-cta-container::before {
-    width: 170px;
-    height: 170px;
-  }
-
-  .pulse-about-cta-container::after {
-    width: 190px;
-    height: 190px;
-  }
-}
-
 /* =========================================================
    SAMSUNG GALAXY S8+ — 360 × 740
    ========================================================= */
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
+@media screen and (max-width: 480px) {
   .pulse-about-cta-section {
     padding: 56px 0;
   }

@@ -164,7 +164,7 @@
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px)  {
   .pulse-pricing-hero-container {
     width: 88%;
   }
@@ -590,7 +590,7 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 480px) and (max-height: 800px) {
+@media (max-width: 480px)  {
   .pulse-pricing-plans-section {
     padding: 65px 0;
   }
@@ -780,7 +780,7 @@
 
 .pulse-plan-comparison-table thead th:first-child {
   width: 31%;
-  text-align: left;
+  text-align: center;
 }
 
 .pulse-plan-comparison-table thead th:not(:first-child) {
@@ -790,7 +790,7 @@
 .pulse-plan-comparison-table tbody th {
   padding: 18px 20px;
   color: var(--text-color);
-  text-align: left;
+  text-align: center;
   font-size: var(--fs-small);
   line-height: 1.4;
   font-weight: 600;
@@ -874,9 +874,7 @@
   font-weight: 500;
 }
 
-/* =========================================================
-   TABLET LANDSCAPE
-========================================================= */
+
 
 @media (max-width: 1024px) and (max-height: 600px) {
   .pulse-plan-comparison-section {
@@ -957,7 +955,7 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 480px) and (max-height: 800px) {
+@media (max-width: 480px) {
   .pulse-plan-comparison-section {
     padding: 65px 0;
   }
@@ -1304,7 +1302,7 @@
   }
 }
 
-@media (max-width: 480px) and (max-height: 800px) {
+@media (max-width: 480px)  {
   .pulse-visit-included-section {
     padding: 60px 0;
   }
@@ -1554,7 +1552,7 @@
   }
 }
 
-@media (max-width: 480px) and (max-height: 800px) {
+@media (max-width: 480px)  {
   .pulse-pricing-cta-section {
     padding: 55px 0;
   }

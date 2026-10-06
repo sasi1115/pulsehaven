@@ -830,7 +830,7 @@ IPAD MINI
   }
 }
 
-@media (max-width: 360px) and (max-height:740px) {
+@media (max-width: 480px) {
   .pulse-contact-info-section {
     padding: 55px 0 65px;
   }
@@ -1225,7 +1225,7 @@ IPAD MINI
 SAMSUNG GALAXY S8+
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-contact-form-section {
     padding: 50px 0;
   }
@@ -1598,7 +1598,7 @@ IPAD MINI
 SAMSUNG GALAXY S8+
 ========================================================= */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px){
   .pulse-service-area-section {
     padding: 50px 0;
   }
@@ -1889,7 +1889,7 @@ IPAD MINI
 SAMSUNG GALAXY S8+
 ========================================================= */
 
-@media (max-width: 360px) and(max-height:740px) {
+@media (max-width: 480px)  {
   .pulse-contact-faq-section {
     padding: 50px 0;
   }
@@ -2132,7 +2132,7 @@ SAMSUNG GALAXY S8+
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px){
   .pulse-contact-cta-section {
     padding: 25px 0;
   }

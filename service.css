@@ -227,7 +227,7 @@
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-services-hero {
     min-height: 100vh;
   }
@@ -572,7 +572,7 @@
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-services-cards-section {
     padding: 65px 0;
   }
@@ -990,7 +990,7 @@
   }
 }
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-monitor-section {
     padding: 65px 0;
   }
@@ -1460,7 +1460,7 @@
   }
 }
 
-@media (max-width: 360px) and (max-height: 800px) {
+@media (max-width: 480px) {
   .pulse-care-life-section {
     padding: 65px 0;
   }
@@ -2370,7 +2370,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 800px) {
+@media (max-width: 480px) {
   .pulse-dashboard-section {
     padding: 65px 14px;
   }
@@ -2797,7 +2797,7 @@
 
 /* SAMSUNG GALAXY S8+ */
 
-@media (max-width: 360px) and (max-height: 740px) {
+@media (max-width: 480px) {
   .pulse-services-cta-section {
     padding: 65px 14px;
   }

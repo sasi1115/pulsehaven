@@ -112,6 +112,7 @@
 .dashboard-sidebar-close svg {
   width: 18px;
   height: 18px;
+  pointer-events: none;
 }
 
 /* =========================================================
@@ -333,7 +334,7 @@
   justify-content: center;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--light-bg);
   color: var(--text-color);
   cursor: pointer;
 }
@@ -341,6 +342,7 @@
 .dashboard-menu-toggle svg {
   width: 19px;
   height: 19px;
+  pointer-events: none;
 }
 
 /* =========================================================
