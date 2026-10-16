@@ -17,35 +17,40 @@
   </head>
   <body>
     <div id="navbar"></div>
+
     <section class="pulse-hero-section" id="home">
+      <div class="pulse-hero-background">
+        <div class="pulse-hero-overlay"></div>
+      </div>
+
       <div class="pulse-hero-container">
         <div class="pulse-hero-content">
           <div class="pulse-section-tag">
             <span class="pulse-section-tag-icon">
               <i data-lucide="heart-pulse"></i>
             </span>
-
             <span class="pulse-section-tag-text"> AT-HOME VITALS CARE </span>
           </div>
 
           <h1 class="pulse-hero-title">
-            Your Vital Care,
-            <span>Right at Home.</span>
+            Better Health
+            <span>Starts at Home.</span>
           </h1>
 
           <p class="pulse-hero-description">
-            Professional blood pressure and vitals monitoring from caring
-            healthcare professionals, delivered conveniently to your home.
+            Stay on top of your blood pressure and vital signs with convenient
+            home visits from caring healthcare professionals.
           </p>
 
           <div class="pulse-hero-actions">
             <a href="contact.html" class="pulse-btn pulse-btn-primary">
-              <span>Schedule a Visit</span>
-              <i data-lucide="calendar-check"></i>
+              <span>Book a Home Visit</span>
+              <i data-lucide="arrow-up-right"></i>
             </a>
 
             <a href="#services" class="pulse-btn pulse-btn-secondary">
-              Explore Services
+              <span>Explore Services</span>
+              <i data-lucide="arrow-down"></i>
             </a>
           </div>
 
@@ -54,122 +59,53 @@
               <span class="pulse-hero-trust-icon">
                 <i data-lucide="house"></i>
               </span>
-
-              <span class="pulse-hero-trust-text"> Care at your door </span>
+              <span>Care at Home</span>
             </div>
 
-            <div class="pulse-hero-trust-divider"></div>
+            <span class="pulse-hero-trust-divider"></span>
 
             <div class="pulse-hero-trust-item">
               <span class="pulse-hero-trust-icon">
-                <i data-lucide="shield-check"></i>
+                <i data-lucide="heart-pulse"></i>
               </span>
+              <span>Vitals Monitoring</span>
+            </div>
 
-              <span class="pulse-hero-trust-text">
-                Professional monitoring
+            <span class="pulse-hero-trust-divider"></span>
+
+            <div class="pulse-hero-trust-item">
+              <span class="pulse-hero-trust-icon">
+                <i data-lucide="calendar-check"></i>
               </span>
+              <span>Easy Scheduling</span>
             </div>
           </div>
         </div>
 
-        <div class="pulse-hero-visual">
-          <div class="pulse-hero-glow"></div>
-
-          <div class="pulse-hero-wave">
-            <svg viewBox="0 0 600 180" aria-hidden="true" focusable="false">
-              <path
-                d="M0 92
-            H90
-            C105 92 110 91 120 88
-            L138 88
-            L154 88
-            L170 88
-            L185 88
-            L202 88
-            L220 88
-            L236 88
-            L250 88
-            L264 88
-            L278 88
-            L292 88
-            L305 88
-            L318 88
-            L330 88
-            L342 88
-            L354 88
-            L366 88
-            L378 88
-            L390 88
-            L402 88
-            L414 88
-            L426 88
-            L438 88
-            L450 88
-            L462 88
-            L474 88
-            L486 88
-            L498 88
-            L510 88
-            L522 88
-            L534 88
-            L546 88
-            L558 88
-            L570 88
-            L600 88"
-              />
-            </svg>
-          </div>
-
-          <div class="pulse-hero-image-wrap">
-            <div class="pulse-hero-image-frame">
-              <img
-                src="images/home1-hero.avif"
-                alt="Healthcare professional checking a patient's blood pressure at home"
-                class="pulse-hero-image"
-              />
-            </div>
-
-            <div class="pulse-hero-image-overlay"></div>
-          </div>
-
-          <div class="pulse-bp-card">
-            <div class="pulse-bp-card-top">
-              <span class="pulse-bp-icon">
-                <i data-lucide="heart-pulse"></i>
-              </span>
-
-              <span class="pulse-bp-label"> Blood Pressure </span>
-            </div>
-
-            <div class="pulse-bp-reading">
-              <strong>118</strong>
-              <span>/ 76</span>
-            </div>
-
-            <div class="pulse-bp-status">
-              <span class="pulse-bp-status-dot"></span>
-              <span>Healthy reading</span>
-            </div>
-          </div>
-
-          <div class="pulse-home-visit-card">
-            <span class="pulse-home-visit-icon">
-              <i data-lucide="check"></i>
+        <div class="pulse-hero-vitals-card">
+          <div class="pulse-hero-vitals-header">
+            <span class="pulse-hero-vitals-icon">
+              <i data-lucide="heart-pulse"></i>
             </span>
 
-            <div class="pulse-home-visit-content">
-              <span class="pulse-home-visit-label"> Home Visit </span>
-
-              <span class="pulse-home-visit-text"> Care at your door </span>
+            <div class="pulse-hero-vitals-heading">
+              <h2>Blood Pressure</h2>
+              <p>Sample reading</p>
             </div>
+
+            <span class="pulse-hero-vitals-status">
+              <i data-lucide="check-circle"></i>
+            </span>
           </div>
 
-          <div class="pulse-vitals-orbit">
-            <span class="pulse-vitals-orbit-dot"></span>
+          <div class="pulse-hero-vitals-reading">
+            <span class="pulse-hero-vitals-number">118/76</span>
+            <span class="pulse-hero-vitals-unit">mmHg</span>
+          </div>
 
-            <span class="pulse-vitals-orbit-icon">
-              <i data-lucide="activity"></i>
-            </span>
+          <div class="pulse-hero-vitals-footer">
+            <span class="pulse-hero-vitals-indicator"></span>
+            <span>Illustrative reading</span>
           </div>
         </div>
       </div>
@@ -521,7 +457,7 @@
         <div class="pulse-about-visual">
           <div class="pulse-about-image">
             <img
-              src="images/img2.jpg"
+              src="images/hero-img2.jpg"
               alt="Healthcare professional providing care at home"
             />
           </div>

@@ -49,6 +49,8 @@ body
 
   --text-color: #24313a;
   --light-bg: #f7fafc;
+    --section-alt-bg: #eef2ff;
+
   --dark-bg: #17232b;
   --white: #ffffff;
 
@@ -56,6 +58,7 @@ body
 
   --primary-soft: rgba(79, 70, 229, 0.09);
   --secondary-soft: rgba(14, 165, 233, 0.09);
+  -secondary-s:rgba(14, 165, 233, 0.09);
 
   /* Shared shadow */
 
@@ -163,13 +166,13 @@ body
 ========================================================= */
 
 .pulse-btn-secondary {
-  background: var(--light-bg);
+  
   color: var(--secondary-color);
   border: 1.5px solid var(--secondary-color);
 }
 
 .pulse-btn-secondary:hover {
-  transform: translateY(-3px);
+ 
   background: var(--secondary-color);
   color: var(--white);
 }

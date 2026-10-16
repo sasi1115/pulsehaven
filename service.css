@@ -32,7 +32,7 @@
   background: rgba(0, 0, 0, 0.8);
 }
 .pulse-section-tag {
-  background-color: transparent;
+  background-color: var(--white);
 }
 
 .pulse-services-hero-animation {
