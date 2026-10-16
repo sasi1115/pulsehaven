@@ -446,7 +446,7 @@ html[dir="rtl"] .logo {
   .header-container {
     width: calc(100% - 32px);
     min-height: 60px;
-    gap: 16px;
+    gap: 12px;
   }
 
   .header-logo {
@@ -812,6 +812,7 @@ html[dir="rtl"] .logo {
     transform: translateX(-50%);
 
     bottom: 3px;
+    
   }
 
   /* =======================================================
