@@ -81,7 +81,7 @@ html[dir="rtl"] .logo {
 
   object-fit: contain;
 
-  margin: 0 ;
+  margin: 0;
   padding: 0;
 }
 
@@ -466,7 +466,11 @@ html[dir="rtl"] .logo {
   .nav-link {
     font-size: 14px;
   }
- 
+  .nav-link {
+  box-sizing: border-box;
+  line-height: 14px;
+  vertical-align: middle;
+}
 
   .header-actions {
     width: auto;
@@ -487,21 +491,30 @@ html[dir="rtl"] .logo {
   .mobile-menu-toggle {
     display: none;
   }
+
+  /* Keep the dropdown hidden on hover */
   .dropdown:hover .dropdown-menu {
     opacity: 0;
     visibility: hidden;
     transform: translateX(-50%) translateY(8px);
   }
 
+  /* Show the dropdown when activated */
   .dropdown.active > .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
   }
+
   .dropdown .nav-link svg,
   .dropdown .nav-link i {
     pointer-events: none;
   }
+  .dropdown > .nav-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
 }
 
 /* =========================================================
@@ -665,7 +678,7 @@ html[dir="rtl"] .logo {
     left: 50%;
     right: auto;
 
-    width: 50px;
+    width: 50px;  
 
     transform: translateX(-50%);
 
@@ -812,7 +825,6 @@ html[dir="rtl"] .logo {
     transform: translateX(-50%);
 
     bottom: 3px;
-    
   }
 
   /* =======================================================
